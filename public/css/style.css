@@ -5,7 +5,7 @@ body {
 #logo {
     font-size: 1.2em;
     color: rgb(255, 255, 255);
-    background-color: #304ffe;
+    background-color: rgb(68, 167, 235);
     height: 1.7em;
     width: 1.7em;
     line-height: 1.7em;
@@ -14,7 +14,7 @@ body {
     border-radius: 50% !important;
     text-align: center;
     z-index: 2;
-    text-shadow: rgb(48, 117, 165) 0px 0px, rgb(48, 118, 166) 1px 1px, rgb(49, 119, 168) 2px 2px, rgb(49, 120, 170) 3px 3px, rgb(50, 122, 171) 4px 4px, rgb(50, 123, 173) 5px 5px, rgb(51, 124, 175) 6px 6px, rgb(51, 125, 176) 7px 7px, rgb(51, 126, 178) 8px 8px, rgb(52, 128, 180) 9px 9px, rgb(52, 129, 181) 10px 10px, rgb(53, 130, 183) 11px 11px, rgb(53, 131, 185) 12px 12px, rgb(54, 132, 186) 13px 13px, rgb(54, 134, 188) 14px 14px, rgb(55, 135, 190) 15px 15px, rgb(55, 136, 191) 16px 16px, rgb(56, 137, 193) 17px 17px, rgb(56, 138, 195) 18px 18px, rgb(57, 140, 196) 19px 19px, rgb(57, 141, 198) 20px 20px, rgb(58, 142, 200) 21px 21px, rgb(58, 143, 201) 22px 22px, rgb(59, 144, 203) 23px 23px, rgb(59, 146, 205) 24px 24px, rgb(60, 147, 206) 25px 25px, rgb(60, 148, 208) 26px 26px, rgb(61, 149, 210) 27px 27px, rgb(61, 150, 212) 28px 28px, rgb(62, 151, 213) 29px 29px, rgb(62, 153, 215) 30px 30px, rgb(63, 154, 217) 31px 31px, rgb(63, 155, 218) 32px 32px, rgb(64, 156, 220) 33px 33px, rgb(64, 157, 222) 34px 34px, rgb(65, 159, 223) 35px 35px, rgb(65, 160, 225) 36px 36px, rgb(66, 161, 227) 37px 37px, rgb(66, 162, 228) 38px 38px, rgb(67, 163, 230) 39px 39px, rgb(67, 165, 232) 40px 40px, rgb(68, 166, 233) 41px 41px; overflow: hidden;
+    text-shadow: rgb(48, 117, 165) 0 0, rgb(48, 118, 166) 1px 1px, rgb(49, 119, 168) 2px 2px, rgb(49, 120, 170) 3px 3px, rgb(50, 122, 171) 4px 4px, rgb(50, 123, 173) 5px 5px, rgb(51, 124, 175) 6px 6px, rgb(51, 125, 176) 7px 7px, rgb(51, 126, 178) 8px 8px, rgb(52, 128, 180) 9px 9px, rgb(52, 129, 181) 10px 10px, rgb(53, 130, 183) 11px 11px, rgb(53, 131, 185) 12px 12px, rgb(54, 132, 186) 13px 13px, rgb(54, 134, 188) 14px 14px, rgb(55, 135, 190) 15px 15px, rgb(55, 136, 191) 16px 16px, rgb(56, 137, 193) 17px 17px, rgb(56, 138, 195) 18px 18px, rgb(57, 140, 196) 19px 19px, rgb(57, 141, 198) 20px 20px, rgb(58, 142, 200) 21px 21px, rgb(58, 143, 201) 22px 22px, rgb(59, 144, 203) 23px 23px, rgb(59, 146, 205) 24px 24px, rgb(60, 147, 206) 25px 25px, rgb(60, 148, 208) 26px 26px, rgb(61, 149, 210) 27px 27px, rgb(61, 150, 212) 28px 28px, rgb(62, 151, 213) 29px 29px, rgb(62, 153, 215) 30px 30px, rgb(63, 154, 217) 31px 31px, rgb(63, 155, 218) 32px 32px, rgb(64, 156, 220) 33px 33px, rgb(64, 157, 222) 34px 34px, rgb(65, 159, 223) 35px 35px, rgb(65, 160, 225) 36px 36px, rgb(66, 161, 227) 37px 37px, rgb(66, 162, 228) 38px 38px, rgb(67, 163, 230) 39px 39px, rgb(67, 165, 232) 40px 40px, rgb(68, 166, 233) 41px 41px; overflow: hidden;
 }
 
 .text-indigo {
