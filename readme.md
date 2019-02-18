@@ -15,7 +15,7 @@ HTML, CSS, JavaScript, Jquery, PHP
 <br>
 
 
-If you want to contact me, please send an e-mail to [ontanomariio95@gmail.com](mailto:ontanomariio95@gmail.com).
+If you want to contact me, please send an e-mail to [shipotech@gmail.com](mailto:shipotech@gmail.com).
 <br>
 
 ##  Linkedin
