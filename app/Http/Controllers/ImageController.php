@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image as Intervention;
 
 class ImageController extends Controller
 {
@@ -15,6 +16,7 @@ class ImageController extends Controller
         $this->middleware('auth');
     }
 
+    // Method for profile avatar
     public function ajaxImage(Request $request)
     {
         if ($request->isMethod('get')) {
@@ -58,6 +60,7 @@ class ImageController extends Controller
         return $filename;
     }
 
+    // Method for Upload images in Home
     public function store(Request $request)
     {
         // Obtain data
@@ -79,22 +82,62 @@ class ImageController extends Controller
 
         // Upload the image
         if ($image_path) {
+
+            //filename to store
             $extension = $image_path->getClientOriginalExtension();
             $filename = uniqid('', true) . '_' . time() . '.' . $extension;
 
-            // Save the new photo on disk
+            // Save the new Image on disk
             Storage::disk('images')->put($filename, File::get($image_path));
+
+            // Obtain the new ubication of the Image
+            $saveImage = public_path('storage/images/'.$filename);
+
+            // Obtain the dimension
+            $height = Intervention::make($saveImage)->height();
+            $width = Intervention::make($saveImage)->width();
+
+            // Fill the images that don't fit the condition's below:
+            if ($width < 665 && $height < 400) {
+                // create an Instance
+                $img = Intervention::make($saveImage);
+
+                // set a background-color for the emerging area
+                $img->resizeCanvas(665, 400, 'center', false, '212121');
+            } elseif ($width < 665) {
+                // create empty canvas
+                $img = Intervention::make($saveImage);
+
+                // set a background-color for the emerging area
+                $img->resizeCanvas(665, $height, 'center', false, '212121');
+            } elseif ($height < 400) {
+                // create empty canvas
+                $img = Intervention::make($saveImage);
+
+                // set a background-color for the emerging area
+                $img->resizeCanvas($width, 400, 'center', false, '212121');
+            } else {
+                //Resize image here
+                $img = Intervention::make($saveImage)->resize(665, 600, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+            }
+
+            $img->save($saveImage);
 
             // Update with the new photo
             $image->image_path = $filename;
             $image->save();
+
         }
 
         return redirect()->route('home')->with([
-            'message' => 'You upload the image successfully'
+            'message'   => 'You upload the image successfully'
         ]);
     }
 
+    // Method for show (one) uploaded image
     public function show($id)
     {
         $image = Image::find($id);

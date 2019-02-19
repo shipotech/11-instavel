@@ -13,7 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{ asset('css/pro-4.7.1.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" href="{{ asset('css/mdb.min.css') }}">
     <!-- Your custom styles (optional) -->
@@ -35,10 +35,14 @@
 <header>
     <nav class="navbar fixed-top navbar-expand-lg @if (session('isDark')) navbar-dark unique-color-dark @else navbar-light light-mode @endif py-0">
         <div class="container">
-            <a class="navbar-brand d-flex justify-content-center align-items-center" href="{{ route('home') }}">
-                <i class="fa fa-camera-retro sticky" id="logo"> </i>
-                <span class="mx-2 font-weight-bold text-indigo">| Instavel</span>
-            </a>
+            <div>
+                <a class="navbar-brand d-flex flex-row align-items-center" href="{{ route('home') }}">
+                    <i class="fa fa-camera-retro" id="logo"> </i>
+                    <div class="d-flex align-items-center">
+                        <h1 class="m-0 mx-2 text-logo h2-responsive font-weight-bolder">| Instavel</h1>
+                    </div>
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -88,7 +92,7 @@
                                 </a>
 
 
-                                <div class="dropdown-menu dropdown-menu-right dropdown-ins @if(session('isDark')) unique-color-dark @else white @endif" aria-labelledby="navbarDropdownMenuLink-55">
+                                <div class="dropdown-menu dropdown-menu-right dropdown-primary @if(session('isDark')) unique-color-dark @else white @endif" aria-labelledby="navbarDropdownMenuLink-55">
                                     <a class="dropdown-item @if(session('isDark')) text-white @else black-text @endif" href="">
                                         Profile
                                     </a>

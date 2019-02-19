@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-lg-5 py-5">
     <div class="row justify-content-center">
-        <div class="col-md-4 order-md-2 mb-5">
+        <div class="col-md-4 order-md-2 mb-5 pr-md-0 pl-md-5">
             <!-- Card -->
                 <div class="card promoting-card mb-2">
                     <!-- Card content -->
@@ -70,13 +70,13 @@
                 <!-- Card -->
         </div>
 
-        <div class="col-md-6 order-md-1">
+        <div class="col-md-7 order-md-1 pl-md-0 pr-md-0">
 
             @foreach($images as $image)
             <!-- Card -->
-            <div class="card promoting-card mb-5">
+            <article class="card promoting-card mb-5">
                 <!-- Card content -->
-                <div class="card-body d-flex flex-row py-2 align-items-center">
+                <header class="card-body d-flex flex-row py-2 align-items-center">
                     <!-- Avatar -->
                     <img src="@if($image->user->image) {{ asset('storage/users/' . $image->user->image) }} @else {{ asset('img/img3-escala.png') }} @endif" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
                     <!-- Content -->
@@ -86,11 +86,15 @@
                         <!-- Subtitle -->
                         <p class="card-text">5 min ago</p>
                     </div>
-                </div>
+                </header>
 
                 <!-- Card image -->
                 <div class="view overlay">
-                    <img class="card-img-top rounded-0" src="@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }} @else {{ asset('img/img3-escala.png') }} @endif" alt="Card image cap" height="500px" width="500px">
+                    <img class="card-img-top rounded-0" src="
+@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
+                    @else {{ asset('img/img3-escala.png') }} @endif"
+                         alt="Card image cap"
+                         style="height: @if($image->user->image) {{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height() - 30) }} @else 400 @endif px;">
                     <a href="{{ route('image.show', ['id' => $image->id]) }}">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -115,7 +119,7 @@
                         <li class="list-inline-item pr-2 white-text"><i class="far fa-clock pr-1"></i>{{ $image->created_at->diffForHumans() }}</li>
                     </ul>
                 </div>
-            </div>
+            </article>
             <!-- Card -->
             @endforeach
                 <div class="clearfix"></div>
