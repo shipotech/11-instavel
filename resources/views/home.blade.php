@@ -70,7 +70,7 @@
                 <!-- Card -->
         </div>
 
-        <div class="col-md-7 order-md-1 pl-md-0 pr-md-0">
+        <div class="col-md-7 order-md-1">
 
             @foreach($images as $image)
             <!-- Card -->
@@ -94,7 +94,7 @@
 @if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
                     @else {{ asset('img/img3-escala.png') }} @endif"
                          alt="Card image cap"
-                         style="height: @if($image->user->image) {{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height() - 30) }} @else 400 @endif px;">
+                         style="@if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 400px;@endif">
                     <a href="{{ route('image.show', ['id' => $image->id]) }}">
                         <div class="mask rgba-white-slight"></div>
                     </a>

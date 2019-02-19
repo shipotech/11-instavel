@@ -98,24 +98,24 @@ class ImageController extends Controller
             $width = Intervention::make($saveImage)->width();
 
             // Fill the images that don't fit the condition's below:
-            if ($width < 665 && $height < 400) {
+            if ($width < 665 && $height < 450) {
                 // create an Instance
                 $img = Intervention::make($saveImage);
 
                 // set a background-color for the emerging area
-                $img->resizeCanvas(665, 400, 'center', false, '212121');
+                $img->resizeCanvas(665, 450, 'center', false, '212121');
             } elseif ($width < 665) {
                 // create empty canvas
                 $img = Intervention::make($saveImage);
 
                 // set a background-color for the emerging area
                 $img->resizeCanvas(665, $height, 'center', false, '212121');
-            } elseif ($height < 400) {
+            } elseif ($height < 450) {
                 // create empty canvas
                 $img = Intervention::make($saveImage);
 
                 // set a background-color for the emerging area
-                $img->resizeCanvas($width, 400, 'center', false, '212121');
+                $img->resizeCanvas($width, 450, 'center', false, '212121');
             } else {
                 //Resize image here
                 $img = Intervention::make($saveImage)->resize(665, 600, function ($constraint) {
