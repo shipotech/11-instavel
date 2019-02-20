@@ -4,72 +4,6 @@
 <div class="container mt-lg-5 py-5">
     <div class="row justify-content-center">
         <div class="col-md-4 order-md-2 mb-5 pr-lg-5 pl-lg-5">
-            {{--<!-- Card -->--}}
-                {{--<div class="card promoting-card mb-2">--}}
-                    {{--<!-- Card content -->--}}
-                    {{--<div class="card-body d-flex flex-row py-2 align-items-center">--}}
-                        {{--<!-- Avatar -->--}}
-                        {{--<img src="{{ asset('storage/users/' . Auth::user()->image) }}" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">--}}
-                        {{--<!-- Content -->--}}
-                        {{--<div class="mdb-color-text">--}}
-                            {{--<!-- Nick -->--}}
-                            {{--<h4 class="card-title font-weight-bold mb-1 h5-responsive">{{ Auth::user()->name . ' ' . Auth::user()->surname}}</h4>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<!-- Card content -->--}}
-                    {{--<div class="card-body m-0 py-0">--}}
-                        {{--<div class="alert alert-danger fade text-danger d-none text-sm" role="alert" id="error">--}}
-                            {{--<strong>Whoops!</strong> <span>The file must be an image (jpeg, png)</span>--}}
-                        {{--</div>--}}
-
-                        {{--@if($errors->any())--}}
-                            {{--<div class="alert alert-danger fade show text-danger text-sm" role="alert">--}}
-                                {{--<strong>Whoops!</strong>--}}
-                                    {{--@foreach($errors->all() as $message)--}}
-                                        {{--<span>{{ $message }}</span>--}}
-                                    {{--@endforeach--}}
-                            {{--</div>--}}
-                        {{--@endif--}}
-
-                        {{--@if(session('message'))--}}
-                            {{--<div class="alert alert-success alert-dismissible fade show text-sm" role="alert">--}}
-                                {{--<strong>Success!</strong> {{ session('message') }}.--}}
-                                {{--<button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
-                                    {{--<span aria-hidden="true">&times;</span>--}}
-                                {{--</button>--}}
-                            {{--</div>--}}
-                        {{--@endif--}}
-
-
-                        {{--<div class="mx-auto">--}}
-                            {{--<div class="view overlay overflow-hidden">--}}
-                                {{--<a title="Upload your photo" href="javascript:changeUpload()">--}}
-                                    {{--<img src="{{ asset('img/img2-escala.png') }}" alt="upload picture" class="img-fluid upload-preview w-100">--}}
-                                    {{--<div class="mask flex-center text-white rgba-black-strong overflow-hidden">--}}
-                                        {{--<i class="fa fa-camera fa-2x"></i>--}}
-                                    {{--</div>--}}
-                                {{--</a>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{----}}
-                        {{--<div class="form-group shadow-textarea w-100">--}}
-                            {{--<form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form">--}}
-                                {{--@csrf--}}
-                                {{--<input type="file" name="upload" id="upload-image" style="display: none" required/>--}}
-                                {{--<label for="description" class="sr-only-focusable"></label>--}}
-                                {{--<textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." required></textarea>--}}
-                                {{--<button type="submit" class="btn indigo accent-4 border-0 hoverable float-right  mx-0 my-4 white-text">--}}
-                                    {{--<i class="fas fa-upload" aria-hidden="true"></i> Upload--}}
-                                {{--</button>--}}
-                            {{--</form>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                {{--</div>--}}
-                {{--<!-- Card -->--}}
-
-
             <!-- Card NEW -->
                 <article class="card news-card mb-5">
 
@@ -105,6 +39,15 @@
                             </div>
                         @endif
 
+                        @if(session('error'))
+                            <div class="alert alert-danger fade show text-dark text-sm" role="alert">
+                                <strong>Whoops!</strong> {{ session('error') }}.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
+
                         @if(session('message'))
                             <div class="alert alert-success alert-dismissible fade show text-sm" role="alert">
                                 <strong>Success!</strong> {{ session('message') }}.
@@ -128,6 +71,7 @@
                         <div class="form-group shadow-textarea w-100">
                             <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form">
                                 @csrf
+                                <input type="hidden" name="form_token" value="{{ session('form_token') }}">
                                 <input type="file" name="upload" id="upload-image" style="display: none" required/>
                                 <label for="description" class="sr-only-focusable"></label>
                                 <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." required></textarea>

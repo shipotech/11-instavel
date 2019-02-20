@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -63,6 +64,16 @@ class ImageController extends Controller
     // Method for Upload images in Home
     public function store(Request $request)
     {
+        // Check if the user don't submit the form multiple times
+        $form_token = $request->input('form_token');
+
+        if (!Hash::check($form_token, session('form_token'))) {
+            return redirect()->route('home')->with([
+                'error'   => 'Please, wait a moment'
+            ]);
+        }
+        // ---------------------------------------------------------
+
         // Obtain data
         $description = $request->input('description');
         $image_path = $request->file('upload');
@@ -124,6 +135,7 @@ class ImageController extends Controller
                 });
             }
 
+            // Save the resize Image
             $img->save($saveImage);
 
             // Update with the new photo
