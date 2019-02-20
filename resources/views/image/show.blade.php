@@ -40,7 +40,7 @@
                 <div class="card promoting-card mb-5 z-depth-2">
                     <div class="row">
 
-                        <div class="col-md-7">
+                        <div class="col-md-7 pr-md-0">
                             <!-- Card image -->
                             <div class="w-100 white">
                                 <img class="card-img-top rounded-0 d-block"
@@ -52,10 +52,10 @@
 
                         <div class="col-md-5 pl-md-0"
                              style="@if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
-                            <div class="h-30 news-card">
+                            <div class="h-30 news-card overflow-hidden border-bottom">
 
                             <!-- Heading-->
-                                <div class="card-body w-100">
+                                <div class="card-body w-100 mb-0">
                                     <div class="content d-flex align-items-center">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-12 text-center">
@@ -71,15 +71,11 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="d-flex flex-column h-70">
-                                <div class="scrollbar scrollbar-primary p-0">
+                                <div class="scrollbar scrollbar-primary p-0 mb-0">
                                     <div class="force-overflow">
-                                <div class="card-body px-3 py-0">
-                                    <hr class="hr-bold">
-                                </div>
                                         <!-- Card content -->
-                                        <div class="card-body px-3 py-0">
+                                        <div class="card-body pb-0 pt-2">
                                             <!-- Text -->
                                             <p class="card-text text-body">
                                                 <span class="black-text font-weight-bold">{{ $image->user->nick }}</span> {{ $image->description }}
@@ -109,16 +105,16 @@
                                                                 <span class="card-text text-body">
                        {{ $comment->content }}
                        </span>
-                                                            </div>
-                                                        @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))
+                                                        @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))&nbsp;
                                                             <!-- Feed footer -->
                                                                 <div class="feed-footer">
                                                                     <a href="{{ route('comment.delete', ['id' => $comment->id]) }}"
-                                                                       class="like" title="delete">
+                                                                       class="like float-left" title="delete">
                                                                         <i class="fas fa-trash"></i>
                                                                     </a>
                                                                 </div>
                                                             @endif
+                                                            </div>
                                                         </div>
                                                         <!-- Excerpt -->
                                                     </div>
