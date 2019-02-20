@@ -64,12 +64,12 @@ class ImageController extends Controller
     // Method for Upload images in Home
     public function store(Request $request)
     {
-        // Check if the user don't submit the form multiple times
+        // Check if the user has submit the form multiple times
         $form_token = $request->input('form_token');
 
-        if (!Hash::check($form_token, session('form_token'))) {
+        if ($form_token !== session('form_token')) {
             return redirect()->route('home')->with([
-                'error'   => 'Please, wait a moment'
+                'error'   => 'Please, wait a moment or refresh this page'
             ]);
         }
         // ---------------------------------------------------------
@@ -142,10 +142,13 @@ class ImageController extends Controller
             $image->image_path = $filename;
             $image->save();
 
+            return redirect()->route('home')->with([
+                'message'   => 'You upload the image successfully'
+            ]);
         }
 
         return redirect()->route('home')->with([
-            'message'   => 'You upload the image successfully'
+            'errors'   => 'Something goes wrong...'
         ]);
     }
 
