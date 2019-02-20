@@ -192,6 +192,12 @@
             }
         @endif
 
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
         $.ajax({
             method: 'POST',
             url: "{{ url('/update/photo') }}",
