@@ -115,10 +115,16 @@
                 <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
-                            <a href="#" class="white-text">
-                                <i class="far fa-heart pr-1"></i>
-                                {{ count($image->likes) }}
-                            </a>
+                            <div class="feed-footer">
+                                <a class="like">
+                                    <i class="fas fa-heart pr-1"></i>
+                                    <span>{{ count($image->likes) }}</span>
+                                </a>
+                            </div>
+                            {{--<a href="#" class="white-text">--}}
+                                {{--<i class="far fa-heart pr-1"></i>--}}
+                                {{--{{ count($image->likes) }}--}}
+                            {{--</a>--}}
                         </li>
                         <li class="list-inline-item pr-2">
                             <a href="{{ route('image.show', ['id' => $image->id]) }}" class="white-text">
