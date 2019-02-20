@@ -73,74 +73,74 @@
         <div class="col-md-7 order-md-1">
 
             @foreach($images as $image)
-            <!-- Card -->
-            <article class="card promoting-card mb-5">
-                <!-- Card content -->
-                <header class="card-body d-flex flex-row py-2 align-items-center">
-                    <!-- Avatar -->
-                    <img src="@if($image->user->image) {{ asset('storage/users/' . $image->user->image) }} @else {{ asset('img/img3-escala.png') }} @endif" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
-                    <!-- Content -->
-                    <div class="mdb-color-text">
-                        <!-- Nick -->
-                        <h4 class="card-title font-weight-bold mb-1 h4-responsive">{{ $image->user->nick }}</h4>
-                        <!-- Subtitle -->
-                        <p class="card-text">5 min ago</p>
-                    </div>
-                </header>
+                <!-- Card -->
+                    <article class="card news-card mb-5">
 
-                <!-- Card image -->
-                <div class="view overlay">
-                    <img class="card-img-top rounded-0" src="
-@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
-                    @else {{ asset('img/img3-escala.png') }} @endif"
-                         alt="Card image cap"
-                         style="@if($image->user->image) height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }} @else height: 400px;@endif">
-                    <a href="{{ route('image.show', ['id' => $image->id]) }}">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-
-                <!-- Card content -->
-                <div class="card-body">
-                    <div class="collapse-content">
-                        <!-- Text -->
-                        <p class="card-text collapse" id="collapseContent">
-                            <span class="black-text">{{ '@' . $image->user->nick }}</span>
-                            {{ $image->description }}
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card footer -->
-                <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <div class="feed-footer">
-                                <a class="like">
-                                    <i class="fas fa-heart pr-1"></i>
-                                    <span>{{ count($image->likes) }}</span>
-                                </a>
+                        <!-- Heading-->
+                        <header class="card-body w-100 px-0 py-2">
+                            <div class="content">
+                                <div class="row w-100 m-0 p-0">
+                                    <div class="col-12 text-center d-flex flex-row">
+                                        <img src="@if($image->user->image) {{ asset('storage/users/' . $image->user->image) }} @else {{ asset('img/img3-escala.png') }} @endif" class="rounded-circle avatar-img" alt="avatar">
+                                        <div class="col-md d-flex flex-column align-items-start">
+                                            <p class="font-weight-bold m-0">
+                                                {{ $image->user->nick }}
+                                            </p>
+                                            <span class="text-sm text-muted font-weight-normal mt-2">
+                                        <i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            {{--<a href="#" class="white-text">--}}
-                                {{--<i class="far fa-heart pr-1"></i>--}}
-                                {{--{{ count($image->likes) }}--}}
-                            {{--</a>--}}
-                        </li>
-                        <li class="list-inline-item pr-2">
-                            <a href="{{ route('image.show', ['id' => $image->id]) }}" class="white-text">
-                        @if(count($image->comments) > 0)
-                                <i class="fas fa-comments pr-1"></i>
-                            @else
-                                <i class="far fa-comments pr-1"></i>
-                            @endif
-                            {{ count($image->comments) }}
+                        </header>
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                            <img class="card-img-top rounded-0" src="
+@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
+                            @else {{ asset('img/img3-escala.png') }} @endif"
+                                 alt="Card image cap"
+                                 style="@if($image->user->image) height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }} @else height: 400px;@endif">
+                            <a href="{{ route('image.show', ['id' => $image->id]) }}">
+                                <div class="mask rgba-white-slight"></div>
                             </a>
-                        </li>
-                        <li class="list-inline-item pr-2 white-text"><i class="far fa-clock pr-1"></i>{{ $image->created_at->diffForHumans() }}</li>
-                    </ul>
-                </div>
-            </article>
-            <!-- Card -->
+                        </div>
+
+                        <div class="card-body pb-0 mdb-color-text">
+                            <div class="row p-0 m-0">
+                                <div class="col px-0">
+                                    <a href="#" class="pr-2 text-muted icons likes">
+                                        <i class="far fa-heart"></i>
+                                        {{ count($image->likes) }}
+                                    </a>
+
+                                    <a href="{{ route('image.show', ['id' => $image->id]) }}" class="text-muted icons">
+                                        @if(count($image->comments) > 0)
+                                            <i class="fas fa-comments"></i>
+                                        @else
+                                            <i class="far fa-comments"></i>
+                                        @endif
+                                        {{ count($image->comments) }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card content -->
+                        <div class="card-body px-3 pb-0 pt-2 mdb-color-text">
+                            <div class="collapse-content pb-3 pt-0">
+                                <!-- Text -->
+                                <p class="card-text collapse" id="collapseContent">
+                                    <span class="black-text font-weight-bold">{{ $image->user->nick }}</span>
+                                    {{ $image->description }}
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet enim est fuga fugit in iste, necessitatibus non possimus quibusdam quidem reprehenderit sapiente sint suscipit temporibus tenetur ut vero voluptates.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque eaque explicabo facere optio, ratione tempora totam. Architecto aut autem ex facere facilis harum illo neque, numquam provident tempora. Ipsa.
+                                </p>
+                            </div>
+                        </div>
+
+                    </article>
+                    <!-- Card -->
             @endforeach
                 <div class="clearfix"></div>
                 <div class="d-flex justify-content-center white align-items-center align-content-center">
