@@ -106,5 +106,14 @@ textarea#description {
 .h-70 {
     height: 70% !important;
 }
-
 /*Comments*/
+
+/*Icons*/
+.icons i {
+    font-size: 1.4rem !important;
+}
+
+.likes:hover > i{
+    color: #dc3545 !important;
+}
+/*Icons*/
