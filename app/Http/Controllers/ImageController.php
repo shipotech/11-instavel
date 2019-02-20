@@ -70,7 +70,7 @@ class ImageController extends Controller
         // Validation
         $validate = $this->validate($request, [
            'description'    => 'required',
-           'upload'         => 'required|mimes:jpeg,jpg,png,gif'
+           'upload'         => 'required|mimes:jpeg,jpg,png'
         ]);
 
         // Assign values
