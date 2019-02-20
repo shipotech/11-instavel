@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-lg-5 py-5">
     <div class="row justify-content-center">
-        <div class="col-md-4 order-md-2 mb-5 pr-md-0 pl-md-5">
+        <div class="col-md-4 order-md-2 mb-5 pr-lg-5 pl-lg-5">
             <!-- Card -->
                 <div class="card promoting-card mb-2">
                     <!-- Card content -->
@@ -20,7 +20,7 @@
                     <!-- Card content -->
                     <div class="card-body m-0 py-0">
                         <div class="alert alert-danger fade text-danger d-none text-sm" role="alert" id="error">
-                            <strong>Whoops!</strong> <span>The file must be an image (jpeg, png, gif)</span>
+                            <strong>Whoops!</strong> <span>The file must be an image (jpeg, png)</span>
                         </div>
 
                         @if($errors->any())
@@ -94,7 +94,7 @@
 @if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
                     @else {{ asset('img/img3-escala.png') }} @endif"
                          alt="Card image cap"
-                         style="@if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 400px;@endif">
+                         style="@if($image->user->image) height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }} @else height: 400px;@endif">
                     <a href="{{ route('image.show', ['id' => $image->id]) }}">
                         <div class="mask rgba-white-slight"></div>
                     </a>
@@ -114,8 +114,22 @@
                 <!-- Card footer -->
                 <div class="rounded-bottom mdb-color lighten-3 text-center pt-3">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="#" class="white-text"><i class="far fa-heart pr-1"> </i>{{ count($image->likes) }}</a></li>
-                        <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="far fa-comments pr-1"></i>{{ count($image->comments) }}</a></li>
+                        <li class="list-inline-item">
+                            <a href="#" class="white-text">
+                                <i class="far fa-heart pr-1"></i>
+                                {{ count($image->likes) }}
+                            </a>
+                        </li>
+                        <li class="list-inline-item pr-2">
+                            <a href="{{ route('image.show', ['id' => $image->id]) }}" class="white-text">
+                        @if(count($image->comments) > 0)
+                                <i class="fas fa-comments pr-1"></i>
+                            @else
+                                <i class="far fa-comments pr-1"></i>
+                            @endif
+                            {{ count($image->comments) }}
+                            </a>
+                        </li>
                         <li class="list-inline-item pr-2 white-text"><i class="far fa-clock pr-1"></i>{{ $image->created_at->diffForHumans() }}</li>
                     </ul>
                 </div>

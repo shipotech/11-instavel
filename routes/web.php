@@ -27,8 +27,13 @@ Route::post('/update/personal', 'UserController@updatePersonal')->name('user.per
 Route::post('/update/login', 'UserController@updateLogin')->name('user.login');
 Route::post('/update/password', 'UserController@updatePassword')->name('user.password');
 
+// Update Profile picture
 Route::match(['get', 'post'], '/update/photo', 'ImageController@ajaxImage');
 
 // Upload Images
 Route::post('/upload', 'ImageController@store')->name('image.store');
 Route::get('/image/{id}', 'ImageController@show')->name('image.show');
+
+// Comments
+Route::post('/comment', 'CommentController@store')->name('comment.store');
+Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');

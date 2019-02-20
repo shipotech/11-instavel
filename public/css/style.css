@@ -73,6 +73,7 @@ textarea#description {
     overflow-y: scroll;
     margin-bottom: 25px;
 }
+
 .force-overflow {
     min-height: 12em;
 }
@@ -87,3 +88,23 @@ textarea#description {
     background-color: #4285F4; }
 
 /*Scroll Bar*/
+
+/*Comments*/
+.mdb-feed .news .label img {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+.news-card .content .avatar-img {
+    width: 4rem !important;
+    height: 4rem !important;
+}
+.h-30 {
+    height: 30% !important;
+}
+
+.h-70 {
+    height: 70% !important;
+}
+
+/*Comments*/
