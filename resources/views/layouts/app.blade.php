@@ -25,9 +25,9 @@
     <!-- Bootstrap tooltips -->
     <script src="{{ asset('js/popper.min.js') }}" type="text/javascript"></script>
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" async></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
     <!-- MDB core JavaScript -->
-    <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript" async></script>
+    <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript"></script>
     <!-- SCRIPTS -->
 </head>
 <body class="@if (session('isDark')) dark-mode @else @guest rgba-blue-strong @else light-mode @endguest @endif ">

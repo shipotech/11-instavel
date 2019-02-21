@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-    </list>
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +123,7 @@
           <entry key="js" value="381" />
           <entry key="json" value="5" />
           <entry key="md" value="435" />
-          <entry key="php" value="25236" />
+          <entry key="php" value="25257" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1162" />
           <entry key="txt" value="1987" />
@@ -146,7 +138,7 @@
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="381" />
           <entry key="Markdown" value="435" />
-          <entry key="PHP" value="8160" />
+          <entry key="PHP" value="8181" />
           <entry key="PLAIN_TEXT" value="2031" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1162" />
@@ -173,20 +165,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="552">
+              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://97daeeaa-6673-4ddd-9e47-37cb74620d32/schema/instavel/table/images">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -449,17 +432,6 @@
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -533,7 +505,7 @@
       <workItem from="1550585966725" duration="2804000" />
       <workItem from="1550609756743" duration="30061000" />
       <workItem from="1550675259158" duration="37611000" />
-      <workItem from="1550765233280" duration="10926000" />
+      <workItem from="1550765233280" duration="11545000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -637,14 +609,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339363000" />
+    <option name="totallyTimeSpent" value="339982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.2118003" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.5060423" side_tool="true" weight="0.14787701" />
       <window_info id="Favorites" order="5" sideWeight="0.50453174" side_tool="true" weight="0.13250366" />
@@ -660,7 +633,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.396875" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3836858" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5014641" side_tool="true" weight="0.31722054" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -668,7 +641,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15960665" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15446559" />
       <window_info anchor="right" id="Key Promoter X" order="4" />
     </layout>
   </component>
@@ -1012,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="55" column="35" lean-forward="true" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+        <state relative-caret-position="552">
+          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
           <folding>
             <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
