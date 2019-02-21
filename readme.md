@@ -25,14 +25,15 @@ HTML, CSS, JavaScript, Jquery, PHP
 8- npm run dev <br>
 
 <br>
-If you want to contact me, please send an e-mail to [shipotech@gmail.com](mailto:shipotech@gmail.com).
-<br>
+If you want to contact me, please send an e-mail to:
+
+[shipotech@gmail.com](mailto:shipotech@gmail.com)
+
 
 ##  Linkedin
 
 [https://www.linkedin.com/in/mario-montano-129917179/](https://www.linkedin.com/in/mario-montano-129917179/)
 <br>
-
 
 ## License
 
