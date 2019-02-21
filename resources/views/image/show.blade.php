@@ -55,7 +55,7 @@
                             <div class="h-30 news-card overflow-hidden border-bottom">
 
                             <!-- Heading-->
-                                <div class="card-body w-100 mb-0">
+                                <div class="card-body w-100 pb-0 pt-2">
                                     <div class="content d-flex align-items-center">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-12 text-center">
@@ -66,12 +66,12 @@
                                                 </p>
                                             </div>
 
-                                            <div class="right-side-meta ml-auto text-sm text-primary font-weight-normal align-self-center mt-0"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</div>
+                                            <div class="ml-auto text-sm text-primary font-weight-normal align-self-center mt-0"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column h-70">
+                            <div class="d-flex flex-column h-70 overflow-hidden">
                                 <div class="scrollbar scrollbar-primary p-0 mb-0">
                                     <div class="force-overflow">
                                         <!-- Card content -->
@@ -94,7 +94,7 @@
                                                     <div class="news mb-1">
                                                         <!-- Label -->
                                                         <div class="label">
-                                                            <img src="@if($comment->user->image) {{ asset('storage/users/' . $comment->user->image) }} @else {{ asset('img/img3-escala.png') }} @endif"
+                                                            <img src="@if($comment->user->image) {{ asset('storage/users/' . $comment->user->image) }} @else {{ asset('img/noimage.png') }} @endif"
                                                                  class="rounded-circle avatar-img d-block">
                                                         </div>
 
@@ -128,6 +128,7 @@
                                     <div class="card-body px-3 py-0">
                                         <form action="{{ route('comment.store') }}" method="post" id="comment-form" class="prevent-form-submit">
                                         @csrf
+                                            <input type="hidden" name="form_token" value="{{ session('form_token') }}">
                                         <!--Material textarea-->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="col p-0">
@@ -141,7 +142,9 @@
                                                 </div>
                                                 <div>
                                                     <div class="md-form">
-                                                        <button type="submit" class="btn-floating btn-rounded border-0 primary-color white-text prevent-buttom-submit"><i class="far fa-comment"></i><i class="fas fa-circle-notch fa-spin load"></i></button>
+                                                        <button type="submit" class="btn-floating btn-rounded border-0 primary-color white-text prevent-button-submit"><i class="far fa-comment"></i>
+                                                            <i class="fas fa-circle-notch fa-spin load"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>

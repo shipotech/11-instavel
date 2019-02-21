@@ -12,7 +12,7 @@
                         <div class="content d-flex">
                             <div class="row w-100 m-0 p-0">
                                 <div class="col-12 p-0">
-                                    <img src="@if(Auth::user()->image) {{ asset('storage/users/' . Auth::user()->image) }} @else {{ asset('img/img3-escala.png') }} @endif"
+                                    <img src="@if(Auth::user()->image) {{ asset('storage/users/' . Auth::user()->image) }} @else {{ asset('img/noimage.png') }} @endif"
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">

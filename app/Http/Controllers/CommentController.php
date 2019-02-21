@@ -20,6 +20,16 @@ class CommentController extends Controller
         $image_id = $request->input('image_id');
         $content = $request->input('content');
 
+        // Check if the user has submit the form multiple times
+        $form_token = $request->input('form_token');
+
+        if ($form_token !== session('form_token')) {
+            return redirect()->route('image.show', ['id' => $image_id])->with([
+                'error'   => 'Please, wait a moment or refresh this page'
+            ]);
+        }
+        // -----------------------------------------------------
+
         // Validate the form data
         $validate = $this->validate($request, [
             'image_id'  => 'integer|required',

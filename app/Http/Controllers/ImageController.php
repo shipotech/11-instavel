@@ -157,6 +157,15 @@ class ImageController extends Controller
     {
         $image = Image::find($id);
 
+        // form token
+        $form_token = uniqid('', true);
+
+        // Hashing uniqid
+        $form_token = Hash::make($form_token);
+
+        // create form token session and store generated id in it.
+        session(['form_token' => $form_token]);
+
         return view('image.show', [
             'image'     => $image
         ]);
