@@ -16,7 +16,7 @@ HTML, CSS, JavaScript, Jquery, PHP
 
 ## Instructions:
 1- Clone the repo and cd into it <br>
-2- `Composer install` <br>
+2- `composer install` <br>
 3- Rename or copy .env.example file to .env <br>
 4- Enter your database credentials in your .env file <br>
 5- You can run the "database.sql" or the migrations <br>
