@@ -115,6 +115,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Procfile" value="44" />
           <entry key="cell" value="34" />
           <entry key="css" value="1220" />
           <entry key="env" value="28" />
@@ -138,7 +139,7 @@
           <entry key="JavaScript" value="381" />
           <entry key="Markdown" value="428" />
           <entry key="PHP" value="7903" />
-          <entry key="PLAIN_TEXT" value="1987" />
+          <entry key="PLAIN_TEXT" value="2031" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1162" />
           <entry key="Scratch" value="34" />
@@ -163,7 +164,11 @@
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -220,7 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
         <option value="$PROJECT_DIR$/resources/js/bootstrap.js" />
@@ -271,6 +275,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/public/js/prevent.js" />
         <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -479,7 +484,7 @@
       <workItem from="1550585966725" duration="2804000" />
       <workItem from="1550609756743" duration="30061000" />
       <workItem from="1550675259158" duration="37611000" />
-      <workItem from="1550765233280" duration="1641000" />
+      <workItem from="1550765233280" duration="2173000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -583,15 +588,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330078000" />
+    <option name="totallyTimeSpent" value="330610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.5060423" side_tool="true" weight="0.14787701" />
       <window_info id="Favorites" order="5" sideWeight="0.50453174" side_tool="true" weight="0.13250366" />
@@ -607,7 +611,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.58308154" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3957704" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5014641" side_tool="true" weight="0.31722054" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -945,7 +949,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
