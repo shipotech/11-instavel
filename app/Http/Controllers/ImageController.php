@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image as Intervention;
 
 class ImageController extends Controller
@@ -48,11 +47,13 @@ class ImageController extends Controller
 
         // Delete previous profile photo if the user has one on DB
         if ($user->image !== null || !empty($user->image)) {
-            Storage::disk('users')->delete($user->image);
+//            Storage::disk('users')->delete($user->image);
+            File::delete(public_path('storage/users/'), $user->image);
         }
 
         // Save the new photo
-        Storage::disk('users')->put($filename, File::get($image));
+//        Storage::disk('users')->put($filename, File::get($image));
+        $image->move(public_path('storage/users/'), $filename);
 
         // Update with the new photo
         $user->image = $filename;
@@ -99,7 +100,8 @@ class ImageController extends Controller
             $filename = uniqid('', true) . '_' . time() . '.' . $extension;
 
             // Save the new Image on disk
-            Storage::disk('images')->put($filename, File::get($image_path));
+//            Storage::disk('images')->put($filename, File::get($image_path));
+            $image_path->move(public_path('storage/images/'), $filename);
 
             // Obtain the new ubication of the Image
             $saveImage = public_path('storage/images/'.$filename);
