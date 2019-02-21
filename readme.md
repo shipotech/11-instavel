@@ -60,7 +60,9 @@ If you want to contact me, please send an e-mail to:
 <br><br>
 </p>
 
-##Linkedin
+<br>
+
+## Linkedin
 
 [https://www.linkedin.com/in/mario-montano-129917179/](https://www.linkedin.com/in/mario-montano-129917179/)
 <br>

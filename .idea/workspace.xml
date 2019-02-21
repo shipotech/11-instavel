@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="" />
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,7 @@
           <entry key="comments" value="3" />
           <entry key="css" value="41" />
           <entry key="editorconfig" value="1" />
-          <entry key="env" value="2" />
+          <entry key="env" value="3" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="13" />
           <entry key="ico" value="3" />
@@ -80,9 +82,9 @@
           <entry key="js" value="42" />
           <entry key="json" value="2" />
           <entry key="log" value="1" />
-          <entry key="md" value="4" />
+          <entry key="md" value="5" />
           <entry key="migrations" value="1" />
-          <entry key="php" value="254" />
+          <entry key="php" value="255" />
           <entry key="phpcuBP41" value="1" />
           <entry key="png" value="5" />
           <entry key="rnc" value="1" />
@@ -94,7 +96,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="2" />
+          <entry key=".env file" value="3" />
           <entry key="Blade" value="114" />
           <entry key="CSS" value="41" />
           <entry key="Database Element" value="45" />
@@ -103,8 +105,8 @@
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="42" />
           <entry key="Log" value="1" />
-          <entry key="Markdown" value="4" />
-          <entry key="PHP" value="140" />
+          <entry key="Markdown" value="5" />
+          <entry key="PHP" value="141" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="8" />
@@ -122,7 +124,7 @@
           <entry key="html" value="561" />
           <entry key="js" value="381" />
           <entry key="json" value="3" />
-          <entry key="md" value="428" />
+          <entry key="md" value="435" />
           <entry key="php" value="24979" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1162" />
@@ -137,7 +139,7 @@
           <entry key="HTML" value="561" />
           <entry key="JSON" value="3" />
           <entry key="JavaScript" value="381" />
-          <entry key="Markdown" value="428" />
+          <entry key="Markdown" value="435" />
           <entry key="PHP" value="7903" />
           <entry key="PLAIN_TEXT" value="2031" />
           <entry key="SCSS" value="43" />
@@ -162,11 +164,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1574">
+                <caret line="64" column="3" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="11" selection-start-line="13" selection-end-line="13" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -269,13 +301,13 @@
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/public/js/prevent.js" />
         <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -411,6 +443,17 @@
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -484,7 +527,7 @@
       <workItem from="1550585966725" duration="2804000" />
       <workItem from="1550609756743" duration="30061000" />
       <workItem from="1550675259158" duration="37611000" />
-      <workItem from="1550765233280" duration="2173000" />
+      <workItem from="1550765233280" duration="4326000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -588,14 +631,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330610000" />
+    <option name="totallyTimeSpent" value="332763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.5060423" side_tool="true" weight="0.14787701" />
       <window_info id="Favorites" order="5" sideWeight="0.50453174" side_tool="true" weight="0.13250366" />
@@ -611,7 +655,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3957704" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.35951662" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5014641" side_tool="true" weight="0.31722054" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -683,18 +727,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Minor improvements, Fixed some bugs with the layout and comments." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/test.blade.php" />
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -882,16 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-809">
-            <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
@@ -952,6 +974,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1574">
+            <caret line="64" column="3" selection-start-line="64" selection-start-column="3" selection-end-line="64" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="11" selection-start-line="13" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
         </state>
       </provider>
     </entry>
