@@ -14,7 +14,17 @@ HTML, CSS, JavaScript, Jquery, PHP
 [MySQL](https://www.mysql.com)
 <br>
 
+## Instructions:
+1- Clone the repo and cd into it <br>
+2- Composer install <br>
+3- Rename or copy .env.example file to .env <br>
+4- Enter your database credentials in your .env file <br>
+5- You can run the "database.sql" <br>
+6- php artisan key:generate <br>
+7- npm install <br>
+8- npm run dev <br>
 
+<br>
 If you want to contact me, please send an e-mail to [shipotech@gmail.com](mailto:shipotech@gmail.com).
 <br>
 
