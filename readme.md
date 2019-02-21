@@ -16,13 +16,15 @@ HTML, CSS, JavaScript, Jquery, PHP
 
 ## Instructions:
 1- Clone the repo and cd into it <br>
-2- Composer install <br>
+2- `Composer install` <br>
 3- Rename or copy .env.example file to .env <br>
 4- Enter your database credentials in your .env file <br>
-5- You can run the "database.sql" <br>
-6- php artisan key:generate <br>
-7- npm install <br>
-8- npm run dev <br>
+5- You can run the "database.sql" or the migrations <br>
+6- `php artisan migrate` <br>
+7- `npm install` <br>
+8- `npm run dev` <br>
+9- `php artisan key:generate` <br>
+10- `php artisan storage:link` <br>
 
 <br>
 If you want to contact me, please send an e-mail to:
