@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container mt-lg-5 py-5">
-        <div class="row justify-content-center">
-            <div class="col-sm-8 col-lg-5">
+        <div class="row justify-content-center mt-lg-5">
+            <div class="col-sm-8 col-md-7 col-lg-5">
                 <!-- Material form login -->
                 <div class="card z-depth-1-half">
                     <h5 class="card-header indigo accent-4 white-text text-center py-4">
@@ -45,18 +45,18 @@
                                 @endif
                             </div>
 
-                            <div class="d-flex justify-content-around">
-                                <div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 pl-0">
                                     <!-- Remember me -->
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember"
                                                id="remember">
-                                        <label class="form-check-label" for="remember">
+                                        <label class="form-check-label col-12" for="remember">
                                             {{ __('Remember Me') }}
                                         </label>
                                     </div>
                                 </div>
-                                <div>
+                                <div class="col-12 col-md-6 mt-2 mt-md-0 pr-0">
                                     <!-- Forgot password -->
                                     @if (Route::has('password.request'))
                                         <a class="text-indigo" href="{{ route('password.request') }}">

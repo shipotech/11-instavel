@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-lg-5 py-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-lg-5">
             <div class="col-sm-8 col-lg-5">
                 <!-- Material form register -->
                 <div class="card z-depth-1-half ">
@@ -17,7 +17,7 @@
                         <form method="POST" action="{{ route('register') }}" class="text-center needs-validation" novalidate style="color: #757575;">
                             @csrf
                             <div class="form-row">
-                                <div class="col">
+                                <div class="col-md">
                                     <!-- First name -->
                                     <div class="md-form">
                                         <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -30,9 +30,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-md">
                                     <!-- Surname -->
-                                    <div class="md-form">
+                                    <div class="md-form mt-0 mt-md-4">
                                         <input id="surname" type="text" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname" value="{{ old('surname') }}" required>
                                         <label for="surname">{{ __('Surname') }}</label>
 
@@ -94,10 +94,11 @@
                                 </small>
                             </div>
 
-                            <div class="form-group">
-                                <div class="form-check pl-0">
+                            <div class="md-form">
+                            <div class="form-group col">
+                                <div class="form-check p-0 col">
                                     <input class="form-check-input" type="checkbox" value="1" id="checkbox" name="checkbox" required>
-                                    <label class="form-check-label" for="checkbox">
+                                    <label class="form-check-label col-12" for="checkbox">
                                         Agree to terms and conditions
                                     </label>
                                     <div class="invalid-feedback">
@@ -109,6 +110,7 @@
                                         </div>
                                     @endif
                                 </div>
+                            </div>
                             </div>
                             <!-- Sign up button -->
                             <button class="btn btn-outline-indigo btn-rounded btn-block my-4 waves-effectz-depth-0" type="submit"> {{ __('Register') }} </button>

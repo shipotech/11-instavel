@@ -35,12 +35,14 @@
 <header>
     <nav class="navbar fixed-top navbar-expand-lg @if (session('isDark')) navbar-dark unique-color-dark @else navbar-light light-mode @endif py-0">
         <div class="container">
-            <div>
-                <a class="navbar-brand d-flex flex-row align-items-center" href="{{ route('home') }}">
+            <div class="row">
+                <a class="navbar-brand m-0" href="{{ route('home') }}">
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-center">
                     <i class="fa fa-camera-retro" id="logo"> </i>
-                    <div class="d-flex align-items-center">
-                        <h1 class="m-0 mx-2 text-logo h2-responsive font-weight-bolder">| Instavel</h1>
+                        <h1 class="mx-2 mb-0 text-logo h2-responsive font-weight-bolder">| Instavel</h1>
                     </div>
+                </div>
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
