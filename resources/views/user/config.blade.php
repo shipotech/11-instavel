@@ -73,7 +73,7 @@
                         <p class="card-text white-text">Basic info, such as your name and surname on
                             <strong>Instavel</strong>.</p>
                         <!-- Form -->
-                        <form method="POST" action="{{ route('user.personal') }}" class="text-center">
+                        <form method="POST" action="{{ route('user.personal') }}" class="text-center prevent-form-submit">
                             @csrf
                             <div class="form-row justify-content-center">
                                 <div class="col-12 col-md-6">
@@ -113,10 +113,7 @@
                             </div>
                             <!-- Save-->
                             <div class="d-flex justify-content-end align-self-end">
-                                <button type="submit" class="btn-sm btn-rounded white border-0 hoverable">
-                                    <i class="fas fa-check @if(session('isDark')) mdb-color-text darken-3 @else text-default accent-4 @endif"
-                                       aria-hidden="true"></i>
-                                </button>
+                                <button type="submit" class="btn-floating btn-sm btn-rounded border-0 white prevent-buttom-submit"><i class="fas fa-check @if(session('isDark')) mdb-color-text darken-3 @else text-default accent-4 @endif" aria-hidden="true"></i></button>
                             </div>
                         </form>
                     </div>
@@ -136,7 +133,7 @@
                     </div>
 
                     <!-- Card content -->
-                    <div class="card-body @if(session('isDark')) unique-color-dark @else indigo accent-4 @endif white-text rounded-bottom">
+                    <div class="card-body @if(session('isDark')) unique-color-dark @else primary-color @endif white-text rounded-bottom">
 
                         <!-- Title -->
                         <h4 class="card-title h5-responsive"><i class="fas fa-lock-open"></i> Login</h4>
@@ -144,7 +141,7 @@
                         <!-- Text -->
                         <p class="card-text white-text">Account info, such as your nickname and email on
                             <strong>Instavel</strong>.</p>
-                        <form method="POST" action="{{ route('user.login') }}" class="text-center">
+                        <form method="POST" action="{{ route('user.login') }}" class="text-center prevent-form-submit">
                             @csrf
                             <div class="form-row justify-content-center">
                                 <div class="col-12 col-md-6">
@@ -188,10 +185,7 @@
                             </div>
                             <!-- Save-->
                             <div class="d-flex justify-content-end align-self-end">
-                                <button type="submit" class="btn-sm btn-rounded white border-0 hoverable">
-                                    <i class="fas fa-check @if(session('isDark')) text-dark @else text-indigo accent-4 @endif"
-                                       aria-hidden="true"></i>
-                                </button>
+                                <button type="submit" class="btn-floating btn-sm btn-rounded border-0 white prevent-buttom-submit"><i class="fas fa-check @if(session('isDark')) text-dark @else text-primary @endif" aria-hidden="true"></i></button>
                             </div>
                         </form>
                     </div>
@@ -218,7 +212,7 @@
                         <hr class="hr-light">
                         <!-- Text -->
                         <p class="card-text white-text">Change your password regularly to help us keep your account secure.</p>
-                        <form method="POST" action="{{ route('user.password') }}" class="text-center">
+                        <form method="POST" action="{{ route('user.password') }}" class="text-center prevent-form-submit">
                             @csrf
                             <div class="form-row justify-content-center">
                                 <div class="col-12 col-md-6">
@@ -252,10 +246,7 @@
                             </div>
                             <!-- Save-->
                             <div class="d-flex justify-content-end align-self-end">
-                                <button type="submit" class="btn-sm btn-rounded white border-0 hoverable">
-                                    <i class="fas fa-check @if(session('isDark')) mdb-color-text @else deep-purple-ic darken-4 @endif"
-                                       aria-hidden="true"></i>
-                                </button>
+                                <button type="submit" class="btn-floating btn-sm btn-rounded border-0 white prevent-buttom-submit"><i class="fas fa-check @if(session('isDark')) mdb-color-text @else deep-purple-ic darken-4 @endif" aria-hidden="true"></i></button>
                             </div>
                         </form>
                     </div>

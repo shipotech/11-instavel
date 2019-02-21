@@ -126,7 +126,7 @@
 
                                 <div class="mt-auto">
                                     <div class="card-body px-3 py-0">
-                                        <form action="{{ route('comment.store') }}" method="post" id="comment-form">
+                                        <form action="{{ route('comment.store') }}" method="post" id="comment-form" class="prevent-form-submit">
                                         @csrf
                                         <!--Material textarea-->
                                             <div class="d-flex justify-content-between align-items-center">
@@ -135,16 +135,13 @@
                                                         <input type="hidden" name="image_id" value="{{ $image->id }}">
                                                         <textarea type="text" id="form7" name="content"
                                                                   class="md-textarea form-control py-2" rows="1"
-                                                                  cols="1"></textarea>
+                                                                  cols="1" required></textarea>
                                                         <label for="form7">Comment here...</label>
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <div class="md-form">
-                                                        <a type="button" class="btn-floating indigo accent-4"
-                                                           onclick="event.preventDefault(); document.getElementById('comment-form').submit();">
-                                                            <i class="far fa-comment" aria-hidden="true"></i></a>
-
+                                                        <button type="submit" class="btn-floating btn-rounded border-0 primary-color white-text prevent-buttom-submit"><i class="far fa-comment"></i><i class="fas fa-circle-notch fa-spin load"></i></button>
                                                     </div>
                                                 </div>
                                             </div>

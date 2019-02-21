@@ -18,9 +18,9 @@ CREATE TABLE IF NOT EXISTS users(
 )ENGINE=InnoDb
   DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
-INSERT INTO users VALUES (null, 'user', 'Mario', 'Montano', 'shipo', 'mario@gmail.com', '123456', null, CURTIME(), CURTIME(), null);
-INSERT INTO users VALUES (null, 'user', 'Juan', 'Lopez', 'juanlopez', 'juan@gmail.com', '123456', null, CURTIME(), CURTIME(), null);
-INSERT INTO users VALUES (null, 'user', 'Manolo', 'Garcia', 'manologarcia', 'manolo@gmail.com', '123456', null, CURTIME(), CURTIME(), null);
+# INSERT INTO users VALUES (null, 'user', 'Mario', 'Montano', 'shipo', 'mario@gmail.com', '123456', null, CURTIME(), CURTIME(), null);
+# INSERT INTO users VALUES (null, 'user', 'Juan', 'Lopez', 'juanlopez', 'juan@gmail.com', '123456', null, CURTIME(), CURTIME(), null);
+# INSERT INTO users VALUES (null, 'user', 'Manolo', 'Garcia', 'manologarcia', 'manolo@gmail.com', '123456', null, CURTIME(), CURTIME(), null);
 
 CREATE TABLE IF NOT EXISTS images(
   id                  int(255) AUTO_INCREMENT NOT NULL,
@@ -34,10 +34,10 @@ CREATE TABLE IF NOT EXISTS images(
 )ENGINE=InnoDb
   DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
-INSERT INTO images VALUES (null, 1, 'test.jpg', 'Decripcion de prueba 1', CURTIME(), CURTIME());
-INSERT INTO images VALUES (null, 1, 'playa.jpg', 'Decripcion de prueba 2', CURTIME(), CURTIME());
-INSERT INTO images VALUES (null, 1, 'arena.jpg', 'Decripcion de prueba 3', CURTIME(), CURTIME());
-INSERT INTO images VALUES (null, 3, 'familia.jpg', 'Decripcion de prueba 4', CURTIME(), CURTIME());
+# INSERT INTO images VALUES (null, 1, 'test.jpg', 'Decripcion de prueba 1', CURTIME(), CURTIME());
+# INSERT INTO images VALUES (null, 1, 'playa.jpg', 'Decripcion de prueba 2', CURTIME(), CURTIME());
+# INSERT INTO images VALUES (null, 1, 'arena.jpg', 'Decripcion de prueba 3', CURTIME(), CURTIME());
+# INSERT INTO images VALUES (null, 3, 'familia.jpg', 'Decripcion de prueba 4', CURTIME(), CURTIME());
 
 CREATE TABLE IF NOT EXISTS comments(
   id                  int(255) AUTO_INCREMENT NOT NULL,
@@ -52,9 +52,9 @@ CREATE TABLE IF NOT EXISTS comments(
 )ENGINE=InnoDb
   DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
-INSERT INTO comments VALUES (null, 1, 4, 'Buena foto de familia', CURTIME(), CURTIME());
-INSERT INTO comments VALUES (null, 2, 1, 'Buena foto de playa!', CURTIME(), CURTIME());
-INSERT INTO comments VALUES (null, 2, 4, 'Que bueno', CURTIME(), CURTIME());
+# INSERT INTO comments VALUES (null, 1, 4, 'Buena foto de familia', CURTIME(), CURTIME());
+# INSERT INTO comments VALUES (null, 2, 1, 'Buena foto de playa!', CURTIME(), CURTIME());
+# INSERT INTO comments VALUES (null, 2, 4, 'Que bueno', CURTIME(), CURTIME());
 
 CREATE TABLE IF NOT EXISTS likes(
   id                  int(255) AUTO_INCREMENT NOT NULL,
@@ -68,8 +68,8 @@ CREATE TABLE IF NOT EXISTS likes(
 )ENGINE=InnoDb
   DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
-INSERT INTO likes VALUES (null, 1, 4, CURTIME(), CURTIME());
-INSERT INTO likes VALUES (null, 2, 4, CURTIME(), CURTIME());
-INSERT INTO likes VALUES (null, 3, 1, CURTIME(), CURTIME());
-INSERT INTO likes VALUES (null, 3, 2, CURTIME(), CURTIME());
-INSERT INTO likes VALUES (null, 2, 1, CURTIME(), CURTIME());
+# INSERT INTO likes VALUES (null, 1, 4, CURTIME(), CURTIME());
+# INSERT INTO likes VALUES (null, 2, 4, CURTIME(), CURTIME());
+# INSERT INTO likes VALUES (null, 3, 1, CURTIME(), CURTIME());
+# INSERT INTO likes VALUES (null, 3, 2, CURTIME(), CURTIME());
+# INSERT INTO likes VALUES (null, 2, 1, CURTIME(), CURTIME());

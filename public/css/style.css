@@ -53,15 +53,11 @@ body {
 
 /*Upload Images*/
 .upload-preview {
-    height: 12em !important;
+    max-height: 12em !important;
 }
 
 textarea#description {
     resize: none;
-}
-
-.show-image {
-    min-height: 25em !important;
 }
 /*Upload Images*/
 
@@ -115,5 +111,9 @@ textarea#description {
 
 .likes:hover > i{
     color: #dc3545 !important;
+}
+
+.load {
+    display: none;
 }
 /*Icons*/

@@ -60,7 +60,7 @@
                         <div class="mx-auto">
                             <div class="view overlay overflow-hidden">
                                 <a title="Upload your photo" href="javascript:changeUpload()">
-                                    <img src="{{ asset('img/img3-escala.png') }}" alt="upload picture" class="img-fluid upload-preview w-100">
+                                    <img src="{{ asset('img/img3-escala.png') }}" alt="upload picture" class="card-img-top upload-preview">
                                     <div class="mask flex-center text-white rgba-black-strong overflow-hidden">
                                         <i class="fa fa-camera fa-2x"></i>
                                     </div>
@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="form-group shadow-textarea w-100">
-                            <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form">
+                            <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form" class="prevent-form-submit">
                                 @csrf
                                 <input type="hidden" name="form_token" value="{{ session('form_token') }}">
                                 <input type="file" name="upload" id="upload-image" style="display: none" required/>
@@ -77,7 +77,61 @@
                                 <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." required></textarea>
                                 <div class="row">
                                     <div class="col">
-                                        <button type="submit" class="btn indigo accent-4 border-0 hoverable mt-4 m-0 w-100 white-text">
+                                        <div class="d-flex justify-content-center">
+                                        <div class="preloader-wrapper small active load mt-1">
+                                            <div class="spinner-layer spinner-blue">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                            <div class="spinner-layer spinner-red">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                            <div class="spinner-layer spinner-yellow">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                            <div class="spinner-layer spinner-green">
+                                                <div class="circle-clipper left">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="gap-patch">
+                                                    <div class="circle"></div>
+                                                </div>
+                                                <div class="circle-clipper right">
+                                                    <div class="circle"></div>
+                                                </div>
+                                            </div>
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+
+                                        <button type="submit" class="btn primary-color border-0 hoverable mt-4 m-0 w-100 white-text prevent-button-submit">
                                             <i class="fas fa-upload" aria-hidden="true"></i> Upload
                                         </button>
                                     </div>
@@ -90,6 +144,27 @@
         </div>
 
         <div class="col-md-7 order-md-1">
+
+            @if(count($images) === 0)
+                <!-- Card -->
+                    <div class="card card-personal">
+                        <!-- Card image-->
+                        <img class="card-img-top" src="{{ asset('img/default1.jpg') }}" alt="Card image cap">
+                        <!-- Card image-->
+
+                        <!-- Card content -->
+                        <div class="card-body">
+                            <!-- Title-->
+                            <a>
+                                <h4 class="card-title title-one text-dark">Nothing here</h4>
+                            </a>
+                            <!-- Text -->
+                            <p class="card-text">Please, upload some Images and post amazing things.</p>
+                        </div>
+                        <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+            @endif
 
             @foreach($images as $image)
                 <!-- Card -->
@@ -116,11 +191,10 @@
 
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top rounded-0" src="
+                            <img class="card-img-top" src="
 @if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
                             @else {{ asset('img/img3-escala.png') }} @endif"
-                                 alt="Card image cap"
-                                 style="@if($image->user->image) height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }} @else height: 400px;@endif">
+                                 alt="image upload by: {{ $image->user->nick }}" style="max-height: 600px;">
                             <a href="{{ route('image.show', ['id' => $image->id]) }}">
                                 <div class="mask rgba-white-slight"></div>
                             </a>
@@ -152,8 +226,6 @@
                                 <p class="card-text collapse" id="collapseContent">
                                     <span class="black-text font-weight-bold">{{ $image->user->nick }}</span>
                                     {{ $image->description }}
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet enim est fuga fugit in iste, necessitatibus non possimus quibusdam quidem reprehenderit sapiente sint suscipit temporibus tenetur ut vero voluptates.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque eaque explicabo facere optio, ratione tempora totam. Architecto aut autem ex facere facilis harum illo neque, numquam provident tempora. Ipsa.
                                 </p>
                             </div>
                         </div>
@@ -162,11 +234,14 @@
                     <!-- Card -->
             @endforeach
                 <div class="clearfix"></div>
+
+                @if(count($images) > 5)
                 <div class="d-flex justify-content-center white align-items-center align-content-center">
                     <div class="mt-3">
                         {{ $images->links() }}
                     </div>
                 </div>
+                @endif
         </div>
     </div>
 </div>

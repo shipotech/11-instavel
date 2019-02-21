@@ -21,13 +21,13 @@
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript" async></script>
+    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
     <!-- Bootstrap tooltips -->
-    <script src="{{ asset('js/popper.min.js') }}" type="text/javascript" defer></script>
+    <script src="{{ asset('js/popper.min.js') }}" type="text/javascript"></script>
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" defer></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" async></script>
     <!-- MDB core JavaScript -->
-    <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript" defer></script>
+    <script src="{{ asset('js/mdb.min.js') }}" type="text/javascript" async></script>
     <!-- SCRIPTS -->
 </head>
 <body class="@if (session('isDark')) dark-mode @else @guest rgba-blue-strong @else light-mode @endguest @endif ">
@@ -228,42 +228,8 @@
         }
     }
     <!-- Profile Picture -->
-
-// Upload Images
-    // Function that click the <input type='file'>
-    function changeUpload() {
-        $('#upload-image').click();
-    }
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            let reader = new FileReader();
-
-            // Verify is Image (gif, jpg, png)
-            let file = input.files[0];
-            let fileType = file["type"];
-            let validImageTypes = ["image/gif", "image/jpeg", "image/png"];
-
-            $('#error').removeClass('show').addClass('d-none');
-
-            if ($.inArray(fileType, validImageTypes) < 0) {
-                $('#error').removeClass('d-none').addClass('show');
-            } else {
-                reader.onload = function (e) {
-                    $('.upload-preview').attr('src', e.target.result);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    }
-
-    $("#upload-image").change(function(){
-        if ($(this).val() !== '') {
-            readURL(this);
-        }
-    });
-// Upload Images
 </script>
+<script src="{{ asset('js/upload.js') }}"></script>
+<script src="{{ asset('js/prevent.js') }}"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@ class ImageController extends Controller
                 'error'   => 'Please, wait a moment or refresh this page'
             ]);
         }
-        // ---------------------------------------------------------
+        // -----------------------------------------------------
 
         // Obtain data
         $description = $request->input('description');
