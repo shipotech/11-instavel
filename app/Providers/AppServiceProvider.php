@@ -13,10 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Config for HTTPS environments (only on production)
-        if(config('app.env') === 'production') {
-            \URL::forceScheme('https');
-        }
+//        // Config for HTTPS environments (only on production)
+//        if(config('app.env') === 'production') {
+//            \URL::forceScheme('https');
+//        }
     }
 
     /**
