@@ -47,6 +47,5 @@
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?instavel/ [NC]
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?instavel.herokuapp.com [NC]
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
-    RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$
-    http://sobrelibrosycultura.com/wp-content/uploads/2016/12/prohibido.jpg
+    RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ http://sobrelibrosycultura.com/wp-content/uploads/2016/12/prohibido.jpg
 </IfModule>
