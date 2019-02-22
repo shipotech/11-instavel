@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/image/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/image/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/config.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/config.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +74,7 @@
           <entry key="css" value="48" />
           <entry key="editorconfig" value="2" />
           <entry key="env" value="3" />
-          <entry key="gitignore" value="6" />
+          <entry key="gitignore" value="14" />
           <entry key="htaccess" value="1" />
           <entry key="html" value="13" />
           <entry key="ico" value="3" />
@@ -116,7 +109,7 @@
           <entry key="Log" value="1" />
           <entry key="Markdown" value="5" />
           <entry key="PHP" value="148" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="PLAIN_TEXT" value="19" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="8" />
           <entry key="SQL" value="5" />
@@ -131,7 +124,7 @@
           <entry key="cell" value="34" />
           <entry key="css" value="1239" />
           <entry key="env" value="28" />
-          <entry key="gitignore" value="33" />
+          <entry key="gitignore" value="100" />
           <entry key="htaccess" value="153" />
           <entry key="html" value="561" />
           <entry key="js" value="724" />
@@ -140,7 +133,7 @@
           <entry key="php" value="25670" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1162" />
-          <entry key="txt" value="1987" />
+          <entry key="txt" value="2235" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -153,7 +146,7 @@
           <entry key="JavaScript" value="724" />
           <entry key="Markdown" value="435" />
           <entry key="PHP" value="8201" />
-          <entry key="PLAIN_TEXT" value="2064" />
+          <entry key="PLAIN_TEXT" value="2379" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1162" />
           <entry key="Scratch" value="34" />
@@ -195,7 +188,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="230">
@@ -207,11 +200,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/showpass.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="23">
+              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -272,9 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Público/Bootstrap/MDB-2/css/profile.css" />
-        <option value="$USER_HOME$/Público/Bootstrap/MDB-2/profile.html" />
-        <option value="$USER_HOME$/Público/Bootstrap/MDB-2/profile2.html" />
         <option value="$USER_HOME$/Público/twitter-like-profile-image-upload-using-jquery-ajax/index.php" />
         <option value="$PROJECT_DIR$/resources/views/user/ajax_image_upload.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
@@ -313,7 +303,6 @@
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
@@ -323,6 +312,10 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/js/showpass.js" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public/storage/.gitignore" />
+        <option value="$PROJECT_DIR$/public/storage/users/.gitignore" />
+        <option value="$PROJECT_DIR$/public/storage/images/.gitignore" />
       </list>
     </option>
   </component>
@@ -458,28 +451,6 @@
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -553,7 +524,7 @@
       <workItem from="1550585966725" duration="2804000" />
       <workItem from="1550609756743" duration="30061000" />
       <workItem from="1550675259158" duration="37611000" />
-      <workItem from="1550765233280" duration="29869000" />
+      <workItem from="1550765233280" duration="31890000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -653,11 +624,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550727556787</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Alert: Changed the storage folder for the images, now all is in &quot;public/&quot; directory.&#10;&#10;1- Added cache for the web&#10;2- Added protection to hot linking&#10;3- Compress the files with gzip&#10;4- Minor improvements to the layout">
+      <created>1550811510261</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550811510261</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358306000" />
+    <option name="totallyTimeSpent" value="360327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -681,7 +659,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3836858" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3836858" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5014641" side_tool="true" weight="0.31722054" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -750,20 +728,10 @@
     <MESSAGE value="-- bug fixed --&#10;&#10;Note: Only work if the user press back in browser and try to resubmit the same data.&#10;Note2: Another thing that I can do from the server side for a &quot;deactivated javasript in browser&quot; and the user click multiple times on the submit button?" />
     <MESSAGE value="Minor improvements:&#10;&#10;1- Added Client Side validation for multiple submit on Form&#10;2- Fixed all the migrations&#10;3- Better layout" />
     <MESSAGE value="Minor improvements, Fixed some bugs with the layout and comments." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor improvements, Fixed some bugs with the layout and comments." />
+    <MESSAGE value="Alert: Changed the storage folder for the images, now all is in &quot;public/&quot; directory.&#10;&#10;1- Added cache for the web&#10;2- Added protection to hot linking&#10;3- Compress the files with gzip&#10;4- Minor improvements to the layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alert: Changed the storage folder for the images, now all is in &quot;public/&quot; directory.&#10;&#10;1- Added cache for the web&#10;2- Added protection to hot linking&#10;3- Compress the files with gzip&#10;4- Minor improvements to the layout" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-897" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/profile.js" />
     <entry file="file://$PROJECT_DIR$/public/js/upload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="587">
@@ -923,13 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/all.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1061,6 +1022,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/showpass.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1068,10 +1036,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/public/storage/images/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        <state relative-caret-position="46">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" lean-forward="true" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-end-line="4" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1082,6 +1064,13 @@
           <folding>
             <element signature="e#724#747#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
