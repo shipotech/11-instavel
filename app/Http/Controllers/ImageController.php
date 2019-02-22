@@ -131,7 +131,7 @@ class ImageController extends Controller
                 $img->resizeCanvas($width, 450, 'center', false, '212121');
             } else {
                 //Resize image here
-                $img = Intervention::make($saveImage)->resize(665, 600, function ($constraint) {
+                $img = Intervention::make($saveImage)->resize(null, 600, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 });
