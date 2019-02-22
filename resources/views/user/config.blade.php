@@ -32,7 +32,7 @@
             <div class="card testimonial-card z-depth-0 @if(session('isDark')) dark-mode @else light-mode @endif">
                 <div class="mx-auto">
                     <div class="rounded-circle view overlay zoom overflow-hidden">
-                        <a title="Change your photo" href="javascript:changeProfile()">
+                        <a title="Change your photo" href="javascript:changeProfile()" id="profile">
                             <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) {{ asset('img/noimage.png') }} @else {{ asset('storage/users/' . Auth::user()->image) }} @endif" alt="profile picture" class="rounded-circle mx-auto d-block profile-photo preview_image">
 
                             <!--Loader animation-->

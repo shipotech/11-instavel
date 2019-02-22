@@ -14,11 +14,12 @@
                     <div class="card-body px-lg-5 pt-0">
 
                         <!-- Form -->
-                        <form method="POST" action="{{ route('login') }}" class="text-center needs-validation" novalidate style="color: #757575;">
+                        <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate style="color: #757575;">
                         @csrf
 
                         <!-- Email -->
                             <div class="md-form">
+                                <i class="fa fa-envelope prefix grey-text"></i>
                                 <input id="email" type="email"
                                        class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
                                        value=" {{ old('email') }}" autofocus required />
@@ -33,6 +34,7 @@
 
                             <!-- Password -->
                             <div class="md-form">
+                                <span class="prefix grey-text fa fa-eye" id="showpass"> </span>
                                 <input id="password" type="password"
                                        class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                        name="password" required onfocus="this.removeAttribute('readonly');" readonly />
@@ -56,10 +58,10 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 mt-2 mt-md-0 pr-0">
+                                <div class="col-12 col-md-6 mt-2 mt-md-0 pr-0 text-center">
                                     <!-- Forgot password -->
                                     @if (Route::has('password.request'))
-                                        <a class="text-indigo" href="{{ route('password.request') }}">
+                                        <a class="text-indigo mx-auto" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif

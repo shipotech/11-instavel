@@ -64,6 +64,10 @@
                                        value="{{ old('email') }}" required>
                                 <label for="email">{{ __('E-Mail Address') }}</label>
 
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
+
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -101,9 +105,6 @@
                                     <label class="form-check-label col-12" for="checkbox">
                                         Agree to terms and conditions
                                     </label>
-                                    <div class="invalid-feedback">
-                                        You must agree before submitting.
-                                    </div>
                                     @if($errors->has('checkbox'))
                                         <div class="invalid-feedback">
                                             You must agree before submitting.

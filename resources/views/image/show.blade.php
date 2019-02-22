@@ -46,12 +46,12 @@
                                 <img class="card-img-top rounded-0 d-block"
                                      src="@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }} @else {{ asset('img/img3-escala.png') }} @endif"
                                      alt="Image uploaded by {{ '@' . $image->user->nick }}"
-                                     style="@if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
+                                     style="min-height: 450px; @if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
                             </div>
                         </div>
 
                         <div class="col-md-5 pl-md-0"
-                             style="@if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
+                             style="min-height: 450px; @if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
                             <div class="h-30 news-card overflow-hidden border-bottom">
 
                             <!-- Heading-->

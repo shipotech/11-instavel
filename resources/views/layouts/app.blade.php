@@ -121,7 +121,7 @@
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" defer></script>
+<script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" async></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
 <!-- SCRIPTS -->
@@ -186,6 +186,7 @@
         // Show the loader animation and hide the blue mask
         $('#loading').css('display', 'block');
         $('.mask').css('display', 'none');
+        $('#profile').attr('href', '#!');
 
         // Store the current profile photo
         @if(Auth::user())
@@ -219,6 +220,7 @@
                 }
                 $('#loading').css('display', 'none');
                 $('.mask').css('display', 'flex');
+                $('#profile').attr('href', 'javascript:changeProfile()');
             })
             .fail(function () {
                 $('.preview_image').attr('src', currentPhoto);
@@ -226,12 +228,14 @@
                 $('.error').text('The file must be an image (jpeg, png, gif)');
                 $('#error').removeClass('d-none').addClass('show');
                 $('.mask').css('display', 'flex');
+                $('#profile').attr('href', 'javascript:changeProfile()');
             })
         }
     }
     <!-- Profile Picture -->
 </script>
-<script src="{{ asset('js/upload.js') }}"></script>
-<script src="{{ asset('js/prevent.js') }}"></script>
+<script src="{{ asset('js/upload.js') }}" defer></script>
+<script src="{{ asset('js/prevent.js') }}" defer></script>
+<script src="{{ asset('js/showpass.js') }}" defer></script>
 </body>
 </html>
