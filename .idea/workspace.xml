@@ -72,7 +72,7 @@
           <entry key="editorconfig" value="2" />
           <entry key="env" value="3" />
           <entry key="gitignore" value="15" />
-          <entry key="htaccess" value="1" />
+          <entry key="htaccess" value="2" />
           <entry key="html" value="13" />
           <entry key="ico" value="3" />
           <entry key="images" value="13" />
@@ -112,7 +112,7 @@
           <entry key="SQL" value="5" />
           <entry key="SVG" value="4" />
           <entry key="Scratch" value="4" />
-          <entry key="htaccess" value="1" />
+          <entry key="htaccess" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -122,7 +122,7 @@
           <entry key="css" value="1239" />
           <entry key="env" value="28" />
           <entry key="gitignore" value="100" />
-          <entry key="htaccess" value="153" />
+          <entry key="htaccess" value="202" />
           <entry key="html" value="561" />
           <entry key="js" value="724" />
           <entry key="json" value="5" />
@@ -147,7 +147,7 @@
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1162" />
           <entry key="Scratch" value="34" />
-          <entry key="htaccess" value="153" />
+          <entry key="htaccess" value="202" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions">
@@ -197,11 +197,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/storage/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="43" selection-start-column="43" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="50" column="96" lean-forward="true" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -302,7 +311,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
-        <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/resources/views/user/config.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
@@ -313,6 +321,7 @@
         <option value="$PROJECT_DIR$/public/storage/users/.gitignore" />
         <option value="$PROJECT_DIR$/public/storage/images/.gitignore" />
         <option value="$PROJECT_DIR$/public/storage/.gitignore" />
+        <option value="$PROJECT_DIR$/public/.htaccess" />
       </list>
     </option>
   </component>
@@ -448,17 +457,6 @@
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -532,7 +530,7 @@
       <workItem from="1550585966725" duration="2804000" />
       <workItem from="1550609756743" duration="30061000" />
       <workItem from="1550675259158" duration="37611000" />
-      <workItem from="1550765233280" duration="32473000" />
+      <workItem from="1550765233280" duration="32769000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -657,7 +655,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360910000" />
+    <option name="totallyTimeSpent" value="361206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -680,7 +678,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3836858" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.19637462" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5014641" side_tool="true" weight="0.31722054" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -1000,13 +998,6 @@
     <entry file="file://$PROJECT_DIR$/public/img/overlays/01.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -1094,6 +1085,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="50" column="96" lean-forward="true" selection-start-line="50" selection-start-column="96" selection-end-line="50" selection-end-column="96" />
         </state>
       </provider>
     </entry>
