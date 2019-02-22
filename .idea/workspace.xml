@@ -130,7 +130,7 @@
           <entry key="php" value="25670" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1162" />
-          <entry key="txt" value="2253" />
+          <entry key="txt" value="2302" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -143,7 +143,7 @@
           <entry key="JavaScript" value="724" />
           <entry key="Markdown" value="435" />
           <entry key="PHP" value="8201" />
-          <entry key="PLAIN_TEXT" value="2397" />
+          <entry key="PLAIN_TEXT" value="2446" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1162" />
           <entry key="Scratch" value="34" />
@@ -200,8 +200,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/storage/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="1" />
+            <state>
+              <caret column="43" selection-start-column="43" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -532,7 +532,7 @@
       <workItem from="1550585966725" duration="2804000" />
       <workItem from="1550609756743" duration="30061000" />
       <workItem from="1550675259158" duration="37611000" />
-      <workItem from="1550765233280" duration="32160000" />
+      <workItem from="1550765233280" duration="32473000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -646,15 +646,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550814542630</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Folders for the provisional upload of the images">
+      <created>1550814715885</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1550814715885</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360597000" />
+    <option name="totallyTimeSpent" value="360910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
@@ -745,7 +751,8 @@
     <MESSAGE value="Minor improvements, Fixed some bugs with the layout and comments." />
     <MESSAGE value="Alert: Changed the storage folder for the images, now all is in &quot;public/&quot; directory.&#10;&#10;1- Added cache for the web&#10;2- Added protection to hot linking&#10;3- Compress the files with gzip&#10;4- Minor improvements to the layout" />
     <MESSAGE value="trying something" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying something" />
+    <MESSAGE value="Folders for the provisional upload of the images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Folders for the provisional upload of the images" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/js/upload.js">
@@ -1085,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/storage/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="1" />
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
         </state>
       </provider>
     </entry>

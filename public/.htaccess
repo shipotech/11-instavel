@@ -45,7 +45,8 @@
     #Protect against hotlinking
     RewriteCond %{HTTP_REFERER} !^$
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?instavel/ [NC]
+    RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?instavel.herokuapp.com/ [NC]
     RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
     RewriteRule \.(jpg|jpeg|png|gif)$ http://instavel/01.png [NC,R,L]
-
+    RewriteRule \.(jpg|jpeg|png|gif)$ http://instavel.herokuapp.com/img/overlays/01.png [NC,R,L]
 </IfModule>
