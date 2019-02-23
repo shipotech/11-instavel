@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image as Intervention;
@@ -43,24 +45,61 @@ class ImageController extends Controller
         // Obtain the image, extension and create new unique filename
         $image = $request->file('file');
         $extension = $image->getClientOriginalExtension();
-        $filename = uniqid('', true) . '_' . time() . '.' . $extension;
+        $filename = (\count(User::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
-        // Delete previous profile photo if the user has one on DB
-        if ($user->image !== null || !empty($user->image)) {
-//            Storage::disk('users')->delete($user->image);
-            File::delete(public_path('storage/users/'), $user->image);
-        }
+            $contents = collect(Storage::disk('users')->listContents('/', false));
+
+            $file = $contents->where('type', '=', 'file')
+                ->where('filename', '=', pathinfo($user->image, PATHINFO_FILENAME))
+                ->where('extension', '=', pathinfo($user->image, PATHINFO_EXTENSION))
+                ->first(); // there can be duplicate file names!
+
+            Storage::disk('users')->delete($file['path']);
 
         // Save the new photo
-//        Storage::disk('users')->put($filename, File::get($image));
         $image->move(public_path('storage/users/'), $filename);
 
-        // Update with the new photo
-        $user->image = $filename;
-        $user->update();
+        // Obtain the new local ubication
+        $saveImage = public_path('storage/users/' . $filename);
 
-        return $filename;
+        // New instance
+        $img = Intervention::make($saveImage);
+
+        //Resize image here
+        // prevent possible upsizing
+        $img->resize(null, 200, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        });
+
+        // Save the resize Image in local folder (public/storage/users/)
+        $img->save($saveImage);
+
+        // Save the new Image in Google Drive
+        Storage::disk('users')->put($filename, File::get($saveImage));
+
+        // Update the database with the new photo
+        $user->image = Storage::disk('users')->url($filename);
+
+        if (!$user->image) {
+            $user->image = 'https://i.ibb.co/2kjt747/nouser.png';
+        }
+
+        $user->update();
+        File::delete($saveImage);
+
+        return $user->image;
     }
+
+
+
+
+
+
+
+
+
+
 
     // Method for Upload images in Home
     public function store(Request $request)
@@ -85,22 +124,20 @@ class ImageController extends Controller
            'upload'         => 'required|mimes:jpeg,jpg,png'
         ]);
 
-        // Assign values
-        $user = \Auth::user();
-        $image = new Image();
-        $image->user_id = $user->id;
-        $image->image_path = null;
-        $image->description = $description;
-
         // Upload the image
         if ($image_path) {
+            // Assign values
+            $user = \Auth::user();
+            $image = new Image();
+            $image->user_id = $user->id;
+            $image->image_path = null;
+            $image->description = $description;
 
             //filename to store
             $extension = $image_path->getClientOriginalExtension();
-            $filename = uniqid('', true) . '_' . time() . '.' . $extension;
+            $filename = (\count(Image::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
             // Save the new Image on disk
-//            Storage::disk('images')->put($filename, File::get($image_path));
             $image_path->move(public_path('storage/images/'), $filename);
 
             // Obtain the new ubication of the Image
@@ -110,39 +147,41 @@ class ImageController extends Controller
             $height = Intervention::make($saveImage)->height();
             $width = Intervention::make($saveImage)->width();
 
-            // Fill the images that don't fit the condition's below:
+            // create an Instance
+            $img = Intervention::make($saveImage);
+
+            // Fill the images that don't fit the conditions below:
             if ($width < 665 && $height < 450) {
-                // create an Instance
-                $img = Intervention::make($saveImage);
 
                 // set a background-color for the emerging area
                 $img->resizeCanvas(665, 450, 'center', false, '212121');
             } elseif ($width < 665) {
-                // create empty canvas
-                $img = Intervention::make($saveImage);
 
                 // set a background-color for the emerging area
                 $img->resizeCanvas(665, $height, 'center', false, '212121');
             } elseif ($height < 450) {
-                // create empty canvas
-                $img = Intervention::make($saveImage);
 
                 // set a background-color for the emerging area
                 $img->resizeCanvas($width, 450, 'center', false, '212121');
             } else {
+
                 //Resize image here
-                $img = Intervention::make($saveImage)->resize(665, 600, function ($constraint) {
+                $img->resize(665, 600, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 });
             }
 
-            // Save the resize Image
+            // Save the resize Image in local folder (public/storage/images/)
             $img->save($saveImage);
 
-            // Update with the new photo
-            $image->image_path = $filename;
+            // Save the new Image in Google Drive
+            Storage::disk('images')->put($filename, File::get($saveImage));
+
+            // Update the database with the new Image
+            $image->image_path = Storage::disk('images')->url($filename);
             $image->save();
+            File::delete($saveImage);
 
             return redirect()->route('home')->with([
                 'message'   => 'You upload the image successfully'

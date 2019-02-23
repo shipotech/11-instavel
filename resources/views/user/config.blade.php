@@ -33,10 +33,10 @@
                 <div class="mx-auto">
                     <div class="rounded-circle view overlay zoom overflow-hidden">
                         <a title="Change your photo" href="javascript:changeProfile()" id="profile">
-                            <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) {{ asset('img/noimage.png') }} @else {{ asset('storage/users/' . Auth::user()->image) }} @endif" alt="profile picture" class="rounded-circle mx-auto d-block profile-photo preview_image">
+                            <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) https://i.ibb.co/2kjt747/nouser.png @else {{ Auth::user()->image }} @endif" alt="profile picture" class="rounded-circle mx-auto d-block profile-photo preview_image">
 
                             <!--Loader animation-->
-                            <span id="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="position: absolute; left: 45%; top: 45%; display: none"></span>
+                            <span id="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="position: absolute; left: 45%; top: 45%; display: none;"> </span>
                             <div class="mask flex-center text-white blue-gradient-rgba overflow-hidden">
                                 <i class="fa fa-camera fa-2x"></i>
                             </div>
@@ -58,8 +58,8 @@
 
                     <!-- Card image -->
                     <div class="view overlay">
-                        <img class="card-img-top"
-                             src="{{ asset('img/1.jpg') }}"
+                        <img class="card-img-top border-0 rounded-0"
+                             src="https://i.ibb.co/XbB0BBB/1.jpg"
                              alt="Card image cap">
                     </div>
 
@@ -127,8 +127,8 @@
 
                     <!-- Card image -->
                     <div class="view overlay">
-                        <img class="card-img-top"
-                             src="{{ asset('img/2.jpg') }}"
+                        <img class="card-img-top border-0 rounded-0"
+                             src="https://i.ibb.co/2Ysv3mx/2.jpg"
                              alt="Card image cap">
                     </div>
 
@@ -199,8 +199,8 @@
 
                     <!-- Card image -->
                     <div class="view overlay">
-                        <img class="card-img-top"
-                             src="{{ asset('img/3.jpg') }}"
+                        <img class="card-img-top border-0 rounded-0"
+                             src="https://i.ibb.co/PhSz2wR/3.jpg"
                              alt="Card image cap">
                     </div>
 

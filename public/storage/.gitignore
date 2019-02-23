@@ -1,2 +1,5 @@
-# Ignoring all the files but not the folder
+# Ignoring all the files but not the folders
+*
+!images/
+!users/
 !.gitignore

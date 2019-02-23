@@ -44,14 +44,15 @@
                             <!-- Card image -->
                             <div class="w-100 white">
                                 <img class="card-img-top rounded-0 d-block"
-                                     src="@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }} @else {{ asset('img/img3-escala.png') }} @endif"
+                                     src="@if($image->image_path) {{ $image->image_path }}
+                                     @else https://i.ibb.co/b23YqqB/noimage.png @endif"
                                      alt="Image uploaded by {{ '@' . $image->user->nick }}"
-                                     style="min-height: 450px; @if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
+                                     style="min-height: 450px; @if($image->image_path)height:{{ (\Intervention\Image\Facades\Image::make($image->image_path)->height()) . 'px;' }}@else height: 450px;@endif">
                             </div>
                         </div>
 
                         <div class="col-md-5 pl-md-0"
-                             style="min-height: 450px; @if($image->user->image)height:{{ (\Intervention\Image\Facades\Image::make(asset('storage/images/' . $image->image_path) )->height()) . 'px;' }}@else height: 450px;@endif">
+                             style="min-height: 450px; @if($image->image_path)height:{{ (\Intervention\Image\Facades\Image::make($image->image_path)->height()) . 'px;' }}@else height: 450px;@endif">
                             <div class="h-30 news-card overflow-hidden border-bottom">
 
                             <!-- Heading-->
@@ -59,7 +60,7 @@
                                     <div class="content d-flex align-items-center">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-12 text-center">
-                                            <img src="@if($image->user->image) {{ asset('storage/users/' . $image->user->image) }} @else {{ asset('img/img3-escala.png') }} @endif"
+                                            <img src="@if($image->user->image) {{ $image->user->image }} @else https://i.ibb.co/2kjt747/nouser.png @endif"
                                                  class="rounded-circle avatar-img d-block mx-auto" alt="avatar">
                                                 <p class="font-weight-bolder text-muted m-0">
                                             {{ $image->user->nick }}

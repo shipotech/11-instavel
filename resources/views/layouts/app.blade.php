@@ -79,7 +79,7 @@
 
                             <li class="nav-item avatar dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) {{ asset('img/noimage.png') }} @else {{ asset('storage/users/' . Auth::user()->image) }} @endif" class="preview_image rounded-circle z-depth-0 mx-auto" alt="avatar image" width="35" height="35">
+                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image))https://i.ibb.co/2kjt747/nouser.png @else {{ Auth::user()->image }} @endif" class="preview_image rounded-circle z-depth-0 mx-auto" alt="avatar image" width="35" height="35">
                                 </a>
 
 
@@ -191,7 +191,7 @@
         // Store the current profile photo
         @if(Auth::user())
             if(typeof currentPhoto === 'undefined') {
-                let currentPhoto = '{{ asset('storage/users/'.Auth::user()->image) }}';
+                var currentPhoto = '{{Auth::user()->image}}';
             }
         @endif
 
@@ -215,8 +215,8 @@
                     $('.preview_image').attr('src', currentPhoto);
                 } else {
                     $('#file_name').val(data);
-                    $('.preview_image').attr('src', '{{ asset('storage/users') }}' + '/' + data);
-                    currentPhoto = '{{ asset('storage/users') }}' + '/' + data;
+                    $('.preview_image').attr('src', data);
+                    currentPhoto = data;
                 }
                 $('#loading').css('display', 'none');
                 $('.mask').css('display', 'flex');

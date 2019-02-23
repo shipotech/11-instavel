@@ -20,6 +20,7 @@
             } else {
                 reader.onload = function (e) {
                     $('.upload-preview').attr('src', e.target.result);
+                    $('.alert').removeClass('show').addClass('d-none');
                 };
 
                 reader.readAsDataURL(input.files[0]);

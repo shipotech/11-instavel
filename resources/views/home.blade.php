@@ -12,7 +12,7 @@
                         <div class="content d-flex">
                             <div class="row w-100 m-0 p-0">
                                 <div class="col-12 p-0">
-                                    <img src="@if(Auth::user()->image) {{ asset('storage/users/' . Auth::user()->image) }} @else {{ asset('img/noimage.png') }} @endif"
+                                    <img src="@if(Auth::user()->image) {{ Auth::user()->image }} @else https://i.ibb.co/2kjt747/nouser.png @endif"
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">
@@ -60,7 +60,7 @@
                         <div class="mx-auto">
                             <div class="view overlay overflow-hidden">
                                 <a title="Upload your photo" href="javascript:changeUpload()">
-                                    <img src="{{ asset('img/img3-escala.png') }}" alt="upload picture" class="card-img-top upload-preview">
+                                    <img src="https://i.ibb.co/jGvG5VL/upload2.png" alt="upload picture" class="card-img-top upload-preview">
                                     <div class="mask flex-center text-white rgba-black-strong overflow-hidden">
                                         <i class="fa fa-camera fa-2x"></i>
                                     </div>
@@ -72,7 +72,7 @@
                             <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form" class="prevent-form-submit">
                                 @csrf
                                 <input type="hidden" name="form_token" value="{{ session('form_token') }}">
-                                <input type="file" name="upload" id="upload-image" style="display: none" required/>
+                                <input type="file" name="upload" id="upload-image" style="display: none" />
                                 <label for="description" class="sr-only-focusable"></label>
                                 <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." required></textarea>
                                 <div class="row">
@@ -145,11 +145,11 @@
 
         <div class="col-md-7 order-md-1">
 
-            @if(count($images) === 0)
+            @if(\count($images) === 0)
                 <!-- Card -->
                     <div class="card card-personal">
                         <!-- Card image-->
-                        <img class="card-img-top" src="{{ asset('img/default1.jpg') }}" alt="Card image cap">
+                        <img class="card-img-top border-0" src="https://i.ibb.co/rQQ3XSW/default.jpg" alt="Card image cap">
                         <!-- Card image-->
 
                         <!-- Card content -->
@@ -175,7 +175,7 @@
                                 <div class="content d-flex">
                                     <div class="row w-100 m-0 p-0">
                                         <div class="col-12 p-0">
-                                            <img src="@if($image->user->image) {{ asset('storage/users/' . $image->user->image) }} @else {{ asset('img/img3-escala.png') }} @endif"
+                                            <img src="@if($image->user->image) {{ $image->user->image }} @else https://i.ibb.co/2kjt747/nouser.png @endif"
                                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                             <div class="col text-center text-sm-left">
                                             <p class="font-weight-bold text-dark m-0">
@@ -191,9 +191,8 @@
 
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top" src="
-@if($image->user->image) {{ asset('storage/images/' . $image->image_path) }}
-                            @else {{ asset('img/img3-escala.png') }} @endif"
+                            <img class="card-img-top" src="@if($image->image_path) {{ $image->image_path }}
+                            @else https://i.ibb.co/b23YqqB/noimage.png @endif"
                                  alt="image upload by: {{ $image->user->nick }}" style="max-height: 600px;">
                             <a href="{{ route('image.show', ['id' => $image->id]) }}">
                                 <div class="mask rgba-white-slight"></div>
