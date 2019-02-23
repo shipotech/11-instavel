@@ -47,14 +47,21 @@ class ImageController extends Controller
         $extension = $image->getClientOriginalExtension();
         $filename = (\count(User::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
-            $contents = collect(Storage::disk('users')->listContents('/', false));
+        // Delete previous profile photo if the user has one on DB
+        if ($user->image !== null || !empty($user->image)) {
+            // Now find that file and use its ID (path) to delete it
+            $dir = '/';
+            $recursive = false; // Get subdirectories also?
+            $contents = collect(Storage::disk('users')->listContents($dir, $recursive));
 
-            $file = $contents->where('type', '=', 'file')
+            $file = $contents
+                ->where('type', '=', 'file')
                 ->where('filename', '=', pathinfo($user->image, PATHINFO_FILENAME))
                 ->where('extension', '=', pathinfo($user->image, PATHINFO_EXTENSION))
                 ->first(); // there can be duplicate file names!
 
             Storage::disk('users')->delete($file['path']);
+        }
 
         // Save the new photo
         $image->move(public_path('storage/users/'), $filename);
