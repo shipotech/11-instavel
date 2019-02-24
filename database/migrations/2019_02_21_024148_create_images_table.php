@@ -17,6 +17,7 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('image_path');
+            $table->string('drive_id', 255)->nullable();
             $table->text('description');
             $table->timestamps();
 

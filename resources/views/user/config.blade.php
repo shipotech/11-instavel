@@ -33,7 +33,7 @@
                 <div class="mx-auto">
                     <div class="rounded-circle view overlay zoom overflow-hidden">
                         <a title="Change your photo" href="javascript:changeProfile()" id="profile">
-                            <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) https://i.ibb.co/2kjt747/nouser.png @else {{ Auth::user()->image }} @endif" alt="profile picture" class="rounded-circle mx-auto d-block profile-photo preview_image">
+                            <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif" alt="profile picture" class="rounded-circle mx-auto d-block profile-photo preview_image">
 
                             <!--Loader animation-->
                             <span id="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="position: absolute; left: 45%; top: 45%; display: none;"> </span>

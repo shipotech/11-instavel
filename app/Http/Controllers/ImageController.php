@@ -2,20 +2,32 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Image;
 use App\User;
+use Google_Client;
+use Google_Service_Drive;
+use Google_Service_Drive_DriveFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image as Intervention;
 
 class ImageController extends Controller
 {
-    public function __construct()
+    private $drive;
+    public function __construct(Google_Client $client)
     {
         $this->middleware('auth');
+
+        //* setting refresh token and creating a new instance of  Google_Service_Drive  with Google_Client
+        //* instance from service container
+        $this->middleware(function ($request, $next) use ($client) {
+            $client->refreshToken(env('GOOGLE_REFRESH_TOKEN'));
+            $this->drive = new Google_Service_Drive($client);
+            return $next($request);
+        });
     }
 
     // Method for profile avatar
@@ -49,18 +61,18 @@ class ImageController extends Controller
 
         // Delete previous profile photo if the user has one on DB
         if ($user->image !== null || !empty($user->image)) {
-            // Now find that file and use its ID (path) to delete it
-            $dir = '/';
-            $recursive = false; // Get subdirectories also?
-            $contents = collect(Storage::disk('users')->listContents($dir, $recursive));
+            $file_id = $this->findFile(env('GOOGLE_FOLDER_USERS'), $user->image);
 
-            $file = $contents
-                ->where('type', '=', 'file')
-                ->where('filename', '=', pathinfo($user->image, PATHINFO_FILENAME))
-                ->where('extension', '=', pathinfo($user->image, PATHINFO_EXTENSION))
-                ->first(); // there can be duplicate file names!
-
-            Storage::disk('users')->delete($file['path']);
+            try {
+                $this->drive->files->delete($file_id);
+            } catch (Exception $e) {
+                return array(
+                    'fail' => true,
+                    'previous' => $user->drive_id,
+                    'errors' => [
+                        'file' => 'There was a problem with Google Drive, please contact the admin'
+                    ]);
+            }
         }
 
         // Save the new photo
@@ -72,7 +84,7 @@ class ImageController extends Controller
         // New instance
         $img = Intervention::make($saveImage);
 
-        //Resize image here
+        // Resize image here
         // prevent possible upsizing
         $img->resize(null, 200, function ($constraint) {
             $constraint->aspectRatio();
@@ -83,10 +95,13 @@ class ImageController extends Controller
         $img->save($saveImage);
 
         // Save the new Image in Google Drive
-        Storage::disk('users')->put($filename, File::get($saveImage));
+        $file = File::get($saveImage);
+        $mimeType = File::mimeType($saveImage);
+        $file_id = $this->createFile($file, $mimeType, $filename, env('GOOGLE_FOLDER_USERS'));
 
         // Update the database with the new photo
-        $user->image = Storage::disk('users')->url($filename);
+        $user->image = $filename;
+        $user->drive_id = $file_id;
 
         if (!$user->image) {
             $user->image = 'https://i.ibb.co/2kjt747/nouser.png';
@@ -95,17 +110,8 @@ class ImageController extends Controller
         $user->update();
         File::delete($saveImage);
 
-        return $user->image;
+        return "https://drive.google.com/uc?id=$user->drive_id&export=media";
     }
-
-
-
-
-
-
-
-
-
 
 
     // Method for Upload images in Home
@@ -183,11 +189,16 @@ class ImageController extends Controller
             $img->save($saveImage);
 
             // Save the new Image in Google Drive
-            Storage::disk('images')->put($filename, File::get($saveImage));
+            $file = File::get($saveImage);
+            $mimeType = File::mimeType($saveImage);
+            $file_id = $this->createFile($file, $mimeType, $filename, env('GOOGLE_FOLDER_IMAGES'));
 
             // Update the database with the new Image
-            $image->image_path = Storage::disk('images')->url($filename);
+            $image->image_path = $filename;
+            $image->drive_id = $file_id;
             $image->save();
+
+            // Delete the image in temporal path
             File::delete($saveImage);
 
             return redirect()->route('home')->with([
@@ -217,5 +228,40 @@ class ImageController extends Controller
         return view('image.show', [
             'image'     => $image
         ]);
+    }
+
+    // Methods for Manage Files on Google Drive
+    public function findFile($folder, $name)
+    {
+        $query = "name='".$name."' and '".$folder."' in parents and trashed=false";
+
+        $optParams = [
+            'q' => $query,
+            'fields' => 'files(id, name)'
+        ];
+
+        $results = $this->drive->files->listFiles($optParams)->getFiles();
+
+        if (\is_array($results) && empty($results)) {
+            return null;
+        }
+
+        return $results[0]['id'];
+    }
+
+    public function createFile($content, $mimeType, $name, $parent_id){
+        $fileMetadata = new Google_Service_Drive_DriveFile([
+            'name' => $name,
+            'parents' => array($parent_id)
+        ]);
+
+        $file = $this->drive->files->create($fileMetadata, [
+            'data' => $content,
+            'mimeType' => $mimeType,
+            'uploadType' => 'multipart',
+            'fields' => 'id'
+        ]);
+
+        return $file->id;
     }
 }

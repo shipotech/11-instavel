@@ -44,15 +44,13 @@
                             <!-- Card image -->
                             <div class="w-100 white">
                                 <img class="card-img-top rounded-0 d-block"
-                                     src="@if($image->image_path) {{ $image->image_path }}
-                                     @else https://i.ibb.co/b23YqqB/noimage.png @endif"
+                                     src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
                                      alt="Image uploaded by {{ '@' . $image->user->nick }}"
-                                     style="min-height: 450px; @if($image->image_path)height:{{ (\Intervention\Image\Facades\Image::make($image->image_path)->height()) . 'px;' }}@else height: 450px;@endif">
+                                     style="min-height: 450px;">
                             </div>
                         </div>
 
-                        <div class="col-md-5 pl-md-0"
-                             style="min-height: 450px; @if($image->image_path)height:{{ (\Intervention\Image\Facades\Image::make($image->image_path)->height()) . 'px;' }}@else height: 450px;@endif">
+                        <div class="col-md-5 pl-md-0" style="min-height: 450px;">
                             <div class="h-30 news-card overflow-hidden border-bottom">
 
                             <!-- Heading-->
@@ -60,7 +58,7 @@
                                     <div class="content d-flex align-items-center">
                                         <div class="row w-100 m-0 p-0">
                                             <div class="col-12 text-center">
-                                            <img src="@if($image->user->image) {{ $image->user->image }} @else https://i.ibb.co/2kjt747/nouser.png @endif"
+                                            <img src="@if($image->user->drive_id === null || empty($image->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($image->user->drive_id) {{ 'https://drive.google.com/uc?id='.$image->user->drive_id.'&export=media' }} @endif"
                                                  class="rounded-circle avatar-img d-block mx-auto" alt="avatar">
                                                 <p class="font-weight-bolder text-muted m-0">
                                             {{ $image->user->nick }}
@@ -95,7 +93,7 @@
                                                     <div class="news mb-1">
                                                         <!-- Label -->
                                                         <div class="label">
-                                                            <img src="@if($comment->user->image) {{ asset('storage/users/' . $comment->user->image) }} @else {{ asset('img/noimage.png') }} @endif"
+                                                            <img src="@if($comment->user->drive_id === null || empty($comment->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($comment->user->drive_id) {{ 'https://drive.google.com/uc?id='.$comment->user->drive_id.'&export=media' }} @endif"
                                                                  class="rounded-circle avatar-img d-block">
                                                         </div>
 

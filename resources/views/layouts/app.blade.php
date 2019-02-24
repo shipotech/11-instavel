@@ -79,7 +79,7 @@
 
                             <li class="nav-item avatar dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image))https://i.ibb.co/2kjt747/nouser.png @else {{ Auth::user()->image }} @endif" class="preview_image rounded-circle z-depth-0 mx-auto" alt="avatar image" width="35" height="35">
+                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image))https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif" class="preview_image rounded-circle z-depth-0 mx-auto" alt="avatar image" width="35" height="35">
                                 </a>
 
 
@@ -191,7 +191,7 @@
         // Store the current profile photo
         @if(Auth::user())
             if(typeof currentPhoto === 'undefined') {
-                var currentPhoto = '{{Auth::user()->image}}';
+                var currentPhoto = "{{'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media'}}";
             }
         @endif
 

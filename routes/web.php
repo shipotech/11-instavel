@@ -37,12 +37,3 @@ Route::get('/image/{id}', 'ImageController@show')->name('image.show');
 // Comments
 Route::post('/comment', 'CommentController@store')->name('comment.store');
 Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');
-
-Route::get('/list', function() {
-    $dir = '/';
-    $recursive = false; // Get subdirectories also?
-    $contents = collect(Storage::disk('users')->listContents($dir, $recursive));
-
-    //return $contents->where('type', '=', 'dir'); // directories
-    return $contents->where('type', '=', 'file'); // files
-})->name('list');

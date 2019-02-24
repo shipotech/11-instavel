@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-lg-5 py-5">
     <div class="row justify-content-center">
-        <div class="col-md-4 order-md-2 mb-5 pr-lg-5 pl-lg-5">
+        <div class="col-10 col-md-4 order-md-2 mb-5 pr-lg-5 pl-lg-5">
             <!-- Card NEW -->
                 <article class="card news-card mb-5">
 
@@ -12,7 +12,7 @@
                         <div class="content d-flex">
                             <div class="row w-100 m-0 p-0">
                                 <div class="col-12 p-0">
-                                    <img src="@if(Auth::user()->image) {{ Auth::user()->image }} @else https://i.ibb.co/2kjt747/nouser.png @endif"
+                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">
@@ -130,7 +130,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-
                                         <button type="submit" class="btn primary-color border-0 hoverable mt-4 m-0 w-100 white-text prevent-button-submit">
                                             <i class="fas fa-upload" aria-hidden="true"></i> Upload
                                         </button>
@@ -144,7 +143,6 @@
         </div>
 
         <div class="col-md-7 order-md-1">
-
             @if(\count($images) === 0)
                 <!-- Card -->
                     <div class="card card-personal">
@@ -166,6 +164,7 @@
                     <!-- Card -->
             @endif
 
+            @if($images)
             @foreach($images as $image)
                 <!-- Card -->
                     <article class="card news-card mb-5">
@@ -175,7 +174,7 @@
                                 <div class="content d-flex">
                                     <div class="row w-100 m-0 p-0">
                                         <div class="col-12 p-0">
-                                            <img src="@if($image->user->image) {{ $image->user->image }} @else https://i.ibb.co/2kjt747/nouser.png @endif"
+                                            <img src="@if(Auth::user()->drive_id === null || empty(Auth::user()->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
                                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                             <div class="col text-center text-sm-left">
                                             <p class="font-weight-bold text-dark m-0">
@@ -191,8 +190,7 @@
 
                         <!-- Card image -->
                         <div class="view overlay">
-                            <img class="card-img-top" src="@if($image->image_path) {{ $image->image_path }}
-                            @else https://i.ibb.co/b23YqqB/noimage.png @endif"
+                            <img class="card-img-top" src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
                                  alt="image upload by: {{ $image->user->nick }}" style="max-height: 600px;">
                             <a href="{{ route('image.show', ['id' => $image->id]) }}">
                                 <div class="mask rgba-white-slight"></div>
@@ -232,6 +230,8 @@
                     </article>
                     <!-- Card -->
             @endforeach
+            @endif
+
                 <div class="clearfix"></div>
 
                 @if(count($images) > 5)

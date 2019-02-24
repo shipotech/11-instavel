@@ -55,6 +55,7 @@ return [
             'visibility' => 'public',
         ],
 
+        // For local usage
 //        'users' => [
 //            'driver' => 'local',
 //            'root' => storage_path('app/public/users'),
@@ -68,24 +69,6 @@ return [
 //            'url' => env('APP_URL').'/storage',
 //            'visibility' => 'public',
 //        ],
-
-        // Google Drive Storage to users folder
-        'users' => [
-            'driver' => 'google',
-            'clientId' => env('GOOGLE_DRIVE_CLIENT_ID'),
-            'clientSecret' => env('GOOGLE_DRIVE_CLIENT_SECRET'),
-            'refreshToken' => env('GOOGLE_DRIVE_REFRESH_TOKEN'),
-            'folderId' => env('GOOGLE_DRIVE_FOLDER_USERS'),
-        ],
-
-        // Google Drive Storage to images folder
-        'images' => [
-            'driver' => 'google',
-            'clientId' => env('GOOGLE_DRIVE_CLIENT_ID'),
-            'clientSecret' => env('GOOGLE_DRIVE_CLIENT_SECRET'),
-            'refreshToken' => env('GOOGLE_DRIVE_REFRESH_TOKEN'),
-            'folderId' => env('GOOGLE_DRIVE_FOLDER_IMAGES'),
-        ],
 
         's3' => [
             'driver' => 's3',
