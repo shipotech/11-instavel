@@ -16,7 +16,7 @@
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">
-                                            {{ Auth::user()->nick }}
+                                            {{ strtolower(Auth::user()->nick) }}
                                         </p>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@
                                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                             <div class="col text-center text-sm-left">
                                             <p class="font-weight-bold text-dark m-0">
-                                                {{ $image->user->nick }}
+                                                {{ strtolower($image->user->nick) }}
                                             </p>
 
                                         <div class="text-sm text-muted font-weight-normal mt-1"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</div>
@@ -192,7 +192,7 @@
                         <div class="view like-overlay">
                             <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay">
                             <img class="card-img-top" src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
-                                 alt="image upload by: {{ $image->user->nick }}" style="max-height: 600px;">
+                                 alt="image upload by: {{ strtolower($image->user->nick) }}" style="max-height: 600px;">
                                 <div class="maskaa no-opacity-like flex-center text-white rgba-black-slight mask_{{$image->id}}">
                                     <i class="fas fa-heart d-none white-text heart_{{$image->id}}"></i>
                                 </div>
@@ -248,7 +248,7 @@
                             <div class="collapse-content pb-3 pt-0">
                                 <!-- Text -->
                                 <p class="card-text collapse" id="collapseContent">
-                                    <span class="black-text font-weight-bold">{{ $image->user->nick }}</span>
+                                    <span class="black-text font-weight-bold">{{ strtolower($image->user->nick) }}</span>
                                     {{ $image->description }}
                                 </p>
                             </div>

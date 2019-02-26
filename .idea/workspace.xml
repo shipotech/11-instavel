@@ -4,8 +4,9 @@
     <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/image/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/image/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/like/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/like/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +78,7 @@
           <entry key="Procfile" value="1" />
           <entry key="XUniRDvnIagfZiugDqrTdA1rJInKQj3TAve0tGAR" value="1" />
           <entry key="comments" value="5" />
-          <entry key="css" value="58" />
+          <entry key="css" value="59" />
           <entry key="editorconfig" value="3" />
           <entry key="env" value="16" />
           <entry key="example" value="4" />
@@ -96,7 +97,7 @@
           <entry key="md" value="5" />
           <entry key="migrations" value="1" />
           <entry key="password_resets" value="1" />
-          <entry key="php" value="401" />
+          <entry key="php" value="404" />
           <entry key="phpcuBP41" value="1" />
           <entry key="png" value="7" />
           <entry key="rnc" value="1" />
@@ -109,8 +110,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="20" />
-          <entry key="Blade" value="164" />
-          <entry key="CSS" value="58" />
+          <entry key="Blade" value="167" />
+          <entry key="CSS" value="59" />
           <entry key="Database Element" value="89" />
           <entry key="HTML" value="13" />
           <entry key="Image" value="27" />
@@ -132,7 +133,7 @@
         <counts>
           <entry key="Procfile" value="44" />
           <entry key="cell" value="36" />
-          <entry key="css" value="1619" />
+          <entry key="css" value="1654" />
           <entry key="dummy" value="31" />
           <entry key="env" value="112" />
           <entry key="example" value="72" />
@@ -142,23 +143,23 @@
           <entry key="js" value="3354" />
           <entry key="json" value="7" />
           <entry key="md" value="435" />
-          <entry key="php" value="32676" />
+          <entry key="php" value="32761" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1162" />
-          <entry key="txt" value="2547" />
+          <entry key="txt" value="2577" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="184" />
-          <entry key="Blade" value="20121" />
-          <entry key="CSS" value="1619" />
+          <entry key="Blade" value="20206" />
+          <entry key="CSS" value="1654" />
           <entry key="HTML" value="561" />
           <entry key="JSON" value="7" />
           <entry key="JavaScript" value="3354" />
           <entry key="Markdown" value="435" />
           <entry key="PHP" value="12555" />
-          <entry key="PLAIN_TEXT" value="2791" />
+          <entry key="PLAIN_TEXT" value="2821" />
           <entry key="RegExp" value="2" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1162" />
@@ -189,19 +190,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+        <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="322">
+              <caret line="109" column="105" selection-start-line="109" selection-start-column="105" selection-end-line="109" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            <state relative-caret-position="217">
+              <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -219,7 +220,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>materi</find>
       <find>.tooltip</find>
       <find>#im</find>
       <find>fa-solid</find>
@@ -249,6 +249,7 @@
       <find>avatar-im</find>
       <find>.content</find>
       <find>scroll</find>
+      <find>nick</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,14 +306,14 @@
         <option value="$PROJECT_DIR$/resources/views/like/dislikes.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/public/js/show-likes.js" />
-        <option value="$PROJECT_DIR$/resources/views/like/show.blade.php" />
         <option value="$PROJECT_DIR$/public/js/likes.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/like/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -473,7 +474,14 @@
               <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="like" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -553,7 +561,7 @@
       <workItem from="1551030153924" duration="5769000" />
       <workItem from="1551062174178" duration="23839000" />
       <workItem from="1551113891959" duration="37227000" />
-      <workItem from="1551199589255" duration="7158000" />
+      <workItem from="1551199589255" duration="9588000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -688,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551163376415</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Minor bug fixed">
+      <created>1551208034474</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1551208034474</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="492567000" />
+    <option name="totallyTimeSpent" value="494997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -790,7 +805,8 @@
     <MESSAGE value="Folders for the provisional upload of the images" />
     <MESSAGE value="Changes in use of Google Drive API, now it has better format" />
     <MESSAGE value="Added Like Module&#10;&#10;1- Likes and Dislikes with ajax&#10;2- Show people who liked the Images with ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Like Module&#10;&#10;1- Likes and Dislikes with ajax&#10;2- Show people who liked the Images with ajax" />
+    <MESSAGE value="Minor bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fixed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../laravel-drive/app/Http/Controllers/DriveController.php">
@@ -969,24 +985,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="274" column="14" lean-forward="true" selection-start-line="274" selection-start-column="14" selection-end-line="274" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/show-likes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/like/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1087,29 +1089,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/like/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="14" column="59" lean-forward="true" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="274" column="14" selection-start-line="274" selection-start-column="14" selection-end-line="274" selection-end-column="14" />
+          <folding>
+            <element signature="e#12073#12099#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="120" column="59" lean-forward="true" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
-          <folding>
-            <element signature="e#2116#3494#0#HTML" />
-            <element signature="e#3040#4577#0#HTML" />
-            <element signature="e#8738#10926#0#HTML" />
-          </folding>
+        <state relative-caret-position="322">
+          <caret line="109" column="105" selection-start-line="109" selection-start-column="105" selection-end-line="109" selection-end-column="105" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        <state relative-caret-position="217">
+          <caret line="130" column="18" selection-start-line="130" selection-start-column="18" selection-end-line="130" selection-end-column="18" />
         </state>
       </provider>
     </entry>

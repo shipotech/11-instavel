@@ -9,7 +9,7 @@
                     @foreach($errors->all() as $message)
                         <br><span>* {{ $message }}</span>
                     @endforeach
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <button type="button" class="close py-2" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -18,7 +18,7 @@
             @if(session('message'))
                 <div class="alert alert-success alert-dismissible fade show text-sm" role="alert">
                     <strong>Success!</strong> {{ session('message') }}.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <button type="button" class="close py-2" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -30,7 +30,7 @@
                         <strong><i class="fas fa-exclamation-circle"></i> Whoops!</strong>
                         {{ session('error') }}
                     </span>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <button type="button" class="close py-2" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -82,7 +82,7 @@
                                         <!-- Card content -->
                                         <div class="card-body pb-0 pt-2">
                                             <!-- Text -->
-                                            <p class="card-text text-body">
+                                            <p class="card-text text-body text-pre">
                                                 <span class="black-text font-weight-bold">{{ $image->user->nick }}</span> {{ $image->description }}
                                             </p>
                                             @if(count($image->comments) > 0)
@@ -107,7 +107,7 @@
                                                         <div class="excerpt">
                                                             <div class="brief">
                                                                 <a class="name">{{ $comment->user->nick }}</a>
-                                                                <span class="card-text text-body">
+                                                                <span class="card-text text-body text-pre">
                {{ $comment->content }}
                </span>
                                                                 @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))&nbsp;
