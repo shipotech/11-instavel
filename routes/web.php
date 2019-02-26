@@ -37,3 +37,8 @@ Route::get('/image/{id}', 'ImageController@show')->name('image.show');
 // Comments
 Route::post('/comment', 'CommentController@store')->name('comment.store');
 Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.delete');
+
+// Likes
+Route::post('/like', 'LikeController@like')->name('like.store');
+Route::post('/dislike', 'LikeController@dislike')->name('like.delete');
+Route::post('/show-likes', 'LikeController@show')->name('like.show');

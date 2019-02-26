@@ -58,14 +58,14 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 mt-2 mt-md-0 pr-0 text-center">
-                                    <!-- Forgot password -->
-                                    @if (Route::has('password.request'))
-                                        <a class="text-indigo mx-auto" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    @endif
-                                </div>
+                                {{--<div class="col-12 col-md-6 mt-2 mt-md-0 pr-0 text-center">--}}
+                                    {{--<!-- Forgot password -->--}}
+                                    {{--@if (Route::has('password.request'))--}}
+                                        {{--<a class="text-indigo mx-auto" href="{{ route('password.request') }}">--}}
+                                            {{--{{ __('Forgot Your Password?') }}--}}
+                                        {{--</a>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
                             </div>
 
                             <!-- Sign in button -->

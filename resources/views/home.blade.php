@@ -174,7 +174,7 @@
                                 <div class="content d-flex">
                                     <div class="row w-100 m-0 p-0">
                                         <div class="col-12 p-0">
-                                            <img src="@if(Auth::user()->drive_id === null || empty(Auth::user()->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
+                                            <img src="@if($image->user->drive_id === null || empty($image->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($image->user->drive_id) {{ 'https://drive.google.com/uc?id='.$image->user->drive_id.'&export=media' }} @endif"
                                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                             <div class="col text-center text-sm-left">
                                             <p class="font-weight-bold text-dark m-0">
@@ -189,21 +189,32 @@
                             </header>
 
                         <!-- Card image -->
-                        <div class="view overlay">
+                        <div class="view like-overlay">
+                            <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay">
                             <img class="card-img-top" src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
                                  alt="image upload by: {{ $image->user->nick }}" style="max-height: 600px;">
-                            <a href="{{ route('image.show', ['id' => $image->id]) }}">
-                                <div class="mask rgba-white-slight"></div>
+                                <div class="maskaa no-opacity-like flex-center text-white rgba-black-slight mask_{{$image->id}}">
+                                    <i class="fas fa-heart d-none white-text heart_{{$image->id}}"></i>
+                                </div>
                             </a>
                         </div>
 
                         <div class="card-body pb-0 pt-3 mdb-color-text">
                             <div class="row p-0 m-0">
                                 <div class="col px-0">
-                                    <a href="#" class="pr-2 text-muted icons likes">
-                                        <i class="far fa-heart"></i>
-                                        {{ count($image->likes) }}
-                                    </a>
+                                    {{-- if user logged like this Image --}}
+                                    @php $user_like = false; @endphp
+                                    @foreach($image->likes as $like)
+                                        @if($like->user->id === Auth::user()->id)
+                                            @php $user_like = true; @endphp
+                                        @endif
+                                    @endforeach
+
+                                    @if($user_like)
+                                        @include('like.likes')
+                                    @else
+                                        @include('like.dislikes')
+                                    @endif
 
                                     <a href="{{ route('image.show', ['id' => $image->id]) }}" class="text-muted icons">
                                         @if(count($image->comments) > 0)
@@ -213,6 +224,22 @@
                                         @endif
                                         {{ count($image->comments) }}
                                     </a>
+                                </div>
+                            </div>
+                            <div class="row p-0 m-0">
+                                <div class="col px-0">
+                                    <p class="card-text">
+                                        <a type="button" data-toggle="modal" data-target="#modal_like"
+                                          class="show_likes" id="s_{{$image->id}}">
+                                        <span class="mdb-color-text font-weight-bold" id="amount_{{$image->id}}">
+                                            @if(count($image->likes) === 1)
+                                                {{ count($image->likes) }} like
+                                            @elseif(count($image->likes) === 0)
+                                            @else
+                                                {{ count($image->likes) }} likes
+                                            @endif</span>
+                                       </a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -241,6 +268,31 @@
                     </div>
                 </div>
                 @endif
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal_like" tabindex="-1" role="dialog" aria-labelledby="modal_like"
+     aria-hidden="true">
+
+    <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+
+
+        <div class="modal-content text-dark rounded ">
+            <div class="modal-header py-2 d-flex justify-content-center align-items-center flex-row">
+                <h5 class="modal-title d-flex justify-content-center mx-auto font-weight-bold" id="exampleModalLongTitle">Likes</h5>
+                <button type="button" class="close m-0 p-0 d-flex justify-content-end" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Grid column -->
+                <div class="col-md-12" id="show_likes">
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
