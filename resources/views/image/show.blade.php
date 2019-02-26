@@ -35,41 +35,47 @@
                     </button>
                 </div>
             @endif
-            <div class="col-md-12">
-                <!-- Card -->
-                <div class="card promoting-card mb-5 z-depth-2">
-                    <div class="row">
-
-                        <div class="col-md-7 pr-md-0">
-                            <!-- Card image -->
-                            <div class="w-100 white">
-                                <img class="card-img-top rounded-0 d-block"
-                                     src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
-                                     alt="Image uploaded by {{ '@' . $image->user->nick }}"
-                                     style="min-height: 450px;">
-                            </div>
+        </div>
+        <div class="container">
+            <!-- Section: Personal card -->
+            <section class="m-0 mb-5 w-100 p-0">
+                <!-- Grid row -->
+                <div class="row h-100 z-depth-1">
+                    <!-- Grid column -->
+                    <div class="col-md-7 px-0">
+                        <!-- Card -->
+                        <div class="card card-personal h-100 rounded-0 z-depth-0">
+                            <!-- Card image-->
+                            <img class="card-img-top rounded-0 h-100 min-img"
+                                 src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
+                                 alt="Image uploaded by {{ '@' . $image->user->nick }}">
+                            <!-- Card image-->
                         </div>
-
-                        <div class="col-md-5 pl-md-0" style="min-height: 450px;">
-                            <div class="h-30 news-card overflow-hidden border-bottom">
-
-                            <!-- Heading-->
-                                <div class="card-body w-100 pb-0 pt-2">
-                                    <div class="content d-flex align-items-center">
-                                        <div class="row w-100 m-0 p-0">
+                        <!-- Card -->
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-5 px-0">
+                        <!-- Card -->
+                        <div class="card card-personal h-100 white rounded-0 z-depth-0">
+                            <header class="h-30 news-card border-bottom">
+                                <!-- Heading-->
+                                <div class="card-body w-100 h-100 pb-0 pt-2">
+                                    <div class="content h-100">
+                                        <div class="row w-100 h-100 m-0 p-0">
                                             <div class="col-12 text-center">
-                                            <img src="@if($image->user->drive_id === null || empty($image->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($image->user->drive_id) {{ 'https://drive.google.com/uc?id='.$image->user->drive_id.'&export=media' }} @endif"
-                                                 class="rounded-circle avatar-img d-block mx-auto" alt="avatar">
+                                                <img src="@if($image->user->drive_id === null || empty($image->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($image->user->drive_id) {{ 'https://drive.google.com/uc?id='.$image->user->drive_id.'&export=media' }} @endif"
+                                                     class="rounded-circle avatar-img d-block mx-auto" alt="avatar">
                                                 <p class="font-weight-bolder text-muted m-0">
-                                            {{ $image->user->nick }}
+                                                    {{ $image->user->nick }}
                                                 </p>
                                             </div>
-
-                                            <div class="ml-auto text-sm text-primary font-weight-normal align-self-center mt-0"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</div>
+                                            <div class="col-12">
+                                            <p class="text-primary text-sm font-weight-normal m-0 p-0 text-right"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </header>
                             <div class="d-flex flex-column h-70 overflow-hidden">
                                 <div class="scrollbar scrollbar-primary p-0 mb-0">
                                     <div class="force-overflow">
@@ -102,17 +108,17 @@
                                                             <div class="brief">
                                                                 <a class="name">{{ $comment->user->nick }}</a>
                                                                 <span class="card-text text-body">
-                       {{ $comment->content }}
-                       </span>
-                                                        @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))&nbsp;
-                                                            <!-- Feed footer -->
+               {{ $comment->content }}
+               </span>
+                                                                @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))&nbsp;
+                                                                <!-- Feed footer -->
                                                                 <div class="feed-footer">
                                                                     <a href="{{ route('comment.delete', ['id' => $comment->id]) }}"
                                                                        class="like float-left" title="delete">
                                                                         <i class="fas fa-trash"></i>
                                                                     </a>
                                                                 </div>
-                                                            @endif
+                                                                @endif
                                                             </div>
                                                         </div>
                                                         <!-- Excerpt -->
@@ -123,12 +129,12 @@
                                     </div>
                                 </div>
 
-                                <div class="mt-auto">
+                                <footer class="mt-auto">
                                     <div class="card-body px-3 py-0">
                                         <form action="{{ route('comment.store') }}" method="post" id="comment-form" class="prevent-form-submit">
-                                        @csrf
+                                            @csrf
                                             <input type="hidden" name="form_token" value="{{ session('form_token') }}">
-                                        <!--Material textarea-->
+                                            <!--Material textarea-->
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="col p-0">
                                                     <div class="md-form h5-responsive">
@@ -149,13 +155,15 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </footer>
                             </div>
                         </div>
+                        <!-- Card -->
                     </div>
                 </div>
-                <!-- Card -->
-            </div>
+                <!-- Grid row -->
+            </section>
+            <!-- Section: Personal card -->
         </div>
     </section>
 @endsection

@@ -61,17 +61,24 @@ textarea#description {
 }
 /*Upload Images*/
 
+/*Show Image*/
+.min-img {
+    min-height: 70vh;
+}
+/*Show Image*/
+
 /*Scroll Bar*/
 .scrollbar {
     float: left;
     min-height: 12em;
+    max-height: 20em;
     background: #fff;
     overflow-y: scroll;
     margin-bottom: 25px;
 }
 
 .force-overflow {
-    min-height: 12em;
+    min-height: 15em;
 }
 
 .scrollbar-primary::-webkit-scrollbar {
@@ -114,6 +121,10 @@ textarea#description {
 
 .load {
     display: none;
+}
+
+.md-form .prefix {
+    font-size: 1.5rem !important;
 }
 
 #showpass {
@@ -163,3 +174,34 @@ textarea#description {
     transition:all .4s ease-in-out;
 }
 /*Like*/
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+    .min-img {
+        min-height: 50vh;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+    .min-img {
+        min-height: 55vh;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .min-img {
+        min-height: 60vh;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
