@@ -139,7 +139,7 @@
                                                     <!-- Excerpt -->
                                                     <div class="excerpt">
                                                         <div class="brief">
-                                                            <a class="name" href="{{ route('user.profile', ['id' => $image->user->id]) }}">{{ strtolower($comment->user->nick) }}</a>
+                                                            <a class="name" href="{{ route('user.profile', ['id' => $comment->user->id]) }}">{{ strtolower($comment->user->nick) }}</a>
                                                             <span class="card-text text-body text-pre">
            {{ $comment->content }}
            </span>

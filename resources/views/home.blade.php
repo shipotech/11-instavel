@@ -166,6 +166,7 @@
             <!-- Card -->
         @endif
             @include('layouts.show-more')
+            @include('layouts.loaders')
         </div>
     </div>
 </div>
