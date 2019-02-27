@@ -22,10 +22,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Dark Mode
 Route::get('/dark', 'HomeController@darkMode')->name('dark');
 
+// User Data
 Route::get('/config', 'UserController@config')->name('config');
 Route::post('/update/personal', 'UserController@updatePersonal')->name('user.personal');
 Route::post('/update/login', 'UserController@updateLogin')->name('user.login');
 Route::post('/update/password', 'UserController@updatePassword')->name('user.password');
+Route::get('/profile/{id}', 'UserController@profile')->name('user.profile');
 
 // Update Profile picture
 Route::match(['get', 'post'], '/update/photo', 'ImageController@ajaxImage');

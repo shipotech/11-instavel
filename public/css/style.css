@@ -184,12 +184,20 @@ textarea#description {
     .min-img {
         min-height: 50vh;
     }
+
+    .card-columns {
+        column-count: 1 !important;
+    }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767px) {
     .min-img {
         min-height: 55vh;
+    }
+
+    .card-columns {
+        column-count: 2 !important;
     }
 }
 

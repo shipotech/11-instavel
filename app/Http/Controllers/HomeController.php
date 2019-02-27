@@ -21,18 +21,21 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
+     * @param Request $request
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $images = Image::orderBy('id', 'DESC')->paginate(5);
 
+        if ($request->ajax()) {
+            return view('layouts.show-more')->with('images', $images);
+        }
+
         // form token
         $form_token = uniqid('', true);
-
         // Hashing uniqid
         $form_token = Hash::make($form_token);
-
         // create form token session and store generated id in it.
         session(['form_token' => $form_token]);
 

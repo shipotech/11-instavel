@@ -9,7 +9,9 @@
                          class="rounded-circle avatar-img2 d-block float-left mx-0 mr-3" alt="avatar">
                     <div class="col text-left">
                         <p class="font-weight-bold text-dark m-0">
-                            <a href="#!">{{ strtolower($like->user->nick) }}</a>
+                            <a href="{{ route('user.profile', ['id' => $like->user->id]) }}">
+                                {{ strtolower($like->user->nick) }}
+                            </a>
                         </p>
 
                         <div class="text-sm text-muted font-weight-normal mt-1">{{ ucwords($like->user->name .' '. $like->user->surname) }}</div>

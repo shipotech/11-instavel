@@ -84,7 +84,7 @@
 
 
                                 <div class="dropdown-menu dropdown-menu-right dropdown-primary @if(session('isDark')) unique-color-dark @else white @endif" aria-labelledby="navbarDropdownMenuLink-55">
-                                    <a class="dropdown-item @if(session('isDark')) text-white @else black-text @endif" href="">
+                                    <a class="dropdown-item @if(session('isDark')) text-white @else black-text @endif" href="{{ route('user.profile', ['id' => Auth::user()->id]) }}">
                                         Profile
                                     </a>
 
@@ -183,11 +183,6 @@
         form_data.append('file', img.files[0]);
         form_data.append('_token', '{{ csrf_token() }}');
 
-        // Show the loader animation and hide the blue mask
-        $('#loading').css('display', 'block');
-        $('.mask').css('display', 'none');
-        $('#profile').attr('href', '#!');
-
         // Store the current profile photo
         @if(Auth::user())
             if(typeof currentPhoto === 'undefined') {
@@ -207,6 +202,13 @@
             data: form_data,
             contentType: false,
             processData: false,
+            beforeSend: function()
+            {
+                // Show the loader animation and hide the blue mask
+                $('#loading').css('display', 'block');
+                $('.mask').css('display', 'none');
+                $('#profile').attr('href', '#!');
+            }
         })
             .done(function (data) {
                 if (data.fail) {
@@ -235,6 +237,7 @@
     <!-- Profile Picture -->
 </script>
 <script src="{{ asset('js/show-likes.js') }}" async></script>
+<script src="{{ asset('js/show-more.js') }}" async></script>
 <script src="{{ asset('js/upload.js') }}" defer></script>
 <script src="{{ asset('js/prevent.js') }}" defer></script>
 <script src="{{ asset('js/showpass.js') }}" defer></script>
