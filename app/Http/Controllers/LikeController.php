@@ -38,6 +38,7 @@ class LikeController extends Controller
         }
 
         $likes = Like::where('image_id', $image_id)->count();
+
         return response()->json([
             'fail'      => true,
             'likes'     => $likes
@@ -76,10 +77,7 @@ class LikeController extends Controller
     {
         $image_id = $request->message;
 
-        $likes = Like::with('user')
-            ->where('image_id', $image_id)
-            ->orderBy('id', 'desc')
-            ->get();
+        $likes = Like::where('image_id', $image_id)->orderBy('id', 'desc')->get();
 
         return view('like.show')->with('likes', $likes);
     }

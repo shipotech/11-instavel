@@ -21,16 +21,11 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @param Request $request
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Request $request)
+    public function index()
     {
-        $images = Image::orderBy('id', 'DESC')->paginate(5);
-
-        if ($request->ajax()) {
-            return view('layouts.show-more')->with('images', $images);
-        }
+        $images = Image::orderBy('id', 'DESC')->skip(0)->take(5)->get();
 
         // form token
         $form_token = uniqid('', true);
@@ -42,6 +37,33 @@ class HomeController extends Controller
         return view('home', [
             'images' => $images
         ]);
+    }
+
+    public function scroll(Request $request)
+    {
+        $lastId = $request->message;
+
+        $images = Image::where('id', '<', $lastId)->orderBy('id', 'DESC')->take(5)->get();
+
+        if ($request->ajax()) {
+            if (\count($images) > 0) {
+                foreach ($images as $image) {
+                    $lastId = $image->id;
+                }
+
+                // return a view ready to ".append" in jquery, and other data
+                return response()->json([
+                    'view'   => view('layouts.show-more')->with('images', $images)->render(),
+                    'last'   => $lastId,
+                    'status' => true
+                ]);
+            }
+
+            return response()->json([
+                'status'   => false
+            ]);
+        }
+        abort(403);
     }
 
     // Change Theme Color to Dark or Light

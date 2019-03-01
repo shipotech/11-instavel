@@ -121,7 +121,7 @@
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" async></script>
+<script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" defer></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
 <!-- SCRIPTS -->
@@ -129,7 +129,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         // Tooltips Initialization
-        $('[data-toggle="tooltip"]').tooltip();
+        jQuery('[data-toggle="tooltip"]').tooltip();
 
         // Validate Register Form Client-Side
         (function() {
@@ -236,11 +236,11 @@
     }
     <!-- Profile Picture -->
 </script>
-<script src="{{ asset('js/show-likes.js') }}" async></script>
-<script src="{{ asset('js/show-more.js') }}" async></script>
+<script src="{{ asset('js/show-likes.js') }}" defer></script>
+<script src="{{ asset('js/show-more.js') }}" defer></script>
+<script src="{{ asset('js/likes.js') }}" defer></script>
 <script src="{{ asset('js/upload.js') }}" defer></script>
 <script src="{{ asset('js/prevent.js') }}" defer></script>
 <script src="{{ asset('js/showpass.js') }}" defer></script>
-<script src="{{ asset('js/likes.js') }}" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 (function(){
-    $('.likes').click(function (e) {
+    $(document).on("click", ".likes", function(e){
         e.preventDefault();
 
         let button = $(this).attr('id');

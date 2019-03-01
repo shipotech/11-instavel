@@ -1,7 +1,8 @@
+@if($likes)
 @foreach($likes as $like)
 <!-- Card -->
-<article class="card news-card z-depth-0 px-0">
-    <header class="card-body w-100 py-2 px-0">
+<div class="card news-card z-depth-0 px-0">
+    <div class="card-body w-100 py-2 px-0">
         <div class="content d-flex">
             <div class="row w-100 m-0 p-0">
                 <div class="col-12 p-0">
@@ -19,6 +20,7 @@
                 </div>
             </div>
         </div>
-    </header>
-</article>
+    </div>
+</div>
 @endforeach
+@endif

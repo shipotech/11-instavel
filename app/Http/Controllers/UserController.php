@@ -98,14 +98,9 @@ class UserController extends Controller
     public function profile(Request $request)
     {
         $id = $request->id;
+        session(['actual_profile' => $id]);
 
-        $images = Image::where('user_id', $id)
-            ->orderBy('created_at', 'desc')
-            ->paginate(3);
-
-        if ($request->ajax()) {
-            return view('user.show-more')->with('images', $images);
-        }
+        $images = Image::where('user_id', $id)->orderBy('id', 'DESC')->skip(0)->take(3)->get();
 
         $user = User::find($id);
 
@@ -130,10 +125,31 @@ class UserController extends Controller
         ]);
     }
 
-    public function ajaxMore()
+    public function scroll(Request $request)
     {
-        $images = Image::orderBy('id', 'DESC')->paginate(5);
+        $lastId = $request->message;
+        $user_id = session('actual_profile');
 
-        return view('like.show')->with('likes', $likes);
+        $images = Image::where('user_id', $user_id)
+            ->where('id', '<', $lastId)->orderBy('id', 'DESC')->take(3)->get();
+
+        if ($request->ajax()) {
+            if (\count($images) > 0) {
+                foreach ($images as $image) {
+                    $lastId = $image->id;
+                }
+
+                return response()->json([
+                    'view'   => view('user.show-more')->with('images', $images)->render(),
+                    'last'   => $lastId,
+                    'status' => true
+                ]);
+            }
+
+            return response()->json([
+                'status'   => false
+            ]);
+        }
+        abort(403);
     }
 }

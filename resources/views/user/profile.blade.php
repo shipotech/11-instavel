@@ -104,12 +104,19 @@
                 <!-- Card -->
         </div>
         @endif
-
-    <section class="card-columns">
-        @include('user.show-more')
-        @include('layouts.loaders')
-    </section>
-
+        <section class="card-columns" id="show-more">
+            @include('user.show-more')
+        </section>
+        <!-- We need to store the last ID -->
+        <div class="lastId" style="display:none" id="{{ session('lastId') }}"></div>
+        <div class="layout_name" style="display:none" id="{{ session('layout_name') }}"></div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 p-0">
+            <!-- show preloader -->
+            <div class="before"></div>
+            <div id="no-more"></div>
+        </div>
     </div>
 </div>
 

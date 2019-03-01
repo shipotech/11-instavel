@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/scroll', 'HomeController@scroll');
 
 // Dark Mode
 Route::get('/dark', 'HomeController@darkMode')->name('dark');
@@ -28,6 +29,7 @@ Route::post('/update/personal', 'UserController@updatePersonal')->name('user.per
 Route::post('/update/login', 'UserController@updateLogin')->name('user.login');
 Route::post('/update/password', 'UserController@updatePassword')->name('user.password');
 Route::get('/profile/{id}', 'UserController@profile')->name('user.profile');
+Route::post('/scroll/profile', 'UserController@scroll');
 
 // Update Profile picture
 Route::match(['get', 'post'], '/update/photo', 'ImageController@ajaxImage');
@@ -43,4 +45,4 @@ Route::get('/comment/delete/{id}', 'CommentController@delete')->name('comment.de
 // Likes
 Route::post('/like', 'LikeController@like')->name('like.store');
 Route::post('/dislike', 'LikeController@dislike')->name('like.delete');
-Route::post('/show-likes', 'LikeController@show')->name('like.show');
+Route::post('/show-likes', 'LikeController@show');

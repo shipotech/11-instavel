@@ -92,5 +92,7 @@
 
         </article>
         <!-- Card -->
+        @php session(['lastId' => $image->id]); @endphp
     @endforeach
+        @php session(['layout_name' => 'home']); @endphp
 @endif

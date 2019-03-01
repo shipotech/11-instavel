@@ -144,7 +144,7 @@
                 <!-- Card -->
         </div>
 
-        <div class="col-md-7 order-md-1">
+        <div class="col-md-7 order-md-1" id="show-more">
         @if(\count($images) === 0)
         <!-- Card -->
             <div class="card card-personal">
@@ -166,8 +166,19 @@
             <!-- Card -->
         @endif
             @include('layouts.show-more')
-            @include('layouts.loaders')
         </div>
+        <!-- We need to store the last ID -->
+        <div class="lastId" style="display:none" id="{{ session('lastId') }}"></div>
+        <div class="layout_name" style="display:none" id="{{ session('layout_name') }}"></div>
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <!-- show preloader -->
+            <div class="before"></div>
+            <div id="no-more"></div>
+        </div>
+        <div class="col-md-4">&nbsp;</div>
     </div>
 </div>
 
