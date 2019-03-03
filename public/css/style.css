@@ -123,16 +123,16 @@ textarea#description {
     font-size: 1.4rem !important;
 }
 
-.load {
-    display: none;
-}
-
 .md-form .prefix {
     font-size: 1.3rem !important;
 }
 
 #showpass {
     cursor: pointer;
+}
+
+.icon-menu {
+    font-size: 1.5em;
 }
 /*Icons*/
 

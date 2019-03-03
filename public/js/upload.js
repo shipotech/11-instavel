@@ -1,10 +1,11 @@
 // Upload Images
     // Function that click the <input type='file'>
-    function changeUpload() {
-        $('#upload-image').click();
-    }
+(function(){
+    $(document).on("click", ".change_upload", function(){
+        var id = $(this).attr('id').split('_')[1];
+        $('#upload-image'+id).click();
 
-    function readURL(input) {
+    function readURL(input, id) {
         if (input.files && input.files[0]) {
             let reader = new FileReader();
 
@@ -13,14 +14,14 @@
             let fileType = file["type"];
             let validImageTypes = ["image/jpeg", "image/jpg", "image/png"];
 
-            $('#error').removeClass('show').addClass('d-none');
+            $('#error'+id).removeClass('show').addClass('d-none');
 
             if ($.inArray(fileType, validImageTypes) < 0) {
-                $('#error').removeClass('d-none').addClass('show');
+                $('#error'+id).removeClass('d-none').addClass('show');
             } else {
                 reader.onload = function (e) {
-                    $('.upload-preview').attr('src', e.target.result);
-                    $('.alert').removeClass('show').addClass('d-none');
+                    $('.upload-preview'+id).attr('src', e.target.result);
+                    $('#error'+id).removeClass('show').addClass('d-none');
                 };
 
                 reader.readAsDataURL(input.files[0]);
@@ -28,9 +29,11 @@
         }
     }
 
-    $("#upload-image").change(function(){
-        if ($(this).val() !== '') {
-            readURL(this);
-        }
+        $("#upload-image"+id).change(function(){
+            if ($(this).val() !== '') {
+                readURL(this, id);
+            }
+        });
     });
+})();
 // Upload Images

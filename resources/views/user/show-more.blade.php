@@ -1,11 +1,12 @@
 @if($images)
     @foreach($images as $image)
         <!-- Card -->
-        <article class="card news-card">
+        <article class="card news-card mb-5 mb-sm-3">
             <!-- Card image -->
             <div class="view like-overlay">
                 <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay">
-                    <img class="card-img-top" src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
+                    <img class="card-img-top"
+                         src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
                          alt="image upload by: {{ strtolower($image->user->nick) }}" style="max-height: 600px;">
                     <div class="maskaa no-opacity-like flex-center text-white rgba-black-slight mask_{{$image->id}}">
                         <i class="fas fa-heart d-none white-text heart_{{$image->id}}"></i>
@@ -39,14 +40,16 @@
                             {{ count($image->comments) }}
                         </a>
 
-                        <span class="text-sm text-muted font-weight-normal ml-auto text-right align-self-center"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</span>
+                        <span class="text-sm text-muted font-weight-normal ml-auto text-right align-self-center"><i
+                                    class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</span>
                     </div>
                 </div>
                 <div class="row p-0 m-0">
                     <div class="col px-0">
-                        <p class="card-text">
-                            <a type="button" data-toggle="modal" data-target="#modal_like"
-                               class="show_likes" id="s_{{$image->id}}">
+                        <div class="card-text">
+                            <div class="p-0 d-flex align-items-center justify-content-between">
+                                <a type="button" data-toggle="modal" data-target="#modal_like"
+                                   class="show_likes" id="s_{{$image->id}}">
                                 <span class="mdb-color-text font-weight-bold" id="amount_{{$image->id}}">
                                     @if(count($image->likes) === 1)
                                         {{ count($image->likes) }} like
@@ -54,8 +57,29 @@
                                     @else
                                         {{ count($image->likes) }} likes
                                     @endif</span>
-                            </a>
-                        </p>
+                                </a>
+                            @if(Auth::user() && Auth::user()->id === $image->user->id)
+                                <!--Dropdown primary-->
+                                <div class="dropdown dropleft">
+                                    <!--Trigger-->
+                                    <a class="text-decoration-none grey-text" type="button" id="dropdownMenu1"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-h icon-menu"></i>
+                                    </a>
+                                    <!--Menu-->
+                                    <div class="dropdown-menu dropdown-primary">
+                                        <a type="button" data-toggle="modal" data-target="#image_edit"
+                                           class="image_edit dropdown-item" id="s_{{$image->id}}">
+                                            Edit</a>
+
+                                        <a type="button" data-toggle="modal"
+                                           data-target="#modalConfirmDelete{{$image->id}}" class="dropdown-item">
+                                            Delete</a>
+                                    </div>
+                                </div>
+                            @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,10 +94,10 @@
                     </p>
                 </div>
             </footer>
-
         </article>
         <!-- Card -->
         @php session(['lastId' => $image->id]); @endphp
+        @include('layouts.modal-confirm')
     @endforeach
-        @php session(['layout_name' => 'profile']); @endphp
+    @php session(['layout_name' => 'profile']); @endphp
 @endif

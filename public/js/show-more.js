@@ -108,7 +108,7 @@ function loadMore()
             }
 
             // if the scroll goes to bottom we fired loadMore()
-            if ($(window).scrollTop() + $(window).height() + 100 >= $(document).height())
+            if ($(window).scrollTop() + $(window).height() + 500 >= $(document).height())
             {
                 scroll = setTimeout(function()
                 {

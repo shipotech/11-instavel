@@ -1,5 +1,5 @@
 (function(){
-    $(document).on("click", ".show_likes", function(e){
+    $(document).on("click", ".show_likes", function(){
 
         let image_id = $(this).attr('id').split('_')[1];
         let token = $('meta[name="csrf-token"]').attr('content');
@@ -16,10 +16,9 @@
                 /* remind that 'data' is the response of the AjaxController */
                 success: function (data) {
                     if (data === " ") {
-                        alert('hi');
+                        alert('There was a problem with your request, please refresh and try again in a few seconds');
                     } else {
                         $('#show_likes').html(data);
-                        console.log(data);
                     }
                 }
             })

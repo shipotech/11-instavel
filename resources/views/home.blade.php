@@ -12,7 +12,7 @@
                         <div class="content d-flex">
                             <div class="row w-100 m-0 p-0">
                                 <div class="col-12 p-0">
-                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
+                                    <img src="@if(Auth::user()->drive_id === null || empty(Auth::user()->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">
@@ -28,7 +28,7 @@
 
                     <!-- Card content -->
                     <div class="card-body m-0 py-0">
-                        <div class="alert alert-danger fade text-danger d-none text-sm" role="alert" id="error">
+                        <div class="alert alert-danger fade text-danger d-none text-sm" role="alert" id="error1">
                             <strong>Whoops!</strong> <span>The file must be an image (jpeg, png)</span>
                         </div>
 
@@ -61,8 +61,8 @@
 
                         <div class="mx-auto">
                             <div class="view overlay overflow-hidden">
-                                <a title="Upload your photo" href="javascript:changeUpload()">
-                                    <img src="https://i.ibb.co/jGvG5VL/upload2.png" alt="upload picture" class="card-img-top upload-preview">
+                                <a title="Upload your photo" href="#!" class="change_upload" id="c_1">
+                                    <img src="https://i.ibb.co/jGvG5VL/upload2.png" alt="upload picture" class="card-img-top upload-preview1">
                                     <div class="mask flex-center text-white rgba-black-strong overflow-hidden">
                                         <i class="fa fa-camera fa-2x"></i>
                                     </div>
@@ -74,59 +74,59 @@
                             <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form" class="prevent-form-submit">
                                 @csrf
                                 <input type="hidden" name="form_token" value="{{ session('form_token') }}">
-                                <input type="file" name="upload" id="upload-image" style="display: none" />
+                                <input type="file" name="upload" id="upload-image1" style="display: none" />
                                 <label for="description" class="sr-only-focusable"></label>
                                 <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." required></textarea>
                                 <div class="row">
                                     <div class="col">
                                         <div class="d-flex justify-content-center">
-                                        <div class="preloader-wrapper small active load mt-1">
-                                            <div class="spinner-layer spinner-blue">
-                                                <div class="circle-clipper left">
-                                                    <div class="circle"></div>
+                                            <div class="preloader-wrapper small active load d-none mt-2">
+                                                <div class="spinner-layer spinner-blue">
+                                                    <div class="circle-clipper left">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="gap-patch">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="circle-clipper right">
+                                                        <div class="circle"></div>
+                                                    </div>
                                                 </div>
-                                                <div class="gap-patch">
-                                                    <div class="circle"></div>
+                                                <div class="spinner-layer spinner-red">
+                                                    <div class="circle-clipper left">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="gap-patch">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="circle-clipper right">
+                                                        <div class="circle"></div>
+                                                    </div>
                                                 </div>
-                                                <div class="circle-clipper right">
-                                                    <div class="circle"></div>
+                                                <div class="spinner-layer spinner-yellow">
+                                                    <div class="circle-clipper left">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="gap-patch">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="circle-clipper right">
+                                                        <div class="circle"></div>
+                                                    </div>
                                                 </div>
+                                                <div class="spinner-layer spinner-green">
+                                                    <div class="circle-clipper left">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="gap-patch">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                    <div class="circle-clipper right">
+                                                        <div class="circle"></div>
+                                                    </div>
+                                                </div>
+                                                <span class="sr-only">Loading...</span>
                                             </div>
-                                            <div class="spinner-layer spinner-red">
-                                                <div class="circle-clipper left">
-                                                    <div class="circle"></div>
-                                                </div>
-                                                <div class="gap-patch">
-                                                    <div class="circle"></div>
-                                                </div>
-                                                <div class="circle-clipper right">
-                                                    <div class="circle"></div>
-                                                </div>
-                                            </div>
-                                            <div class="spinner-layer spinner-yellow">
-                                                <div class="circle-clipper left">
-                                                    <div class="circle"></div>
-                                                </div>
-                                                <div class="gap-patch">
-                                                    <div class="circle"></div>
-                                                </div>
-                                                <div class="circle-clipper right">
-                                                    <div class="circle"></div>
-                                                </div>
-                                            </div>
-                                            <div class="spinner-layer spinner-green">
-                                                <div class="circle-clipper left">
-                                                    <div class="circle"></div>
-                                                </div>
-                                                <div class="gap-patch">
-                                                    <div class="circle"></div>
-                                                </div>
-                                                <div class="circle-clipper right">
-                                                    <div class="circle"></div>
-                                                </div>
-                                            </div>
-                                            <span class="sr-only">Loading...</span>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,6 +145,14 @@
         </div>
 
         <div class="col-md-7 order-md-1" id="show-more">
+            @if(session('image-message'))
+            <div class="alert alert-{{session('alert-color')}} fade show alert-dismissible" role="alert">
+                <strong>{{session('title')}}</strong> {{ session('image-message') }}.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @endif
         @if(\count($images) === 0)
         <!-- Card -->
             <div class="card card-personal">
@@ -181,6 +189,6 @@
         <div class="col-md-4">&nbsp;</div>
     </div>
 </div>
-
+@include('layouts.modal-edit')
 @include('like.modal')
 @endsection

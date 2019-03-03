@@ -37,6 +37,9 @@ Route::match(['get', 'post'], '/update/photo', 'ImageController@ajaxImage');
 // Upload Images
 Route::post('/upload', 'ImageController@store')->name('image.store');
 Route::get('/image/{id}', 'ImageController@show')->name('image.show');
+Route::get('/image/delete/{id}', 'ImageController@delete')->name('image.delete');
+Route::get('/image/edit/{id}', 'ImageController@edit')->name('image.edit');
+Route::post('/image/update', 'ImageController@update')->name('image.update');
 
 // Comments
 Route::post('/comment', 'CommentController@store')->name('comment.store');

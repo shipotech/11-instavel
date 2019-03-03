@@ -12,7 +12,7 @@
             <!--Profile Picture-->
             <div class="card testimonial-card z-depth-0 @if(session('isDark')) dark-mode @else light-mode @endif">
                 <div class="mx-auto">
-                    <div class="card text-center mb-3 overflow-hidden">
+                    <div class="card text-center mb-3 overflow-hidden" style="min-width: 20em;">
                     <div class="rounded-circle view overlay zoom overflow-hidden d-block mx-auto mt-4">
                         @if($user->id === Auth::user()->id)
                             <a title="Change your photo" href="javascript:changeProfile()" id="profile">
@@ -39,10 +39,11 @@
                     <span class="mdb-color-text font-weight-bold">
                         <i class="fas fa-images text-primary"></i>
                         <span class="mr-2">
-                        @if($publications)
+                        @if($publications || $publications === 0)
                             @if($publications === 1)
                                 {{ $publications }} publication
                             @elseif($publications === 0)
+                                0 publications
                             @else
                                 {{ $publications }} publications
                             @endif
@@ -51,10 +52,11 @@
 
                         <i class="fas fa-heart like-color"></i>
                         <span class="mr-2">
-                        @if($likes)
+                        @if($likes || $likes === 0)
                             @if($likes === 1)
                                 {{ $likes }} like
                             @elseif($likes === 0)
+                                    0 likes
                             @else
                                 {{ $likes }} likes
                             @endif
@@ -63,10 +65,11 @@
 
                         <i class="fas fa-comments text-indigo"></i>
                         <span>
-                        @if($comments)
+                        @if($comments || $comments === 0)
                             @if($comments === 1)
                                 {{ $comments }} comment
                             @elseif($comments === 0)
+                                    0 comments
                             @else
                                 {{ $comments }} comments
                             @endif
@@ -80,7 +83,18 @@
             </div>
         </div>
         <!-- Profile Picture -->
-
+        <div class="row justify-content-center mx-auto">
+            <div class="col-12 mb-2">
+        @if(session('image-message'))
+            <div class="alert alert-{{session('alert-color')}} fade show alert-dismissible" role="alert">
+                <strong>{{session('title')}}</strong> {{ session('image-message') }}.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+            </div>
+        </div>
 
         @if(\count($user->images) === 0)
         <div class="card-columns">
@@ -119,6 +133,6 @@
         </div>
     </div>
 </div>
-
+@include('layouts.modal-edit')
 @include('like.modal')
 @endsection

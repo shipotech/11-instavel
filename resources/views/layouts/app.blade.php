@@ -240,6 +240,7 @@
 <script src="{{ asset('js/show-more.js') }}" defer></script>
 <script src="{{ asset('js/likes.js') }}" defer></script>
 <script src="{{ asset('js/upload.js') }}" defer></script>
+<script src="{{ asset('js/image-edit.js') }}" defer></script>
 <script src="{{ asset('js/prevent.js') }}" defer></script>
 <script src="{{ asset('js/showpass.js') }}" defer></script>
 </body>

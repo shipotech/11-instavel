@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
+use App\Like;
 use Exception;
 use App\Image;
 use App\User;
@@ -61,10 +63,9 @@ class ImageController extends Controller
 
         // Delete previous profile photo if the user has one on DB
         if ($user->image !== null || !empty($user->image)) {
-            $file_id = $this->findFile(env('GOOGLE_FOLDER_USERS'), $user->image);
 
             try {
-                $this->drive->files->delete($file_id);
+                $this->drive->files->delete($user->drive_id);
             } catch (Exception $e) {
                 return array(
                     'fail' => true,
@@ -112,7 +113,6 @@ class ImageController extends Controller
 
         return "https://drive.google.com/uc?id=$user->drive_id&export=media";
     }
-
 
     // Method for Upload images in Home
     public function store(Request $request)
@@ -263,5 +263,202 @@ class ImageController extends Controller
         ]);
 
         return $file->id;
+    }
+
+    public function edit(Request $request)
+    {
+        if ($request->ajax()) {
+            $user = \Auth::user();
+            $image = Image::find($request->id);
+
+            if ($user && $image && $image->user->id === $user->id) {
+                return response()->json([
+                    'view' => view('image.edit')->with('image', $image)->render(),
+                    'status' => true
+                ]);
+            }
+            return response()->json([
+                'status' => false
+            ]);
+        }
+        abort(403);
+    }
+
+    public function update(Request $request)
+    {
+        // Check if the user has submit the form multiple times
+        $form_token = $request->input('form_token');
+
+        if ($form_token !== session('form_token')) {
+            return redirect()->route('home')->with([
+                'image-message' => 'Please, wait a moment or refresh this page',
+                'alert-color'   => 'danger',
+                'title'         => 'Whoops!'
+            ]);
+        }
+        // -----------------------------------------------------
+
+        // Obtain data
+        $image_id = $request->input('image_id');
+        $image_path = $request->file('upload');
+        $description = $request->input('description');
+
+        // Validation
+        $validate = $this->validate($request, [
+            'description' => 'required',
+            'upload' => 'mimes:jpeg,jpg,png'
+        ]);
+
+        // Assign values
+        $user = \Auth::user();
+        // Obtain previous
+        $image = Image::find($image_id);
+        $image->user_id = $user->id;
+        $image->description = $description;
+
+        // Upload the image
+        if ($image_path && $image_path !== null) {
+
+            //filename to store
+            $extension = $image_path->getClientOriginalExtension();
+            $filename = (\count(Image::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
+
+            // Save the new Image on disk
+            $image_path->move(public_path('storage/images/'), $filename);
+
+            // Obtain the new ubication of the Image
+            $saveImage = public_path('storage/images/' . $filename);
+
+            // Obtain the dimension
+            $height = Intervention::make($saveImage)->height();
+            $width = Intervention::make($saveImage)->width();
+
+            // create an Instance
+            $img = Intervention::make($saveImage);
+
+            // Fill the images that don't fit the conditions below:
+            if ($width < 665 && $height < 450) {
+
+                // set a background-color for the emerging area
+                $img->resizeCanvas(665, 450, 'center', false, '212121');
+            } elseif ($width < 665) {
+
+                // set a background-color for the emerging area
+                $img->resizeCanvas(665, $height, 'center', false, '212121');
+            } elseif ($height < 450) {
+
+                // set a background-color for the emerging area
+                $img->resizeCanvas($width, 450, 'center', false, '212121');
+            } else {
+
+                //Resize image here
+                $img->resize(665, 600, function ($constraint) {
+                    $constraint->aspectRatio();
+                    $constraint->upsize();
+                });
+            }
+
+            // Save the resize Image in local folder (public/storage/images/)
+            $img->save($saveImage);
+
+            try {
+                // Deleting previous Image on Google Drive
+                $this->drive->files->delete($image->drive_id);
+
+                // Save the new Image in Google Drive
+                $file = File::get($saveImage);
+                $mimeType = File::mimeType($saveImage);
+                $file_id = $this->createFile($file, $mimeType, $filename, env('GOOGLE_FOLDER_IMAGES'));
+
+                // Update the database with the new Image
+                $image->image_path = $filename;
+                $image->drive_id = $file_id;
+                $image->update();
+
+                // Delete the image in temporal path
+                File::delete($saveImage);
+
+                $message = [
+                    'image-message' => 'Image edited successfully',
+                    'alert-color'   => 'success',
+                    'title'         => 'Success!'
+                ];
+
+            } catch (Exception $e) {
+                $message = [
+                    'image-message' => 'There was a problem uploading the new image',
+                    'alert-color'   => 'danger',
+                    'title'         => 'Whoops!'
+                ];
+            }
+            return redirect()->back()->with($message);
+        }
+
+        if ($image_path === null) {
+
+            $image->update();
+            $message = [
+                'image-message' => 'Image edited successfully',
+                'alert-color'   => 'success',
+                'title'         => 'Success!'
+            ];
+
+            return redirect()->back()->with($message);
+        }
+
+        $message = [
+            'image-message' => 'There was a problem uploading the new image',
+            'alert-color'   => 'danger',
+            'title'         => 'Whoops!'
+        ];
+        return redirect()->back()->with($message);
+    }
+
+    public function delete($id)
+    {
+        $user = \Auth::user();
+        $image = Image::find($id);
+        $comments = Comment::where('image_id', $id)->get();
+        $likes = Like::where('image_id', $id)->get();
+
+        if ($user && $image && $image->user->id === $user->id) {
+            // Deleting the comments
+            if ($comments && \count($comments) >= 1) {
+                foreach ($comments as $comment) {
+                    $comment->delete();
+                }
+            }
+            // Deleting the likes
+            if ($likes && \count($likes) >= 1) {
+                foreach ($likes as $like) {
+                    $like->delete();
+                }
+            }
+            // Deleting the image
+
+            try {
+                $this->drive->files->delete($image->drive_id);
+                $image->delete();
+                $message = [
+                    'image-message' => 'Image deleted successfully',
+                    'alert-color'   => 'success',
+                    'title'         => 'Success!'
+                ];
+            } catch (Exception $e) {
+                $message = [
+                    'image-message' => 'There was a problem with Google Drive, please contact the admin',
+                    'alert-color'   => 'danger',
+                    'tittle'        => 'Whoops!'
+                ];
+            }
+
+        } else {
+            $message = [
+                'image-message' => 'There was a problem with your request, please try again in a few seconds',
+                'alert-color'   => 'warning',
+                'tittle'        => 'Whoops!'
+            ];
+        }
+        return redirect()->back()->with($message);
     }
 }

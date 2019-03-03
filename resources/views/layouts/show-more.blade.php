@@ -7,7 +7,7 @@
             <header class="card-body w-100 py-2">
                 <div class="content d-flex">
                     <div class="row w-100 m-0 p-0">
-                        <div class="col-12 p-0">
+                        <div class="col p-0">
                             <img src="@if($image->user->drive_id === null || empty($image->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($image->user->drive_id) {{ 'https://drive.google.com/uc?id='.$image->user->drive_id.'&export=media' }} @endif"
                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                             <div class="col text-center text-sm-left">
@@ -20,6 +20,29 @@
                                 <div class="text-sm text-muted font-weight-normal mt-1"><i class="fas fa-clock"></i> {{ $image->created_at->diffForHumans() }}</div>
                             </div>
                         </div>
+                        @if(Auth::user() && Auth::user()->id === $image->user->id)
+                            <div class="p-0 d-flex align-items-center justify-content-end grey-text">
+                                <!--Dropdown primary-->
+                                <div class="dropdown dropleft">
+                                    <!--Trigger-->
+                                    <a class="text-decoration-none" type="button" id="dropdownMenu1"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-ellipsis-v icon-menu"></i>
+                                    </a>
+                                    <!--Menu-->
+                                    <div class="dropdown-menu dropdown-primary">
+                                        <a type="button" data-toggle="modal" data-target="#image_edit"
+                                           class="image_edit dropdown-item" id="s_{{$image->id}}">
+                                            Edit</a>
+
+                                        <a type="button" data-toggle="modal"
+                                           data-target="#modalConfirmDelete{{$image->id}}" class="dropdown-item">
+                                            Delete</a>
+                                    </div>
+                                </div>
+                                <!--/Dropdown primary-->
+                            </div>
+                        @endif
                     </div>
                 </div>
             </header>
@@ -67,13 +90,13 @@
                         <p class="card-text">
                             <a type="button" data-toggle="modal" data-target="#modal_like"
                                class="show_likes" id="s_{{$image->id}}">
-                                        <span class="mdb-color-text font-weight-bold" id="amount_{{$image->id}}">
-                                            @if(count($image->likes) === 1)
-                                                {{ count($image->likes) }} like
-                                            @elseif(count($image->likes) === 0)
-                                            @else
-                                                {{ count($image->likes) }} likes
-                                            @endif</span>
+                                <span class="mdb-color-text font-weight-bold" id="amount_{{$image->id}}">
+                                    @if(count($image->likes) === 1)
+                                        {{ count($image->likes) }} like
+                                    @elseif(count($image->likes) === 0)
+                                    @else
+                                        {{ count($image->likes) }} likes
+                                    @endif</span>
                             </a>
                         </p>
                     </div>
@@ -93,6 +116,7 @@
         </article>
         <!-- Card -->
         @php session(['lastId' => $image->id]); @endphp
+       @include('layouts.modal-confirm')
     @endforeach
         @php session(['layout_name' => 'home']); @endphp
 @endif
