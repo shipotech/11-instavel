@@ -29,12 +29,30 @@ class User extends Authenticatable
     ];
 
     /**
-      * Relation One to Many "Likes"
+      * Relation One to Many "Images"
       */
     public function images()
     {
         // Course: return $this->hasMany('App\Image');
         return $this->hasMany(Image::class);
+    }
+
+    /**
+     * Relation One to Many "likes"
+     */
+    public function likes()
+    {
+        // Course: return $this->hasMany('App\Like');
+        return $this->hasMany(Like::class);
+    }
+
+    /**
+     * Relation One to Many "comments"
+     */
+    public function comments()
+    {
+        // Course: return $this->hasMany('App\Comment');
+        return $this->hasMany(Comment::class);
     }
 
 }

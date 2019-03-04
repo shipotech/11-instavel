@@ -78,10 +78,10 @@
                         <a href="{{ route('image.show', ['id' => $image->id]) }}" class="text-muted icons">
                             @if(count($image->comments) > 0)
                                 <i class="fas fa-comments"></i>
+                                {{ count($image->comments) }}
                             @else
                                 <i class="far fa-comments"></i>
                             @endif
-                            {{ count($image->comments) }}
                         </a>
                     </div>
                 </div>

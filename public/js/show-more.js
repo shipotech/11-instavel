@@ -12,6 +12,8 @@ function loadMore()
         url = '/scroll';
     } else if (url === 'profile') {
         url = '/scroll/profile';
+    } else if (url === 'people') {
+        url = '/scroll/people';
     }
 
     if (id && id > 0) {

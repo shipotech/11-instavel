@@ -131,7 +131,7 @@
                                             @foreach($image->comments as $comment)
                                                 <div class="news mb-1">
                                                     <!-- Label -->
-                                                    <div class="label">
+                                                    <div class="label text-center">
                                                         <img src="@if($comment->user->drive_id === null || empty($comment->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($comment->user->drive_id) {{ 'https://drive.google.com/uc?id='.$comment->user->drive_id.'&export=media' }} @endif"
                                                              class="rounded-circle avatar-img d-block">
                                                     </div>
@@ -139,19 +139,19 @@
                                                     <!-- Excerpt -->
                                                     <div class="excerpt">
                                                         <div class="brief">
+                                                            <div class="p-0 d-flex align-items-center justify-content-between w-100">
                                                             <a class="name" href="{{ route('user.profile', ['id' => $comment->user->id]) }}">{{ strtolower($comment->user->nick) }}</a>
-                                                            <span class="card-text text-body text-pre">
-           {{ $comment->content }}
-           </span>
-                                                            @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))&nbsp;
-                                                            <!-- Feed footer -->
-                                                            <div class="feed-footer">
-                                                                <a href="{{ route('comment.delete', ['id' => $comment->id]) }}"
-                                                                   class="like float-left" title="delete">
+                                                                @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))
+                                                                <a href="{{ route('comment.delete', ['id' => $comment->id]) }}" class="likes mdb-color-text text-sm" title="delete">
                                                                     <i class="fas fa-trash"></i>
                                                                 </a>
+                                                                @endif
                                                             </div>
-                                                            @endif
+                                                            <div class="d-flex align-items-start justify-content-start">
+                                                            <p class="card-text text-body">
+                                                                {{ $comment->content }}
+                                                            </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- Excerpt -->

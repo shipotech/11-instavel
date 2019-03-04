@@ -77,6 +77,10 @@
                                 <a href="{{ route('home') }}" class="nav-link">Home</a>
                             </li>
 
+                            <li class="nav-item">
+                                <a href="{{ route('user.people') }}" class="nav-link">People</a>
+                            </li>
+
                             <li class="nav-item avatar dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="@if(Auth::user()->image === null || empty(Auth::user()->image))https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif" class="preview_image rounded-circle z-depth-0 mx-auto" alt="avatar image" width="35" height="35">
@@ -130,7 +134,6 @@
     $(document).ready(function () {
         // Tooltips Initialization
         jQuery('[data-toggle="tooltip"]').tooltip();
-
         // Validate Register Form Client-Side
         (function() {
             'use strict';
@@ -243,5 +246,6 @@
 <script src="{{ asset('js/image-edit.js') }}" defer></script>
 <script src="{{ asset('js/prevent.js') }}" defer></script>
 <script src="{{ asset('js/showpass.js') }}" defer></script>
+<script src="{{ asset('js/search-people.js') }}" defer></script>
 </body>
 </html>

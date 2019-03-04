@@ -15,6 +15,89 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        $users = User::orderBy('id', 'DESC')->skip(0)->take(6)->get();
+
+        return view('user.index', [
+            'users' => $users,
+            'color' => $this->randomColor()
+        ]);
+    }
+
+    public function scrollPeople(Request $request)
+    {
+        $lastId = $request->message;
+
+        $users = User::where('id', '<', $lastId)->orderBy('id', 'DESC')->take(3)->get();
+
+        if ($request->ajax()) {
+            if (\count($users) > 0) {
+                foreach ($users as $user) {
+                    $lastId = $user->id;
+                }
+
+                return response()->json([
+                    'view'   => view('user.people', [
+                        'users' => $users,
+                        'color' => $this->randomColor()
+                    ])->render(),
+                    'last'   => $lastId,
+                    'status' => true
+                ]);
+            }
+
+            return response()->json([
+                'status'   => false
+            ]);
+        }
+        abort(403);
+    }
+
+    public function search(Request $request)
+    {
+        if ($request->ajax()) {
+            $users = User::where('nick', 'LIKE', '%' . $request->message . '%')->get();
+
+            if ($users) {
+                return response()->json([
+                    'view'   => view('user.search', [
+                        'users' => $users
+                    ])->render(),
+                    'status' => true
+                ]);
+            }
+            return response()->json([
+                'status' => false
+                ]);
+        }
+
+        abort(403);
+    }
+
+    public function randomColor(): array
+    {
+        $colors = [
+            'aqua-gradient',
+            'purple-gradient',
+            'peach-gradient',
+            'blue-gradient',
+            'rgba-blue-strong',
+            'rgba-orange-strong',
+            'unique-color',
+            'default-color-dark',
+            'rgba-blue-grey-strong',
+            'rgba-red-strong',
+            'light-blue accent-4',
+            'deep-purple darken-4',
+            'warning-color-dark',
+            'danger-color-dark',
+            'rgba-yellow-strong'
+        ];
+
+        return $colors;
+    }
+
     public function config()
     {
         return view('user.config');

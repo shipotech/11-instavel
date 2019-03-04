@@ -31,6 +31,11 @@ Route::post('/update/password', 'UserController@updatePassword')->name('user.pas
 Route::get('/profile/{id}', 'UserController@profile')->name('user.profile');
 Route::post('/scroll/profile', 'UserController@scroll');
 
+// People (all users)
+Route::get('/people', 'UserController@index')->name('user.people');
+Route::post('/scroll/people', 'UserController@scrollPeople');
+Route::post('/search', 'UserController@search');
+
 // Update Profile picture
 Route::match(['get', 'post'], '/update/photo', 'ImageController@ajaxImage');
 

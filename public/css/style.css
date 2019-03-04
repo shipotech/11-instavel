@@ -109,6 +109,18 @@ textarea#description {
     width: 3rem !important;
     height: 3rem !important;
 }
+
+.news-card .content .avatar-img3 {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
 .h-30 {
     height: 30% !important;
 }
@@ -178,6 +190,35 @@ textarea#description {
     transition:all .4s ease-in-out;
 }
 /*Like*/
+
+/*Search People*/
+.div-people {
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,.0975);
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 8em;
+    width: 15.6em;
+    z-index: 9;
+    margin-left: -7.8em;
+    max-height: 12em;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: auto;
+    margin-bottom: 25px;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.div-people2 {
+    -webkit-overflow-scrolling: touch;
+    max-height: 12em;
+    padding: 0;
+}
+
+/*Search People*/
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575px) {
