@@ -12,7 +12,9 @@
                         <div class="content d-flex">
                             <div class="row w-100 m-0 p-0">
                                 <div class="col-12 p-0">
-                                    <img src="@if(Auth::user()->drive_id === null || empty(Auth::user()->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
+                                    <img src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
+                                            https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">

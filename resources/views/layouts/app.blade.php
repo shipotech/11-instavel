@@ -83,7 +83,11 @@
 
                             <li class="nav-item avatar dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="@if(Auth::user()->image === null || empty(Auth::user()->image))https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif" class="preview_image rounded-circle z-depth-0 mx-auto" alt="avatar image" width="35" height="35">
+                                    <img class="preview_image2 rounded-circle z-depth-0 mx-auto pp_f2"
+                                         src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
+                                                 https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
+                                         alt="avatar image" width="35" height="35">
                                 </a>
 
 
@@ -176,23 +180,23 @@
         // Verify is Image (gif, jpg, png)
         let upload = img.files[0];
         let fileType = upload["type"];
-        let validImageTypes = ["image/gif", "image/jpeg", "image/png"];
+        let validImageTypes = ["image/jpeg", "image/png"];
 
         // Hide error container
         $('#error').removeClass('show').addClass('d-none');
 
         // Verify is the fileType not is in array
         if ($.inArray(fileType, validImageTypes) < 0) {
-            $('.error').text('The file must be an image (jpeg, png, gif)');
+            $('.error').text('The file must be an image (jpg, png)');
             $('#error').removeClass('d-none').addClass('show');
         } else {
         form_data.append('file', img.files[0]);
-        form_data.append('_token', '{{ csrf_token() }}');
 
         // Store the current profile photo
         @if(Auth::user())
-            if(typeof currentPhoto === 'undefined') {
-                var currentPhoto = "{{'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media'}}";
+            if(typeof currentPhoto1 === 'undefined') {
+                var currentPhoto1 = "{{'https://drive.google.com/uc?id='.Auth::user()->drive_id1.'&export=media'}}";
+                var currentPhoto2 = "{{'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media'}}";
             }
         @endif
 
@@ -204,7 +208,7 @@
 
         $.ajax({
             method: 'POST',
-            url: "{{ url('/update/photo') }}",
+            url: '/update/photo',
             data: form_data,
             contentType: false,
             processData: false,
@@ -220,20 +224,24 @@
                 if (data.fail) {
                     $('.error').text(data.errors['file']);
                     $('#error').removeClass('d-none').addClass('show');
-                    $('.preview_image').attr('src', currentPhoto);
+                    $('.preview_image').attr('src', currentPhoto1);
+                    $('.preview_image2').attr('src', currentPhoto2);
                 } else {
-                    $('#file_name').val(data);
-                    $('.preview_image').attr('src', data);
-                    currentPhoto = data;
+                    $('#file_name').val(data.drive_id1);
+                    $('.preview_image').attr('src', data.drive_id1);
+                    $('.preview_image2').attr('src', data.drive_id2);
+                    currentPhoto1 = data.drive_id1;
+                    currentPhoto2 = data.drive_id2;
                 }
                 $('#loading').css('display', 'none');
                 $('.mask').css('display', 'flex');
                 $('#profile').attr('href', 'javascript:changeProfile()');
             })
             .fail(function () {
-                $('.preview_image').attr('src', currentPhoto);
+                $('.preview_image').attr('src', currentPhoto1);
+                $('.preview_image2').attr('src', currentPhoto2);
                 $('#loading').css('display', 'none');
-                $('.error').text('The file must be an image (jpeg, png, gif)');
+                $('.error').text('The file must be an image (jpg, png)');
                 $('#error').removeClass('d-none').addClass('show');
                 $('.mask').css('display', 'flex');
                 $('#profile').attr('href', 'javascript:changeProfile()');

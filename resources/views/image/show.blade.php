@@ -74,7 +74,9 @@
                                 <div class="content h-100">
                                     <div class="row w-100 h-100 m-0 p-0">
                                         <div class="col-12 text-center">
-                                            <img src="@if($image->user->drive_id === null || empty($image->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($image->user->drive_id) {{ 'https://drive.google.com/uc?id='.$image->user->drive_id.'&export=media' }} @endif"
+                                            <img src="@if($image->user->drive_id2 === null || empty($image->user->drive_id2))
+                                                    https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.$image->user->drive_id2.'&export=media' }} @endif"
                                                  class="rounded-circle avatar-img d-block mx-auto" alt="avatar">
                                             <p class="font-weight-bolder text-muted m-0">
                                                 <a href="{{ route('user.profile', ['id' => $image->user->id]) }}">

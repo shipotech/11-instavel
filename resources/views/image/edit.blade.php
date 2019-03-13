@@ -8,7 +8,9 @@
                 <div class="content d-flex">
                     <div class="row w-100 m-0 p-0">
                         <div class="col-12 p-0">
-                            <img src="@if(Auth::user()->image === null || empty(Auth::user()->image)) https://i.ibb.co/2kjt747/nouser.png @elseif(Auth::user()->drive_id) {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id.'&export=media' }} @endif"
+                            <img src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
+                                    https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
                                  class="rounded-circle avatar-img d-block float-none mx-auto" alt="avatar">
                             <div class="col text-center">
                                 <p class="font-weight-bold text-dark m-0">
@@ -38,8 +40,7 @@
                                  @if($image->drive_id2 !== null || !empty($image->drive_id2))
                                  data-srcset="
 {{'https://drive.google.com/uc?id='.$image->drive_id3.'&export=media 420w'}},
-{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}},
-{{'https://drive.google.com/uc?id='.$image->drive_id1.'&export=media 860w'}}"
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}}"
                                  data-src="
 {{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media'}}"
                                  @endif

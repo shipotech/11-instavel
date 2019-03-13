@@ -1,6 +1,5 @@
 # Ignoring all the files but not the folders
 *
-!medium/
 !mobile/
 !tiny/
 !.gitignore

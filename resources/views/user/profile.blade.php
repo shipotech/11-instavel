@@ -5,10 +5,12 @@
     <div class="row">
         <div class="container mb-4">
             <div class="row justify-content-center">
-            <div class="alert alert-danger fade d-none" role="alert" id="error">
-                <strong>Whoops!</strong> <span class="error"></span>
+                <div class="alert alert-danger fade d-none" role="alert" id="error">
+                    <strong>Whoops!</strong> <span class="error"></span>
+                </div>
             </div>
 
+            <div class="row justify-content-center">
             <!--Profile Picture-->
             <div class="card testimonial-card z-depth-0 @if(session('isDark')) dark-mode @else light-mode @endif">
                 <div class="mx-auto">
@@ -17,7 +19,11 @@
                         @if($user->id === Auth::user()->id)
                             <a title="Change your photo" href="javascript:changeProfile()" id="profile">
                         @endif
-                            <img src="@if($user->drive_id === null || empty($user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($user->drive_id) {{ 'https://drive.google.com/uc?id='.$user->drive_id.'&export=media' }} @endif" alt="profile picture" class="rounded-circle mx-auto d-block profile-photo preview_image">
+                            <img class="rounded-circle mx-auto d-block profile-photo preview_image pp_f"
+                                    src="@if($user->drive_id1 === null || empty($user->drive_id1))
+                                            https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.$user->drive_id1.'&export=media' }} @endif"
+                                 alt="profile picture">
 
                         @if($user->id === Auth::user()->id)
                             <!--Loader animation-->

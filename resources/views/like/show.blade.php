@@ -6,7 +6,9 @@
         <div class="content d-flex">
             <div class="row w-100 m-0 p-0">
                 <div class="col-12 p-0">
-                    <img src="@if($like->user->drive_id === null || empty($like->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($like->user->drive_id) {{ 'https://drive.google.com/uc?id='.$like->user->drive_id.'&export=media' }} @endif"
+                    <img src="@if($like->user->drive_id2 === null || empty($like->user->drive_id2))
+                            https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.$like->user->drive_id2.'&export=media' }} @endif"
                          class="rounded-circle avatar-img2 d-block float-left mx-0 mr-3" alt="avatar">
                     <div class="col text-left">
                         <p class="font-weight-bold text-dark m-0">

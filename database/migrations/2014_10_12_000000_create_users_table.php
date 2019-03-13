@@ -22,7 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('email', 255)->unique();
             $table->string('password', 255);
             $table->string('image', 255)->nullable();
-            $table->string('drive_id', 255)->nullable();
+            $table->string('drive_id1', 255)->nullable();
+            $table->string('drive_id2', 255)->nullable();
             $table->timestamps();
             $table->rememberToken();
 

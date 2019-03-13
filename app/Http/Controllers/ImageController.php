@@ -40,78 +40,64 @@ class ImageController extends Controller
         }
 
         $validator = Validator::make($request->all(),
-            [ 'file'        => 'required|image' ],
-            [ 'file.image'  => 'The file must be an image (jpeg, png, gif)']
+            [ 'file'        => 'required|mimes:jpeg,jpg,png'],
+            [ 'file.image'  => 'The file must be an image (jpg, png)']
         );
-
-        // Obtain current user
-        $user = \Auth::user();
 
         // if have errors, return the errors
         if ($validator->fails()) {
-            return array(
+            return response()->json([
                 'fail' => true,
-                'previous' => $user->image,
                 'errors' => $validator->errors(),
-            );
+            ]);
         }
 
-        // Obtain the image, extension and create new unique filename
+        // Obtain data
+        $user = \Auth::user();
         $image = $request->file('file');
-        $extension = $image->getClientOriginalExtension();
-        $filename = (\count(User::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
-        // Delete previous profile photo if the user has one on DB
-        if ($user->image !== null || !empty($user->image)) {
+        // Upload the image
+        if ($image && $image !== null) {
+            //filename to store
+            $extension = $image->getClientOriginalExtension();
+            $filename = (User::count() + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
-            try {
-                $this->drive->files->delete($user->drive_id);
-            } catch (Exception $e) {
-                return array(
-                    'fail' => true,
-                    'previous' => $user->drive_id,
-                    'errors' => [
-                        'file' => 'There was a problem with Google Drive, please contact the admin'
-                    ]);
+            // Delete previous profile photo if the user has one
+            if ($user->drive_id1 !== null && !empty($user->drive_id1)) {
+                try {
+                    $this->drive->files->delete($user->drive_id1);
+                    $this->drive->files->delete($user->drive_id2);
+                } catch (Exception $e) {
+                    return [
+                        'fail' => true,
+                        'errors' => [
+                            'file' => 'There was a problem with Google Drive, please contact the admin'
+                        ]
+                    ];
+                }
             }
+
+            // Handler file (resize image and upload it on Google Drive)
+            $file_id = $this->fileHandlerProfile($image, $filename);
+
+            // Update the database with the new Profile photo
+            $user->image = $filename;
+            $user->drive_id1 = $file_id[0];
+            $user->drive_id2 = $file_id[1];
+            $user->update();
+
+            return [
+                'drive_id1' => "https://drive.google.com/uc?id=$user->drive_id1&export=media",
+                'drive_id2'   => "https://drive.google.com/uc?id=$user->drive_id2&export=media"
+            ];
         }
 
-        // Save the new photo
-        $image->move(public_path('storage/users/'), $filename);
-
-        // Obtain the new local ubication
-        $saveImage = public_path('storage/users/' . $filename);
-
-        // New instance
-        $img = Intervention::make($saveImage);
-
-        // Resize image here
-        // prevent possible upsizing
-        $img->resize(null, 200, function ($constraint) {
-            $constraint->aspectRatio();
-            $constraint->upsize();
-        });
-
-        // Save the resize Image in local folder (public/storage/users/)
-        $img->save($saveImage);
-
-        // Save the new Image in Google Drive
-        $file = File::get($saveImage);
-        $mimeType = File::mimeType($saveImage);
-        $file_id = $this->createFile($file, $mimeType, $filename, env('GOOGLE_FOLDER_USERS'));
-
-        // Update the database with the new photo
-        $user->image = $filename;
-        $user->drive_id = $file_id;
-
-        if (!$user->image) {
-            $user->image = 'https://i.ibb.co/2kjt747/nouser.png';
-        }
-
-        $user->update();
-        File::delete($saveImage);
-
-        return "https://drive.google.com/uc?id=$user->drive_id&export=media";
+        return [
+            'fail' => true,
+            'errors' => [
+                'file' => 'There was a problem uploading the new photo'
+            ]
+        ];
     }
 
     // Method for Upload images in Home
@@ -394,7 +380,7 @@ class ImageController extends Controller
     }
 
     // Methods for Manage Files on Google Drive
-    public function fileHandler($image_path, $filename)
+    public function fileHandler($image_path, $filename): array
     {
         // Save the new Image on disk
         $image_path->move(public_path('storage/images/'), $filename);
@@ -441,8 +427,58 @@ class ImageController extends Controller
         );
 
         // Creating the images in their respectively path's on Google Drive
-        $file_id = array(); // Arreglar Edit de imagenes
+        $file_id = array();
         for ($i = 0; $i <= 3; $i++) {
+            $file = File::get($image_size[$i]);
+            $mimeType = File::mimeType($image_size[$i]);
+            $file_id[$i] = $this->createFile($file, $mimeType, $filename, $google_path[$i]);
+
+            // Delete the image in temporal path
+            File::delete($saveImage);
+            File::delete($image_size[$i]);
+        }
+
+        return $file_id;
+    }
+
+    // Methods for Manage Files on Google Drive
+    public function fileHandlerProfile($image_path, $filename)
+    {
+        // Save the new Image on disk
+        $image_path->move(public_path('storage/users/'), $filename);
+
+        // Obtain the new ubication of the Image
+        $saveImage = public_path('storage/users/'.$filename);
+
+        // create an Instance
+        $img = Intervention::make($saveImage);
+
+        $mobile_photos_storage = public_path('storage/users/mobile/');
+        $tiny_photos_storage = public_path('storage/users/tiny/');
+
+        // Processing the new Image and resize it
+        $img->resize(200, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($mobile_photos_storage . $filename, 85)
+            ->resize(100, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($tiny_photos_storage . $filename, 85);
+
+        // Original Images stored on temporal path's
+        $image_size = array(
+            $mobile_photos_storage . $filename,
+            $tiny_photos_storage . $filename
+        );
+
+        // Google Drive Path's
+        $google_path = array(
+            env('GOOGLE_FOLDER_MOBILE_USERS'),
+            env('GOOGLE_FOLDER_TINY_USERS')
+        );
+
+        // Creating the images in their respectively path's on Google Drive
+        $file_id = array();
+        for ($i = 0; $i <= 1; $i++) {
             $file = File::get($image_size[$i]);
             $mimeType = File::mimeType($image_size[$i]);
             $file_id[$i] = $this->createFile($file, $mimeType, $filename, $google_path[$i]);

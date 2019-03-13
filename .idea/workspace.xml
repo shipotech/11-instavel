@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="Added progressive image load (for images, not for users profile pictures)&#10;&#10;-- better readme.md&#10;-- lazysizes.js&#10;-- ls">
-      <change afterPath="$PROJECT_DIR$/public/js/lazysizes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/ls.respimg.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_21_024148_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_21_024148_create_images_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/prevent.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/prevent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/search-people.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/search-people.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/storage/images/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/storage/images/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/storage/users/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/storage/users/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/image/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/image/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/image/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/image/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/show-more.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/show-more.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/show-more.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/show-more.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/like/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/like/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/people.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/people.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/search.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,13 +52,6 @@
         <item name="instavel@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="instavel: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="instavel@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="instavel: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="images: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -117,17 +102,17 @@
           <entry key="comments" value="7" />
           <entry key="css" value="75" />
           <entry key="editorconfig" value="3" />
-          <entry key="env" value="22" />
+          <entry key="env" value="28" />
           <entry key="example" value="7" />
           <entry key="gitattributes" value="2" />
-          <entry key="gitignore" value="39" />
+          <entry key="gitignore" value="41" />
           <entry key="htaccess" value="2" />
           <entry key="html" value="14" />
           <entry key="ico" value="3" />
           <entry key="images" value="55" />
           <entry key="jpeg" value="2" />
-          <entry key="jpg" value="23" />
-          <entry key="js" value="161" />
+          <entry key="jpg" value="30" />
+          <entry key="js" value="176" />
           <entry key="json" value="20" />
           <entry key="likes" value="18" />
           <entry key="lock" value="1" />
@@ -137,31 +122,31 @@
           <entry key="mjs" value="5" />
           <entry key="password_resets" value="1" />
           <entry key="photos" value="4" />
-          <entry key="php" value="698" />
+          <entry key="php" value="727" />
           <entry key="phpcuBP41" value="1" />
           <entry key="png" value="7" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="8" />
           <entry key="sql" value="15" />
           <entry key="svg" value="4" />
-          <entry key="users" value="51" />
+          <entry key="users" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="29" />
-          <entry key="Blade" value="326" />
+          <entry key=".env file" value="35" />
+          <entry key="Blade" value="350" />
           <entry key="CSS" value="75" />
-          <entry key="Database Element" value="137" />
+          <entry key="Database Element" value="144" />
           <entry key="ECMAScript 6" value="5" />
           <entry key="HTML" value="14" />
-          <entry key="Image" value="35" />
+          <entry key="Image" value="42" />
           <entry key="JSON" value="21" />
-          <entry key="JavaScript" value="161" />
+          <entry key="JavaScript" value="176" />
           <entry key="Log" value="3" />
           <entry key="Markdown" value="9" />
-          <entry key="PHP" value="372" />
-          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="PHP" value="377" />
+          <entry key="PLAIN_TEXT" value="49" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="8" />
           <entry key="SQL" value="8" />
@@ -176,31 +161,31 @@
           <entry key="cell" value="36" />
           <entry key="css" value="2020" />
           <entry key="dummy" value="31" />
-          <entry key="env" value="250" />
+          <entry key="env" value="263" />
           <entry key="example" value="158" />
           <entry key="gitignore" value="197" />
           <entry key="htaccess" value="206" />
           <entry key="html" value="561" />
-          <entry key="js" value="5659" />
+          <entry key="js" value="5681" />
           <entry key="json" value="9" />
           <entry key="md" value="1017" />
-          <entry key="php" value="44543" />
+          <entry key="php" value="45519" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1183" />
-          <entry key="txt" value="3205" />
+          <entry key="txt" value="3345" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key=".env file" value="408" />
-          <entry key="Blade" value="26577" />
+          <entry key=".env file" value="421" />
+          <entry key="Blade" value="27037" />
           <entry key="CSS" value="2020" />
           <entry key="HTML" value="561" />
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="5659" />
+          <entry key="JavaScript" value="5681" />
           <entry key="Markdown" value="1017" />
-          <entry key="PHP" value="17966" />
-          <entry key="PLAIN_TEXT" value="3477" />
+          <entry key="PHP" value="18482" />
+          <entry key="PLAIN_TEXT" value="3617" />
           <entry key="RegExp" value="2" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1183" />
@@ -229,40 +214,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3082">
-              <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
-              <folding>
-                <element signature="e#463#955#0#PHP" />
-                <element signature="e#3710#5669#0#PHP" />
-                <element signature="e#5719#6127#0#PHP" />
-                <element signature="e#6133#6682#0#PHP" />
-                <element signature="e#10124#12088#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="794">
-              <caret line="214" column="50" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user/profile.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-276" />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -276,8 +228,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hei</find>
-      <find>400</find>
       <find>4</find>
       <find>set</find>
       <find>lik</find>
@@ -306,6 +256,8 @@
       <find>div-</find>
       <find>likes</find>
       <find>load</find>
+      <find>preview</find>
+      <find>preview_image2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -319,12 +271,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/show-likes.js" />
-        <option value="$PROJECT_DIR$/public/js/image-edit.js" />
-        <option value="$PROJECT_DIR$/resources/views/like/modal.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/modal-edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/user/profile.blade.php" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/public/js/show-more.js" />
@@ -332,13 +279,11 @@
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/user/people.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/lazy.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/lazy.html" />
         <option value="$PROJECT_DIR$/resources/views/images/Pogresive Image Loading/index.html" />
-        <option value="$PROJECT_DIR$/resources/views/user/search.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/.env" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/app/Photo.php" />
@@ -353,23 +298,30 @@
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/photo/index.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/public/css/style.css" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_21_024148_create_images_table.php" />
         <option value="$PROJECT_DIR$/public/js/search-people.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/show-more.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/image/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/show-more.blade.php" />
         <option value="$PROJECT_DIR$/public/js/upload.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/public/js/prevent.js" />
-        <option value="$PROJECT_DIR$/public/storage/users/.gitignore" />
         <option value="$PROJECT_DIR$/public/storage/images/.gitignore" />
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/public/storage/users/.gitignore" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/public/js/profile-picture.js" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/profile.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/show-more.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/search.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/people.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/like/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/image/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/image/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -517,13 +469,50 @@
             <path>
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -615,7 +604,7 @@
       <workItem from="1551977348565" duration="8123000" />
       <workItem from="1551999116351" duration="3662000" />
       <workItem from="1552146246857" duration="665000" />
-      <workItem from="1552411412557" duration="4190000" />
+      <workItem from="1552411412557" duration="23751000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -792,11 +781,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551685636545</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Added progressive image load (for images, not for users profile pictures)&#10;&#10;-- better readme.md&#10;-- lazysizes.min.js (lazyloader for images)&#10;-- ls.respimg.min.js (for responsive images, just add 'data-sizes=&quot;auto&quot;' to &lt;img&gt; element)">
+      <created>1552435879987</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1552435879987</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="693413000" />
+    <option name="totallyTimeSpent" value="712974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -900,111 +896,17 @@
     <MESSAGE value="Better Infinite Scroll logic&#10;&#10;- Bugs fixed" />
     <MESSAGE value="Added Image Edit/Delete on &quot;Home&quot; and &quot;Profile&quot;&#10;&#10;-- Better readme.md" />
     <MESSAGE value="Added People Module&#10;&#10;-- You can see all the users in the app&#10;-- Seeder ready for some random users&#10;-- Real time search for users (nickname)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added People Module&#10;&#10;-- You can see all the users in the app&#10;-- Seeder ready for some random users&#10;-- Real time search for users (nickname)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php</url>
-          <line>443</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added progressive image load (for images, not for users profile pictures)&#10;&#10;-- better readme.md&#10;-- lazysizes.min.js (lazyloader for images)&#10;-- ls.respimg.min.js (for responsive images, just add 'data-sizes=&quot;auto&quot;' to &lt;img&gt; element)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added progressive image load (for images, not for users profile pictures)&#10;&#10;-- better readme.md&#10;-- lazysizes.min.js (lazyloader for images)&#10;-- ls.respimg.min.js (for responsive images, just add 'data-sizes=&quot;auto&quot;' to &lt;img&gt; element)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/public/js/ls.parent-fit.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/lazysizes.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="80" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4278" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="55" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/GoogleClientProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345" />
-      </provider>
-    </entry>
-    <entry file="das://6066e0be-78d2-4cc3-be6c-41071e17c649/schema/progresive_images/table/photos" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/31a4960f-07a1-4c9a-8d87-ebc278b9d7e7/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_21_024148_create_images_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/resources/views/photo/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/storage/images/1_5c808e87a57ea4.27176907_1551928967.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/storage/images/tiny/1_5c808e87a57ea4.27176907_1551928967.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/storage/images/mobile/1_5c808e87a57ea4.27176907_1551928967.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/storage/images/medium/1_5c808e87a57ea4.27176907_1551928967.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/storage/images/large/1_5c808e87a57ea4.27176907_1551928967.jpg" />
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/modal-confirm.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/likes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/show-likes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/showpass.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../../progresive-image-loading/app/Http/Controllers/PhotoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="805">
           <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/modal-edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -1015,31 +917,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/show-more.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="64" column="86" lean-forward="true" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://31a4960f-07a1-4c9a-8d87-ebc278b9d7e7/schema/instavel/table/comments">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/search-people.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1050,70 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/show-more.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/image-edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/show-more.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://31a4960f-07a1-4c9a-8d87-ebc278b9d7e7/schema/instavel/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4830" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/prevent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/image/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="32" column="83" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="83" />
         </state>
       </provider>
     </entry>
@@ -1124,30 +945,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/storage/users/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/storage/images/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="44" selection-start-column="44" selection-end-column="44" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="214" column="50" selection-start-line="214" selection-start-column="15" selection-end-line="214" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env.example">
@@ -1176,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1190,17 +985,240 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_21_024148_create_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/prevent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/image-edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="67" column="12" lean-forward="true" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/showpass.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/show-more.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/likes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="70" column="33" lean-forward="true" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/search-people.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="34" column="122" lean-forward="true" selection-start-line="34" selection-start-column="122" selection-end-line="34" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/2_5c88899ce120b0.89572566_1552451996.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/2_5c8888bcda3fc4.73780145_1552451772.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/2_5c88828746cae9.34902841_1552450183.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/tiny/2_5c8886f2d14be5.91107767_1552451314.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/mobile/2_5c88828746cae9.34902841_1552450183.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/mobile/2_5c888c8abe0d63.83505970_1552452746.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/storage/users/tiny/2_5c888c509fb629.46006630_1552452688.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/profile-picture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/show-more.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="13" column="149" lean-forward="true" selection-start-line="13" selection-start-column="149" selection-end-line="13" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="246" column="64" lean-forward="true" selection-start-line="246" selection-start-column="64" selection-end-line="246" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3082">
-          <caret line="277" column="32" selection-start-line="277" selection-start-column="32" selection-end-line="277" selection-end-column="32" />
+        <state relative-caret-position="412">
+          <caret line="444" column="62" selection-start-line="444" selection-start-column="62" selection-end-line="444" selection-end-column="62" />
           <folding>
             <element signature="e#463#955#0#PHP" />
             <element signature="e#3710#5669#0#PHP" />
             <element signature="e#5719#6127#0#PHP" />
             <element signature="e#6133#6682#0#PHP" />
+            <element signature="e#6688#10118#0#PHP" />
             <element signature="e#10124#12088#0#PHP" />
+            <element signature="e#12142#12583#0#PHP" />
+            <element signature="e#13149#15563#0#PHP" />
+            <element signature="e#15905#18290#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/modal-edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/modal-confirm.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/config.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4416" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/people.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="113" lean-forward="true" selection-start-line="13" selection-start-column="113" selection-end-line="13" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/show-more.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/like/dislikes.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://31a4960f-07a1-4c9a-8d87-ebc278b9d7e7/schema/instavel/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/like/modal.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/like/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/like/likes.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="24" column="86" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="24" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="16" column="93" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="16" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/image/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="76" column="125" lean-forward="true" selection-start-line="76" selection-start-column="125" selection-end-line="76" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/image/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="42" column="76" selection-start-line="42" selection-start-column="76" selection-end-line="42" selection-end-column="76" />
         </state>
       </provider>
     </entry>

@@ -9,9 +9,9 @@
             <div class="light-mode">
                 <div class="avatar mx-auto white light-mode zoom">
                     <a href="{{ route('user.profile', ['id' => $user->id]) }}">
-                    <img src="@if($user->drive_id === null || empty($user->drive_id))
-                            https://i.ibb.co/2kjt747/nouser.png @elseif($user->drive_id) {{ 'https://drive.google.com/uc?id='.$user->drive_id.'&export=media' }}
-                    @endif" alt="profile picture of {{ strtolower($user->nick) }}"
+                    <img src="@if($user->drive_id1 === null || empty($user->drive_id1))
+                            https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.$user->drive_id1.'&export=media' }} @endif" alt="profile picture of {{ strtolower($user->nick) }}"
                          class="rounded-circle" style="height: 110px; width: 110px;">
                     </a>
                 </div>
