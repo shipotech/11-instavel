@@ -382,12 +382,6 @@ class ImageController extends Controller
     // Methods for Manage Files on Google Drive
     public function fileHandler($image_path, $filename): array
     {
-        $relPath = public_path('storage/images/');
-        if (!file_exists($relPath)) {
-            if (!mkdir($concurrentDirectory = $relPath, 777, true) && !is_dir($concurrentDirectory)) {
-                throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
-            }
-        }
         // Save the new Image on disk
         $image_path->move(public_path('storage/images/'), $filename);
 
@@ -401,18 +395,6 @@ class ImageController extends Controller
         $medium_photos_storage = public_path('storage/images/medium/');
         $mobile_photos_storage = public_path('storage/images/mobile/');
         $tiny_photos_storage = public_path('storage/images/tiny/');
-
-        if (!file_exists($large_photos_storage) ||
-            !file_exists($medium_photos_storage) ||
-            !file_exists($mobile_photos_storage) ||
-            !file_exists($tiny_photos_storage)) {
-        if ((!mkdir($concurrentDirectory = $large_photos_storage, 777, true) && !is_dir($concurrentDirectory)) ||
-            (!mkdir($concurrentDirectory = $medium_photos_storage, 777, true) && !is_dir($concurrentDirectory)) ||
-            (!mkdir($concurrentDirectory = $mobile_photos_storage, 777, true) && !is_dir($concurrentDirectory)) ||
-            (!mkdir($concurrentDirectory = $tiny_photos_storage, 777, true) && !is_dir($concurrentDirectory))) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));
-        }
-        }
 
         // Processing the new Image and resize it
         $img->resize(860, null, function ($constraint) {

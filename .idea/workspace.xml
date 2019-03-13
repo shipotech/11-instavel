@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
-    </list>
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="2" />
+          <entry key="Procfile" value="3" />
           <entry key="XUniRDvnIagfZiugDqrTdA1rJInKQj3TAve0tGAR" value="1" />
           <entry key="comments" value="7" />
           <entry key="css" value="75" />
@@ -135,7 +133,7 @@
           <entry key="Log" value="3" />
           <entry key="Markdown" value="10" />
           <entry key="PHP" value="380" />
-          <entry key="PLAIN_TEXT" value="53" />
+          <entry key="PLAIN_TEXT" value="54" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="8" />
           <entry key="SQL" value="8" />
@@ -158,7 +156,7 @@
           <entry key="js" value="5681" />
           <entry key="json" value="9" />
           <entry key="md" value="1017" />
-          <entry key="php" value="45535" />
+          <entry key="php" value="45636" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1183" />
           <entry key="txt" value="3386" />
@@ -173,7 +171,7 @@
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="5681" />
           <entry key="Markdown" value="1017" />
-          <entry key="PHP" value="18498" />
+          <entry key="PHP" value="18599" />
           <entry key="PLAIN_TEXT" value="3658" />
           <entry key="RegExp" value="2" />
           <entry key="SCSS" value="43" />
@@ -207,8 +205,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="382" column="20" selection-start-line="382" selection-start-column="20" selection-end-line="382" selection-end-column="20" />
+            <state relative-caret-position="372">
+              <caret line="412" column="32" lean-forward="true" selection-start-line="412" selection-start-column="32" selection-end-line="412" selection-end-column="32" />
               <folding>
                 <element signature="e#463#955#0#PHP" />
                 <element signature="e#5383#5791#0#PHP" />
@@ -584,7 +582,7 @@
       <workItem from="1551999116351" duration="3662000" />
       <workItem from="1552146246857" duration="665000" />
       <workItem from="1552411412557" duration="24406000" />
-      <workItem from="1552490457493" duration="5133000" />
+      <workItem from="1552490457493" duration="6458000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -779,7 +777,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="718762000" />
+    <option name="totallyTimeSpent" value="720087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -802,7 +800,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.3942598" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.6933535" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50075644" side_tool="true" weight="0.2671875" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -1131,9 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1158,10 +1153,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ImageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="382" column="20" selection-start-line="382" selection-start-column="20" selection-end-line="382" selection-end-column="20" />
+        <state relative-caret-position="372">
+          <caret line="412" column="32" lean-forward="true" selection-start-line="412" selection-start-column="32" selection-end-line="412" selection-end-column="32" />
           <folding>
             <element signature="e#463#955#0#PHP" />
             <element signature="e#5383#5791#0#PHP" />
