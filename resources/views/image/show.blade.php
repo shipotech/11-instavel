@@ -46,9 +46,20 @@
                     <!-- Card -->
                     <div class="card card-personal h-100 rounded-0 z-depth-0">
                         <!-- Card image-->
-                        <img class="card-img-top rounded-0 h-100 min-img"
-                             src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
-                             alt="Image uploaded by {{ '@' . strtolower($image->user->nick) }}">
+                        <img class="card-img-top lazyload rounded-0 h-100 min-img"
+                             src="@if($image->drive_id4 === null || empty($image->drive_id4))
+                                     https://i.ibb.co/b23YqqB/noimage.png
+@else {{'https://drive.google.com/uc?id='.$image->drive_id4.'&export=media'}} @endif"
+                             @if($image->drive_id2 !== null || !empty($image->drive_id2))
+                             data-srcset="
+{{'https://drive.google.com/uc?id='.$image->drive_id3.'&export=media 420w'}},
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}},
+{{'https://drive.google.com/uc?id='.$image->drive_id1.'&export=media 860w'}}"
+                             data-src="
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media'}}"
+                             @endif
+                             alt="image upload by: {{ strtolower($image->user->nick) }}">
+
                         <!-- Card image-->
                     </div>
                     <!-- Card -->
@@ -141,11 +152,12 @@
                                                         <div class="brief">
                                                             <div class="p-0 d-flex align-items-center justify-content-between w-100">
                                                             <a class="name" href="{{ route('user.profile', ['id' => $comment->user->id]) }}">{{ strtolower($comment->user->nick) }}</a>
-                                                                @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))
-                                                                <a href="{{ route('comment.delete', ['id' => $comment->id]) }}" class="likes mdb-color-text text-sm" title="delete">
-                                                                    <i class="fas fa-trash"></i>
-                                                                </a>
-                                                                @endif
+                                                            @if(Auth::check() && ($comment->user_id === Auth::user()->id || $comment->image->user_id === Auth::user()->id))
+                                                            <a href="
+{{ route('comment.delete', ['id' => $comment->id]) }}" class="comments mdb-color-text text-sm" title="delete">
+                                                                <i class="fas fa-trash"></i>
+                                                            </a>
+                                                            @endif
                                                             </div>
                                                             <div class="d-flex align-items-start justify-content-start">
                                                             <p class="card-text text-body">
@@ -164,7 +176,7 @@
 
                             <footer class="mt-auto">
                                 <div class="card-body px-3 py-0">
-                                    <form action="{{ route('comment.store') }}" method="post" id="comment-form" class="prevent-form-submit">
+                                    <form action="{{ route('comment.store') }}" method="post" id="comment-form" class="prevent-form-submit2">
                                         @csrf
                                         <input type="hidden" name="form_token" value="{{ session('form_token') }}">
                                         <!--Material textarea-->
@@ -180,8 +192,8 @@
                                             </div>
                                             <div>
                                                 <div class="md-form">
-                                                    <button type="submit" class="btn-floating btn-rounded border-0 primary-color white-text prevent-button-submit"><i class="far fa-comment"></i>
-                                                        <i class="fas fa-circle-notch fa-spin load"></i>
+                                                    <button type="submit" class="btn-floating btn-rounded border-0 primary-color white-text prevent-button-submit2"><i class="far fa-comment"></i>
+                                                        <i class="fas fa-circle-notch fa-spin load2 d-none"></i>
                                                     </button>
                                                 </div>
                                             </div>

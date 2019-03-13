@@ -31,7 +31,19 @@
                 <div class="mx-auto">
                     <div class="view overlay overflow-hidden">
                         <a title="Upload your photo" href="#!" class="change_upload" id="c_2">
-                            <img src="https://drive.google.com/uc?id={{$image->drive_id}}&export=media" alt="upload picture" class="card-img-top upload-preview2">
+                            <img class="card-img-top upload-preview2 lazyload"
+                                 src="@if($image->drive_id4 === null || empty($image->drive_id4))
+                                         https://i.ibb.co/b23YqqB/noimage.png
+@else {{'https://drive.google.com/uc?id='.$image->drive_id4.'&export=media'}} @endif"
+                                 @if($image->drive_id2 !== null || !empty($image->drive_id2))
+                                 data-srcset="
+{{'https://drive.google.com/uc?id='.$image->drive_id3.'&export=media 420w'}},
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}},
+{{'https://drive.google.com/uc?id='.$image->drive_id1.'&export=media 860w'}}"
+                                 data-src="
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media'}}"
+                                 @endif
+                                 alt="upload your photo" style="max-height: 500px;">
                             <div class="mask flex-center text-white rgba-black-strong overflow-hidden">
                                 <i class="fa fa-camera fa-2x"></i>
                             </div>

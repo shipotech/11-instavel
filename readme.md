@@ -14,6 +14,9 @@ HTML, CSS, JavaScript, Jquery, Ajax, PHP
 [MySQL](https://www.mysql.com)
 <br>
 [Google Drive API](https://developers.google.com/drive/api/v3/about-sdk?hl=es-419)
+<br>
+[LazySizes](https://github.com/aFarkas/lazysizes)
+<br>
 
 ## Instructions:
 1- Clone the repo and cd into it <br>
@@ -26,7 +29,7 @@ HTML, CSS, JavaScript, Jquery, Ajax, PHP
 8- `php artisan key:generate` <br>
 9- `composer require laravel/socialite` <br>
 10- `composer require google/apiclient` <br>
-######PD: please, use the "database.sql" file, to guide you if you want to store emojis. ("DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;")<br>
+######PD: please, use the "database.sql" file, to guide you if you want to store emojis and spanish characters. ("DEFAULT CHARACTER SET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;")<br>
 
 ##Create your Google Drive API keys
 Detailed information on how to obtain your API ID, secret and refresh token:
@@ -35,16 +38,29 @@ Detailed information on how to obtain your API ID, secret and refresh token:
 [Getting your Refresh Token](https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/2-getting-your-refresh-token.md)<br>
 [Getting your Root Folder ID](https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README/3-getting-your-root-folder-id.md)<br>
 
+###Important: 
+Download JSON credentials file and save it on (storage/app/) with name: 
+#####client_secret.json
+
+[more info click here](https://quantizd.com/google-drive-client-api-with-laravel/)
+
 ##Update .env file
   Add the keys you created to your .env file and set google as your default cloud storage. You can copy the .env.example file and fill in the blanks.
 ##### Setting google drive for storage the images
-FILESYSTEM_CLOUD=google<br>
-GOOGLE_APP_ID=instavel<br>
-GOOGLE_CLIENT_ID=xxxx.apps.googleusercontent.com<br>
-GOOGLE_CLIENT_SECRET=xxxx<br>
-GOOGLE_REFRESH_TOKEN=xxxx<br>
-GOOGLE_FOLDER_USERS=id_of_created_users_folder_in_your_drive(example: 1hUo0FLkZD9G6DmBz07AcNs2XJXyGy_nT)<br>
-GOOGLE_FOLDER_IMAGES=id_of_created_images_folder_in_your_drive
+FILESYSTEM_CLOUD=google
+GOOGLE_APP_ID=instavel
+GOOGLE_CLIENT_ID=xxxx.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=xxxx
+GOOGLE_REFRESH_TOKEN=xxxx
+###### #Images Folders (example: 1hUo0FLkZD9G6DmBz07AcNs2XJXyGy_nT)
+GOOGLE_FOLDER_LARGE_IMAGES=id_of_created_large_images_folder_in_your_drive
+GOOGLE_FOLDER_MEDIUM_IMAGES=id_of_created_medium_images_folder_in_your_drive
+GOOGLE_FOLDER_MOBILE_IMAGES=id_of_created_mobile_images_folder_in_your_drive
+GOOGLE_FOLDER_TINY_IMAGES=id_of_created_tiny_images_folder_in_your_drive
+###### #Users Folders
+GOOGLE_FOLDER_MEDIUM_USERS=id_of_created_medium_users_folder_in_your_drive
+GOOGLE_FOLDER_MOBILE_USERS=id_of_created_mobile_users_folder_in_your_drive
+GOOGLE_FOLDER_TINY_USERS=id_of_created_tiny_users_folder_in_your_drive
 <br>
 
 #### [More information about "How to connect Google Drive API with Laravel"](https://quantizd.com/google-drive-client-api-with-laravel/) 

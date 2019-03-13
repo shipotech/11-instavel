@@ -5,9 +5,20 @@
             <!-- Card image -->
             <div class="view like-overlay">
                 <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay">
-                    <img class="card-img-top"
-                         src="@if($image->drive_id) {{ 'https://drive.google.com/uc?id='.$image->drive_id.'&export=media' }} @else https://i.ibb.co/b23YqqB/noimage.png @endif"
-                         alt="image upload by: {{ strtolower($image->user->nick) }}" style="max-height: 600px;">
+                    <img class="card-img-top lazyload"
+                         src="@if($image->drive_id4 === null || empty($image->drive_id4))
+                                 https://i.ibb.co/b23YqqB/noimage.png
+@else {{'https://drive.google.com/uc?id='.$image->drive_id4.'&export=media'}} @endif"
+                         @if($image->drive_id2 !== null || !empty($image->drive_id2))
+                         data-srcset="
+{{'https://drive.google.com/uc?id='.$image->drive_id3.'&export=media 420w'}},
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}},
+{{'https://drive.google.com/uc?id='.$image->drive_id1.'&export=media 860w'}}"
+                         data-src="
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media'}}"
+                         @endif
+                         alt="image upload by: {{ strtolower($image->user->nick) }}"
+                         style="max-height: 600px;">
                     <div class="maskaa no-opacity-like flex-center text-white rgba-black-slight mask_{{$image->id}}">
                         <i class="fas fa-heart d-none white-text heart_{{$image->id}}"></i>
                     </div>

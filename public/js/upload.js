@@ -9,7 +9,7 @@
         if (input.files && input.files[0]) {
             let reader = new FileReader();
 
-            // Verify is Image (gif, jpg, png)
+            // Verify is Image (jpg, png)
             let file = input.files[0];
             let fileType = file["type"];
             let validImageTypes = ["image/jpeg", "image/jpg", "image/png"];
@@ -20,7 +20,12 @@
                 $('#error'+id).removeClass('d-none').addClass('show');
             } else {
                 reader.onload = function (e) {
-                    $('.upload-preview'+id).attr('src', e.target.result);
+                    $('.upload-preview'+id).removeClass('lazyloaded')
+                        .removeClass('lazyload')
+                        .attr('src', e.target.result)
+                        .removeAttr('srcset')
+                        .removeAttr('data-src')
+                        .removeAttr('data-srcset');
                     $('#error'+id).removeClass('show').addClass('d-none');
                 };
 

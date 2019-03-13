@@ -2,6 +2,8 @@ body {
     height: 100vh !important;
 }
 
+img[data-sizes="auto"] {display: block; width: 100%; }
+
 #logo {
     font-size: 1.2em;
     color: rgb(255, 255, 255);
@@ -68,6 +70,12 @@ textarea#description {
 
 .text-pre {
     white-space: pre-line;
+}
+
+.lazyload,
+.lazyloading {
+    min-height: 250px;
+    min-width: 250px;
 }
 /*Show Image*/
 
@@ -149,7 +157,8 @@ textarea#description {
 /*Icons*/
 
 /*Like*/
-.likes:hover > i{
+.likes:hover > i,
+.comments:hover > i{
     color: #dc3545 !important;
 }
 

@@ -46,7 +46,7 @@ class CommentController extends Controller
         $comment->save();
 
         return redirect()->route('image.show', ['id' => $image_id])->with([
-            'message' => 'Your comment has been added successfully'
+            'message' => 'Comment added successfully'
         ]);
     }
 
@@ -62,7 +62,7 @@ class CommentController extends Controller
             $comment->delete();
 
             return redirect()->route('image.show', ['id' => $comment->image->id])->with([
-                'message' => 'Comment delete successfully'
+                'message' => 'Comment deleted successfully'
             ]);
         }
 

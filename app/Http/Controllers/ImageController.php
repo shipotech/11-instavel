@@ -138,76 +138,35 @@ class ImageController extends Controller
         ]);
 
         // Upload the image
-        if ($image_path) {
+        if ($image_path && $image_path !== null) {
             // Assign values
             $user = \Auth::user();
             $image = new Image();
             $image->user_id = $user->id;
-            $image->image_path = null;
             $image->description = $description;
 
             //filename to store
             $extension = $image_path->getClientOriginalExtension();
-            $filename = (\count(Image::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
+            $filename = (Image::count() + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
-            // Save the new Image on disk
-            $image_path->move(public_path('storage/images/'), $filename);
+            // Handler file (resize image and upload it on Google Drive)
+            $file_id = $this->fileHandler($image_path, $filename);
 
-            // Obtain the new ubication of the Image
-            $saveImage = public_path('storage/images/'.$filename);
-
-            // Obtain the dimension
-            $height = Intervention::make($saveImage)->height();
-            $width = Intervention::make($saveImage)->width();
-
-            // create an Instance
-            $img = Intervention::make($saveImage);
-
-            // Fill the images that don't fit the conditions below:
-            if ($width < 665 && $height < 450) {
-
-                // set a background-color for the emerging area
-                $img->resizeCanvas(665, 450, 'center', false, '212121');
-            } elseif ($width < 665) {
-
-                // set a background-color for the emerging area
-                $img->resizeCanvas(665, $height, 'center', false, '212121');
-            } elseif ($height < 450) {
-
-                // set a background-color for the emerging area
-                $img->resizeCanvas($width, 450, 'center', false, '212121');
-            } else {
-
-                //Resize image here
-                $img->resize(665, 600, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                });
-            }
-
-            // Save the resize Image in local folder (public/storage/images/)
-            $img->save($saveImage);
-
-            // Save the new Image in Google Drive
-            $file = File::get($saveImage);
-            $mimeType = File::mimeType($saveImage);
-            $file_id = $this->createFile($file, $mimeType, $filename, env('GOOGLE_FOLDER_IMAGES'));
-
-            // Update the database with the new Image
+            // Update the database with the new Images
+            $image->drive_id1 = $file_id[0];
+            $image->drive_id2 = $file_id[1];
+            $image->drive_id3 = $file_id[2];
+            $image->drive_id4 = $file_id[3];
             $image->image_path = $filename;
-            $image->drive_id = $file_id;
             $image->save();
 
-            // Delete the image in temporal path
-            File::delete($saveImage);
-
             return redirect()->route('home')->with([
-                'message'   => 'You upload the image successfully'
+                'message'   => 'Image uploaded successfully'
             ]);
         }
 
         return redirect()->route('home')->with([
-            'errors'   => 'Something goes wrong...'
+            'errors'   => 'Something goes wrong. Please, refresh and try again'
         ]);
     }
 
@@ -228,41 +187,6 @@ class ImageController extends Controller
         return view('image.show', [
             'image'     => $image
         ]);
-    }
-
-    // Methods for Manage Files on Google Drive
-    public function findFile($folder, $name)
-    {
-        $query = "name='".$name."' and '".$folder."' in parents and trashed=false";
-
-        $optParams = [
-            'q' => $query,
-            'fields' => 'files(id, name)'
-        ];
-
-        $results = $this->drive->files->listFiles($optParams)->getFiles();
-
-        if (\is_array($results) && empty($results)) {
-            return null;
-        }
-
-        return $results[0]['id'];
-    }
-
-    public function createFile($content, $mimeType, $name, $parent_id){
-        $fileMetadata = new Google_Service_Drive_DriveFile([
-            'name' => $name,
-            'parents' => array($parent_id)
-        ]);
-
-        $file = $this->drive->files->create($fileMetadata, [
-            'data' => $content,
-            'mimeType' => $mimeType,
-            'uploadType' => 'multipart',
-            'fields' => 'id'
-        ]);
-
-        return $file->id;
     }
 
     public function edit(Request $request)
@@ -306,7 +230,7 @@ class ImageController extends Controller
         // Validation
         $validate = $this->validate($request, [
             'description' => 'required',
-            'upload' => 'mimes:jpeg,jpg,png'
+            'upload'      => 'mimes:jpeg,jpg,png'
         ]);
 
         // Assign values
@@ -321,62 +245,27 @@ class ImageController extends Controller
 
             //filename to store
             $extension = $image_path->getClientOriginalExtension();
-            $filename = (\count(Image::all()) + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
-
-            // Save the new Image on disk
-            $image_path->move(public_path('storage/images/'), $filename);
-
-            // Obtain the new ubication of the Image
-            $saveImage = public_path('storage/images/' . $filename);
-
-            // Obtain the dimension
-            $height = Intervention::make($saveImage)->height();
-            $width = Intervention::make($saveImage)->width();
-
-            // create an Instance
-            $img = Intervention::make($saveImage);
-
-            // Fill the images that don't fit the conditions below:
-            if ($width < 665 && $height < 450) {
-
-                // set a background-color for the emerging area
-                $img->resizeCanvas(665, 450, 'center', false, '212121');
-            } elseif ($width < 665) {
-
-                // set a background-color for the emerging area
-                $img->resizeCanvas(665, $height, 'center', false, '212121');
-            } elseif ($height < 450) {
-
-                // set a background-color for the emerging area
-                $img->resizeCanvas($width, 450, 'center', false, '212121');
-            } else {
-
-                //Resize image here
-                $img->resize(665, 600, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                });
-            }
-
-            // Save the resize Image in local folder (public/storage/images/)
-            $img->save($saveImage);
+            $filename = (Image::count() + 1) . '_' . uniqid('', true) . '_' . time() . '.' . $extension;
 
             try {
-                // Deleting previous Image on Google Drive
-                $this->drive->files->delete($image->drive_id);
+                if ($image->drive_id1 !== null) {
+                    // Deleting previous Images on Google Drive
+                    $this->drive->files->delete($image->drive_id1);
+                    $this->drive->files->delete($image->drive_id2);
+                    $this->drive->files->delete($image->drive_id3);
+                    $this->drive->files->delete($image->drive_id4);
+                }
 
-                // Save the new Image in Google Drive
-                $file = File::get($saveImage);
-                $mimeType = File::mimeType($saveImage);
-                $file_id = $this->createFile($file, $mimeType, $filename, env('GOOGLE_FOLDER_IMAGES'));
+                // Handler file (resize image and upload it on Google Drive)
+                $file_id = $this->fileHandler($image_path, $filename);
 
-                // Update the database with the new Image
+                // Update the database with the new Images
+                $image->drive_id1 = $file_id[0];
+                $image->drive_id2 = $file_id[1];
+                $image->drive_id3 = $file_id[2];
+                $image->drive_id4 = $file_id[3];
                 $image->image_path = $filename;
-                $image->drive_id = $file_id;
                 $image->update();
-
-                // Delete the image in temporal path
-                File::delete($saveImage);
 
                 $message = [
                     'image-message' => 'Image edited successfully',
@@ -437,8 +326,14 @@ class ImageController extends Controller
             // Deleting the image
 
             try {
-                $this->drive->files->delete($image->drive_id);
+                if ($image->drive_id1 !== null) {
+                    $this->drive->files->delete($image->drive_id1);
+                    $this->drive->files->delete($image->drive_id2);
+                    $this->drive->files->delete($image->drive_id3);
+                    $this->drive->files->delete($image->drive_id4);
+                }
                 $image->delete();
+
                 $message = [
                     'image-message' => 'Image deleted successfully',
                     'alert-color'   => 'success',
@@ -461,4 +356,103 @@ class ImageController extends Controller
         }
         return redirect()->back()->with($message);
     }
+
+    // Methods for Manage Files on Google Drive
+    public function findFile($folder, $name)
+    {
+        $query = "name='".$name."' and '".$folder."' in parents and trashed=false";
+
+        $optParams = [
+            'q' => $query,
+            'fields' => 'files(id, name)'
+        ];
+
+        $results = $this->drive->files->listFiles($optParams)->getFiles();
+
+        if (\is_array($results) && empty($results)) {
+            return null;
+        }
+
+        return $results[0]['id'];
+    }
+
+    // Methods for Manage Files on Google Drive
+    public function createFile($content, $mimeType, $name, $parent_id){
+        $fileMetadata = new Google_Service_Drive_DriveFile([
+            'name' => $name,
+            'parents' => array($parent_id)
+        ]);
+
+        $file = $this->drive->files->create($fileMetadata, [
+            'data' => $content,
+            'mimeType' => $mimeType,
+            'uploadType' => 'multipart',
+            'fields' => 'id'
+        ]);
+
+        return $file->id;
+    }
+
+    // Methods for Manage Files on Google Drive
+    public function fileHandler($image_path, $filename)
+    {
+        // Save the new Image on disk
+        $image_path->move(public_path('storage/images/'), $filename);
+
+        // Obtain the new ubication of the Image
+        $saveImage = public_path('storage/images/'.$filename);
+
+        // create an Instance
+        $img = Intervention::make($saveImage);
+
+        $large_photos_storage = public_path('storage/images/large/');
+        $medium_photos_storage = public_path('storage/images/medium/');
+        $mobile_photos_storage = public_path('storage/images/mobile/');
+        $tiny_photos_storage = public_path('storage/images/tiny/');
+
+        // Processing the new Image and resize it
+        $img->resize(860, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($large_photos_storage . $filename, 85)
+            ->resize(640, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($medium_photos_storage . $filename, 85)
+            ->resize(420, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($mobile_photos_storage . $filename, 85)
+            ->resize(50, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->blur(1)->save($tiny_photos_storage . $filename, 85);
+
+        // Original Images stored on temporal path's
+        $image_size = array(
+            $large_photos_storage.$filename,
+            $medium_photos_storage.$filename,
+            $mobile_photos_storage.$filename,
+            $tiny_photos_storage.$filename
+        );
+
+        // Google Drive Path's
+        $google_path = array(
+            env('GOOGLE_FOLDER_LARGE_IMAGES'),
+            env('GOOGLE_FOLDER_MEDIUM_IMAGES'),
+            env('GOOGLE_FOLDER_MOBILE_IMAGES'),
+            env('GOOGLE_FOLDER_TINY_IMAGES')
+        );
+
+        // Creating the images in their respectively path's on Google Drive
+        $file_id = array(); // Arreglar Edit de imagenes
+        for ($i = 0; $i <= 3; $i++) {
+            $file = File::get($image_size[$i]);
+            $mimeType = File::mimeType($image_size[$i]);
+            $file_id[$i] = $this->createFile($file, $mimeType, $filename, $google_path[$i]);
+
+            // Delete the image in temporal path
+            File::delete($saveImage);
+            File::delete($image_size[$i]);
+        }
+
+        return $file_id;
+    }
+
 }

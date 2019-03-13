@@ -1,3 +1,7 @@
-# Ignoring all the files but not the folder
+# Ignoring all the files but not the folders
 *
+!large/
+!medium/
+!mobile/
+!tiny/
 !.gitignore

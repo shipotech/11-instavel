@@ -6,6 +6,9 @@
 
     $(document).on("submit", ".prevent-form-submit2", function(){
         $('.prevent-button-submit2').attr('disabled', 'true');
+        $('.fa-comment').addClass('d-none');
         $('.load2').removeClass('d-none');
+        $('.change_upload').removeClass('change_upload');
+        $('.mask').css('display', 'none');
     });
 })();

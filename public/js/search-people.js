@@ -2,6 +2,8 @@
     var input = document.getElementById('search-people');
     var interval;
 
+    $(document).on('keyup', '#search-people', function () {
+
     input.addEventListener("keyup", function () {
         clearInterval(interval);
         interval = setInterval(function () {
@@ -38,6 +40,7 @@
                 $('.div-people').addClass('d-none');
             }
             clearInterval(interval);
-        }, 800);
+        }, 200);
     }, false);
+    });
 })();

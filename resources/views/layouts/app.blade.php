@@ -128,12 +128,15 @@
 <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" defer></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+<script src="{{ asset('js/lazysizes.min.js') }}" async></script>
+<script src="{{ asset('js/ls.respimg.min.js') }}" async></script>
 <!-- SCRIPTS -->
 
 <script type="text/javascript">
     $(document).ready(function () {
         // Tooltips Initialization
         jQuery('[data-toggle="tooltip"]').tooltip();
+
         // Validate Register Form Client-Side
         (function() {
             'use strict';
