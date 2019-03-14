@@ -1,17 +1,50 @@
 <IfModule mod_rewrite.c>
+    # Fonts
+    # Add correct content-type for fonts
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/x-font-ttf .ttf
+    AddType application/x-font-opentype .otf
+    AddType application/x-font-woff .woff
+    AddType image/svg+xml .svg
 
     # Compress the web with gzip (better performance)
     <IfModule mod_deflate.c>
-        AddOutputFilterByType DEFLATE text/plain
-        AddOutputFilterByType DEFLATE text/html
-        AddOutputFilterByType DEFLATE text/xml
-        AddOutputFilterByType DEFLATE text/shtml
-        AddOutputFilterByType DEFLATE text/css
-        AddOutputFilterByType DEFLATE application/xml
-        AddOutputFilterByType DEFLATE application/xhtml+xml
-        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE image/jpg
+        AddOutputFilterByType DEFLATE image/jpeg
+        AddOutputFilterByType DEFLATE image/png
+        AddOutputFilterByType DEFLATE image/svg+xml
+        AddOutputFilterByType DEFLATE image/x-icon
+        AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
         AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+        AddOutputFilterByType DEFLATE application/x-font
+        AddOutputFilterByType DEFLATE application/x-font-opentype
+        AddOutputFilterByType DEFLATE application/x-font-otf
+        AddOutputFilterByType DEFLATE application/x-font-truetype
+        AddOutputFilterByType DEFLATE application/x-font-ttf
         AddOutputFilterByType DEFLATE application/x-javascript
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE font/opentype
+        AddOutputFilterByType DEFLATE font/otf
+        AddOutputFilterByType DEFLATE font/ttf
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE text/html
+        AddOutputFilterByType DEFLATE text/javascript
+        AddOutputFilterByType DEFLATE text/plain
+    </IfModule>
+
+    <IfModule mod_gzip.c>
+        mod_gzip_on Yes
+        mod_gzip_dechunk Yes
+        mod_gzip_item_include file .(html?|txt|ico|jpg|jpeg|png|css|js|pl)$
+        mod_gzip_item_include handler ^cgi-script$
+        mod_gzip_item_include mime ^text/.*
+        mod_gzip_item_include mime ^application/x-javascript.*
+        mod_gzip_item_include mime ^application/javascript.*
+        mod_gzip_item_exclude mime ^image/.*
+        mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
     </IfModule>
 
     <IfModule mod_negotiation.c>
@@ -21,10 +54,39 @@
     <ifModule mod_expires.c>
         ExpiresActive On
         ExpiresByType image/jpg "access plus 600 seconds"
+        ExpiresByType image/jpeg "access plus 600 seconds"
         ExpiresByType image/png "access plus 600 seconds"
-        ExpiresByType text/css "access plus 1 year"
-        ExpiresByType application/javascript "access plus 1 year"
+        ExpiresByType image/gif "access plus 600 seconds"
+        AddType image/x-icon .ico
+        ExpiresByType image/ico "access plus 2592000 seconds"
+        ExpiresByType image/icon "access plus 2592000 seconds"
+        ExpiresByType image/x-icon "access plus 2592000 seconds"
+        ExpiresByType text/css "access plus 2592000 seconds"
+        ExpiresByType text/javascript "access plus 2592000 seconds"
+        ExpiresByType application/javascript "access plus 2592000 seconds"
+        ExpiresByType application/x-javascript "access plus 2592000 seconds"
     </ifModule>
+
+   #################
+   # CACHE CONTROL #
+   #################
+   ## BEGIN Cache-Control Headers
+   <IfModule mod_headers.c>
+       <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
+           Header set Cache-Control "max-age=2592000, public"
+       </FilesMatch>
+       <FilesMatch "\\.(css)$">
+           Header set Cache-Control "max-age=2592000, public"
+       </FilesMatch>
+       <FilesMatch "\\.(js)$">
+           Header set Cache-Control "max-age=2592000, private"
+       </FilesMatch>
+       # Disable caching for scripts and other dynamic files
+       <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+           Header unset Cache-Control
+       </FilesMatch>
+   </IfModule>
+   ## END Cache-Control Headers
 
     RewriteEngine On
 

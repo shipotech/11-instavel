@@ -18,7 +18,7 @@
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">
-                                            <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}">
+                                            <a class="text-dark" href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" aria-label="go to {{ strtolower(Auth::user()->nick) }} profile">
                                                 {{ strtolower(Auth::user()->nick) }}
                                             </a>
                                         </p>
@@ -63,7 +63,7 @@
 
                         <div class="mx-auto">
                             <div class="view overlay overflow-hidden">
-                                <a title="Upload your photo" href="#!" class="change_upload" id="c_1">
+                                <a title="Upload your photo" href="#!" class="change_upload" id="c_1" aria-label="Upload your photo">
                                     <img src="https://i.ibb.co/jGvG5VL/upload2.png" alt="upload picture" class="card-img-top upload-preview1">
                                     <div class="mask flex-center text-white rgba-black-strong overflow-hidden">
                                         <i class="fa fa-camera fa-2x"></i>
@@ -78,7 +78,7 @@
                                 <input type="hidden" name="form_token" value="{{ session('form_token') }}">
                                 <input type="file" name="upload" id="upload-image1" style="display: none" />
                                 <label for="description" class="sr-only-focusable"></label>
-                                <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." required></textarea>
+                                <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." aria-label="Description, Write something here..." required></textarea>
                                 <div class="row">
                                     <div class="col">
                                         <div class="d-flex justify-content-center">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <button type="submit" class="btn primary-color border-0 hoverable mt-4 m-0 w-100 white-text prevent-button-submit">
+                                        <button type="submit" class="btn primary-color-dark border-0 hoverable mt-4 m-0 w-100 white-text prevent-button-submit">
                                             <i class="fas fa-upload" aria-hidden="true"></i> Upload
                                         </button>
                                     </div>

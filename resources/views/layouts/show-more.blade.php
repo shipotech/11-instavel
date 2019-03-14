@@ -14,7 +14,7 @@
                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                             <div class="col text-center text-sm-left">
                                 <p class="font-weight-bold text-dark m-0">
-                                    <a href="{{ route('user.profile', ['id' => $image->user->id]) }}">
+                                    <a class="text-dark" href="{{ route('user.profile', ['id' => $image->user->id]) }}" aria-label="go to {{ strtolower($image->user->nick) }} profile">
                                         {{ strtolower($image->user->nick) }}
                                     </a>
                                 </p>
@@ -28,17 +28,17 @@
                                 <div class="dropdown dropleft">
                                     <!--Trigger-->
                                     <a class="text-decoration-none" type="button" id="dropdownMenu1"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="menu">
                                         <i class="fas fa-ellipsis-v icon-menu"></i>
                                     </a>
                                     <!--Menu-->
                                     <div class="dropdown-menu dropdown-primary">
                                         <a type="button" data-toggle="modal" data-target="#image_edit"
-                                           class="image_edit dropdown-item" id="s_{{$image->id}}">
+                                           class="image_edit dropdown-item" id="s_{{$image->id}}" aria-label="edit">
                                             Edit</a>
 
                                         <a type="button" data-toggle="modal"
-                                           data-target="#modalConfirmDelete{{$image->id}}" class="dropdown-item">
+                                           data-target="#modalConfirmDelete{{$image->id}}" class="dropdown-item" aria-label="delete">
                                             Delete</a>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
 
             <!-- Card image -->
             <div class="view like-overlay">
-                <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay">
+                <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay" aria-label="show image by: {{ strtolower($image->user->nick) }}">
                     <img class="card-img-top lazyload"
                          src="@if($image->drive_id4 === null || empty($image->drive_id4))
                                  https://i.ibb.co/b23YqqB/noimage.png
@@ -88,7 +88,7 @@
                             @include('like.dislikes')
                         @endif
 
-                        <a href="{{ route('image.show', ['id' => $image->id]) }}" class="text-muted icons">
+                        <a href="{{ route('image.show', ['id' => $image->id]) }}" class="text-muted icons" aria-label="show comments">
                             @if(count($image->comments) > 0)
                                 <i class="fas fa-comments"></i>
                                 {{ count($image->comments) }}
@@ -98,11 +98,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="row pt-4 pb-0 m-0">
+                <div class="row pt-2 pb-0 m-0">
                     <div class="col px-0">
                         <p class="card-text">
                             <a type="button" data-toggle="modal" data-target="#modal_like"
-                               class="show_likes" id="s_{{$image->id}}">
+                               class="show_likes" id="s_{{$image->id}}" aria-label="show people who like this">
                                 <span class="mdb-color-text font-weight-bold" id="amount_{{$image->id}}">
                                     @if(count($image->likes) === 1)
                                         {{ count($image->likes) }} like
