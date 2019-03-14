@@ -98,7 +98,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="row p-0 m-0">
+                <div class="row pt-4 pb-0 m-0">
                     <div class="col px-0">
                         <p class="card-text">
                             <a type="button" data-toggle="modal" data-target="#modal_like"

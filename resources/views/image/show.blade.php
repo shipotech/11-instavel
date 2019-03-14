@@ -145,7 +145,9 @@
                                                 <div class="news mb-1">
                                                     <!-- Label -->
                                                     <div class="label text-center">
-                                                        <img src="@if($comment->user->drive_id === null || empty($comment->user->drive_id)) https://i.ibb.co/2kjt747/nouser.png @elseif($comment->user->drive_id) {{ 'https://drive.google.com/uc?id='.$comment->user->drive_id.'&export=media' }} @endif"
+                                                        <img src="
+@if($comment->user->drive_id2 === null || empty($comment->user->drive_id2)) https://i.ibb.co/2kjt747/nouser.png
+@else{{ 'https://drive.google.com/uc?id='.$comment->user->drive_id2.'&export=media' }} @endif"
                                                              class="rounded-circle avatar-img d-block">
                                                     </div>
 

@@ -20,9 +20,10 @@
 
     <ifModule mod_expires.c>
         ExpiresActive On
-        ExpiresByType image/gif "access plus 600 seconds"
         ExpiresByType image/jpg "access plus 600 seconds"
         ExpiresByType image/png "access plus 600 seconds"
+        ExpiresByType text/css "access plus 1 year"
+        ExpiresByType application/javascript "access plus 1 year"
     </ifModule>
 
     RewriteEngine On

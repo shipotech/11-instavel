@@ -2,13 +2,15 @@
     $(document).on("submit", ".prevent-form-submit", function(){
         $('.prevent-button-submit').attr('disabled', 'true');
         $('.load').removeClass('d-none');
+        $('.change_upload').removeClass('change_upload').css('cursor', 'default');
+        $('.mask').css('display', 'none');
     });
 
     $(document).on("submit", ".prevent-form-submit2", function(){
         $('.prevent-button-submit2').attr('disabled', 'true');
         $('.fa-comment').addClass('d-none');
         $('.load2').removeClass('d-none');
-        $('.change_upload').removeClass('change_upload');
+        $('.change_upload').removeClass('change_upload').css('cursor', 'default');
         $('.mask').css('display', 'none');
     });
 })();
