@@ -28,6 +28,7 @@
     <link rel="preconnect" href="https://drive.google.com">
 </head>
 <body class="@if (session('isDark')) dark-mode @else @guest rgba-blue-strong @else light-mode @endguest @endif ">
+<div class="se-pre-con"></div>
 
 <header>
     <nav class="navbar fixed-top navbar-expand-lg @if (session('isDark')) navbar-dark unique-color-dark @else navbar-light light-mode @endif py-0">
@@ -146,6 +147,9 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+
         // Validate Register Form Client-Side
         (function() {
             'use strict';

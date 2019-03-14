@@ -14,7 +14,7 @@
                                  class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                             <div class="col text-center text-sm-left">
                                 <p class="font-weight-bold text-dark m-0">
-                                    <a class="text-dark" href="{{ route('user.profile', ['id' => $image->user->id]) }}" aria-label="go to {{ strtolower($image->user->nick) }} profile">
+                                    <a href="{{ route('user.profile', ['id' => $image->user->id]) }}" aria-label="go to {{ strtolower($image->user->nick) }} profile">
                                         {{ strtolower($image->user->nick) }}
                                     </a>
                                 </p>

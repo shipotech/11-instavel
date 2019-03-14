@@ -18,7 +18,7 @@
                                          class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
                                     <div class="col text-center text-sm-left">
                                         <p class="font-weight-bold text-dark m-0">
-                                            <a class="text-dark" href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" aria-label="go to {{ strtolower(Auth::user()->nick) }} profile">
+                                            <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" aria-label="go to {{ strtolower(Auth::user()->nick) }} profile">
                                                 {{ strtolower(Auth::user()->nick) }}
                                             </a>
                                         </p>
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <button type="submit" class="btn primary-color-dark border-0 hoverable mt-4 m-0 w-100 white-text prevent-button-submit">
+                                        <button type="submit" class="btn primary-color border-0 hoverable mt-4 m-0 w-100 white-text prevent-button-submit">
                                             <i class="fas fa-upload" aria-hidden="true"></i> Upload
                                         </button>
                                     </div>
