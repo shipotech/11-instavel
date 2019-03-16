@@ -1,9 +1,4 @@
 <?php
-ini_set('post_max_size', '30M');
-ini_set('upload_max_filesize', '5M');
-ini_set('memory_limit', '32M');
-ini_set('max_execution_time', '300');
-ini_set('max_input_time', '300');
 
 /**
  * Laravel - A PHP Framework For Web Artisans
