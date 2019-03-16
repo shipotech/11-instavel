@@ -58,13 +58,13 @@
         ExpiresByType image/png "access plus 600 seconds"
         ExpiresByType image/gif "access plus 600 seconds"
         AddType image/x-icon .ico
-        ExpiresByType image/ico "access plus 2592000 seconds"
-        ExpiresByType image/icon "access plus 2592000 seconds"
-        ExpiresByType image/x-icon "access plus 2592000 seconds"
-        ExpiresByType text/css "access plus 2592000 seconds"
-        ExpiresByType text/javascript "access plus 2592000 seconds"
-        ExpiresByType application/javascript "access plus 2592000 seconds"
-        ExpiresByType application/x-javascript "access plus 2592000 seconds"
+        ExpiresByType image/ico "access plus 600 seconds"
+        ExpiresByType image/icon "access plus 600 seconds"
+        ExpiresByType image/x-icon "access plus 600 seconds"
+        ExpiresByType text/css "access plus 600 seconds"
+        ExpiresByType text/javascript "access plus 600 seconds"
+        ExpiresByType application/javascript "access plus 600 seconds"
+        ExpiresByType application/x-javascript "access plus 600 seconds"
     </ifModule>
 
    #################
@@ -73,13 +73,13 @@
    ## BEGIN Cache-Control Headers
    <IfModule mod_headers.c>
        <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
-           Header set Cache-Control "max-age=2592000, public"
+           Header set Cache-Control "max-age=600, public"
        </FilesMatch>
        <FilesMatch "\\.(css)$">
-           Header set Cache-Control "max-age=2592000, public"
+           Header set Cache-Control "max-age=600, public"
        </FilesMatch>
        <FilesMatch "\\.(js)$">
-           Header set Cache-Control "max-age=2592000, private"
+           Header set Cache-Control "max-age=600, private"
        </FilesMatch>
        # Disable caching for scripts and other dynamic files
        <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
