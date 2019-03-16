@@ -213,16 +213,33 @@ textarea#description {
 /*Like*/
 
 /*Search People*/
-.div-people {
+.peoplee {
     border-radius: 3px;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,.0975);
     display: block;
     left: 50%;
     position: absolute;
-    top: 8em;
+    top: 9em;
     width: 15.6em;
     z-index: 9;
     margin-left: -7.8em;
+    max-height: 12em;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.caret-people:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #3f729b ;
+}
+.div-people {
     max-height: 12em;
     background: #fff;
     overflow-y: scroll;

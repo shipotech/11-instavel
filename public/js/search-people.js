@@ -28,16 +28,30 @@
                     /* remind that 'data' is the response of the AjaxController */
                     success: function (data) {
                         if (data.status) {
-                            $('.div-people').removeClass('d-none');
-                            $('#show-people').html(data.view);
+                            $('.peoplee').removeClass('d-none');
                             $('#search-button').html('').html('<i class="fas fa-search" aria-hidden="true"></i>');
+                            if (data.view) {
+                                $('#show-people').html(data.view);
+                            } else {
+                                $('#show-people').html('<div class="card-body">\n' +
+                                    '    <div class="content d-flex">\n' +
+                                    '        <div class="row w-100 m-0 p-0">\n' +
+                                    '            <div class="col p-0">\n' +
+                                    '                <div class="d-flex align-items-center justify-content-center text-center">\n' +
+                                    '                    <p class="font-weight-bold text-muted m-0 p-0">No people were found <i class="far fa-frown"></i></p>\n' +
+                                    '                </div>\n' +
+                                    '            </div>\n' +
+                                    '        </div>\n' +
+                                    '    </div>\n' +
+                                    '</div>');
+                            }
                         } else {
                             alert('There was a problem with your request, please refresh and try again in a few seconds');
                         }
                     }
                 });
             } else {
-                $('.div-people').addClass('d-none');
+                $('.peoplee').addClass('d-none');
             }
             clearInterval(interval);
         }, 200);

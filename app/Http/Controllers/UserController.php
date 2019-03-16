@@ -57,7 +57,8 @@ class UserController extends Controller
     public function search(Request $request)
     {
         if ($request->ajax()) {
-            $users = User::where('nick', 'LIKE', '%' . $request->message . '%')->get();
+            $string = strtolower($request->message);
+            $users = User::where('nick', 'LIKE', '%' . $string . '%')->get();
 
             if ($users) {
                 return response()->json([

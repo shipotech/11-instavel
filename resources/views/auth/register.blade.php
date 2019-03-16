@@ -7,7 +7,7 @@
                 <!-- Material form register -->
                 <div class="card z-depth-1-half ">
                     <h5 class="card-header indigo accent-4 white-text text-center py-4">
-                        <strong>{{ __('Register') }}</strong>
+                        <strong>{{ __('Create Account') }}</strong>
                     </h5>
 
                     <!--Card content-->
