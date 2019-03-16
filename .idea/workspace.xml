@@ -95,7 +95,7 @@
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="30" />
           <entry key="js" value="193" />
-          <entry key="json" value="20" />
+          <entry key="json" value="21" />
           <entry key="likes" value="18" />
           <entry key="lock" value="1" />
           <entry key="log" value="3" />
@@ -124,7 +124,7 @@
           <entry key="HTML" value="14" />
           <entry key="Image" value="42" />
           <entry key="Ini" value="7" />
-          <entry key="JSON" value="21" />
+          <entry key="JSON" value="22" />
           <entry key="JavaScript" value="193" />
           <entry key="Log" value="3" />
           <entry key="Markdown" value="10" />
@@ -151,7 +151,7 @@
           <entry key="html" value="561" />
           <entry key="ini" value="17" />
           <entry key="js" value="5865" />
-          <entry key="json" value="9" />
+          <entry key="json" value="11" />
           <entry key="md" value="1017" />
           <entry key="php" value="46607" />
           <entry key="scss" value="43" />
@@ -166,7 +166,7 @@
           <entry key="CSS" value="2075" />
           <entry key="HTML" value="561" />
           <entry key="Ini" value="17" />
-          <entry key="JSON" value="9" />
+          <entry key="JSON" value="11" />
           <entry key="JavaScript" value="5865" />
           <entry key="Markdown" value="1017" />
           <entry key="PHP" value="18713" />
@@ -199,7 +199,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -257,7 +267,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/public/js/ls.respimg.min.js" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/photo/index.blade.php" />
@@ -308,6 +317,7 @@
         <option value="$PROJECT_DIR$/public/js/profile-picture.js" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -568,7 +578,7 @@
       <workItem from="1552490457493" duration="35480000" />
       <workItem from="1552576075173" duration="4099000" />
       <workItem from="1552589753808" duration="160000" />
-      <workItem from="1552682248654" duration="16170000" />
+      <workItem from="1552682248654" duration="16504000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -784,7 +794,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="769538000" />
+    <option name="totallyTimeSpent" value="769872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -807,7 +817,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.43806645" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.31722054" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50075644" side_tool="true" weight="0.2671875" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -892,9 +902,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Final steps 4&#10;&#10;-- better layout and message&#10;-- fixing some bugs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/storage/users/mobile/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/storage/images/tiny/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1210,6 +1217,13 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
