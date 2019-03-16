@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/scroll', 'HomeController@scroll');
 
+Route::get('/php', 'PhpController@index');
 // Dark Mode
 Route::get('/dark', 'HomeController@darkMode')->name('dark');
 
