@@ -15,10 +15,16 @@
             let validImageTypes = ["image/jpeg", "image/jpg", "image/png"];
 
             $('#error'+id).removeClass('show').addClass('d-none');
+            $('#error-file-size').removeClass('show').addClass('d-none');
 
             if ($.inArray(fileType, validImageTypes) < 0) {
+                // Validate FileType
                 $('#error'+id).removeClass('d-none').addClass('show');
+            } else if(file.size > 900000 || file.fileSize > 900000) {
+                // Validate FileSize
+                $('#error-file-size').removeClass('d-none').addClass('show');
             } else {
+                // Uploading preview
                 reader.onload = function (e) {
                     $('.upload-preview'+id).removeClass('lazyloaded')
                         .removeClass('lazyload')

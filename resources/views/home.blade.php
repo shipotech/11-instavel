@@ -36,6 +36,10 @@
                             <strong>Whoops!</strong> <span>The file must be an image (jpeg, png)</span>
                         </div>
 
+                        <div class="alert alert-danger fade text-danger d-none text-sm" role="alert" id="error-file-size">
+                            <strong>Whoops!</strong> <span>Allowed file size exceeded. (Max. 900 KB)</span>
+                        </div>
+
                         @if($errors->any())
                             <div class="alert alert-danger fade show text-danger text-sm" role="alert">
                                 <strong>Whoops!</strong>
