@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
           <entry key="html" value="14" />
           <entry key="ico" value="3" />
           <entry key="images" value="56" />
-          <entry key="ini" value="2" />
+          <entry key="ini" value="3" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="30" />
           <entry key="js" value="181" />
@@ -132,7 +130,7 @@
           <entry key="ECMAScript 6" value="5" />
           <entry key="HTML" value="14" />
           <entry key="Image" value="42" />
-          <entry key="Ini" value="2" />
+          <entry key="Ini" value="3" />
           <entry key="JSON" value="21" />
           <entry key="JavaScript" value="181" />
           <entry key="Log" value="3" />
@@ -149,7 +147,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Procfile" value="44" />
+          <entry key="Procfile" value="45" />
           <entry key="cell" value="36" />
           <entry key="css" value="2075" />
           <entry key="dummy" value="31" />
@@ -179,7 +177,7 @@
           <entry key="JavaScript" value="5707" />
           <entry key="Markdown" value="1017" />
           <entry key="PHP" value="18635" />
-          <entry key="PLAIN_TEXT" value="3779" />
+          <entry key="PLAIN_TEXT" value="3780" />
           <entry key="RegExp" value="2" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1183" />
@@ -239,8 +237,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+            <state relative-caret-position="23">
+              <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -311,7 +309,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/routes/web.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/app/Http/Controllers/PhotoController.php" />
@@ -362,6 +359,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/resources/views/user/index.blade.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -505,10 +503,6 @@
           <expand>
             <path>
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -532,19 +526,19 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../../progresive-image-loading/resources/views/photo" />
-      <recent name="$PROJECT_DIR$/../../progresive-image-loading/public/js" />
-      <recent name="$PROJECT_DIR$/resources/views/images/ejemplo1" />
-      <recent name="$PROJECT_DIR$/resources/views/images" />
-      <recent name="$PROJECT_DIR$/storage/app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/storage/users/tiny" />
       <recent name="$PROJECT_DIR$/public/storage/users/mobile" />
       <recent name="$PROJECT_DIR$/public/storage/images/tiny" />
       <recent name="$PROJECT_DIR$/public/storage/images/mobile" />
-      <recent name="$PROJECT_DIR$/public/storage/images/medium" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/../../progresive-image-loading/resources/views/photo" />
+      <recent name="$PROJECT_DIR$/../../progresive-image-loading/public/js" />
+      <recent name="$PROJECT_DIR$/resources/views/images/ejemplo1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -604,7 +598,7 @@
       <workItem from="1552490457493" duration="35480000" />
       <workItem from="1552576075173" duration="4099000" />
       <workItem from="1552589753808" duration="160000" />
-      <workItem from="1552682248654" duration="8759000" />
+      <workItem from="1552682248654" duration="9069000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -813,7 +807,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="762127000" />
+    <option name="totallyTimeSpent" value="762437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -821,7 +815,7 @@
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.5060423" side_tool="true" weight="0.14787701" />
       <window_info id="Favorites" order="5" sideWeight="0.50453174" side_tool="true" weight="0.13250366" />
@@ -837,7 +831,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.19637462" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.19637462" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50075644" side_tool="true" weight="0.2671875" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -922,7 +916,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Final steps 2&#10;&#10;-- added .user.ini (configured some php.ini options)&#10;-- fixing some bugs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/profile-picture.js" />
     <entry file="file://$PROJECT_DIR$/resources/views/user/config.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4416" />
@@ -1221,10 +1214,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/custom_php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+        <state relative-caret-position="23">
+          <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
         </state>
       </provider>
     </entry>
