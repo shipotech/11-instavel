@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="Final steps 2&#10;&#10;-- Added .user.ini (configured max_upload_size)">
-      <change afterPath="$PROJECT_DIR$/public/.user.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/bootstrap6.min.css" afterDir="false" />
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap5.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/image/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/image/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/show-more.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/show-more.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/people.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/people.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/show-more.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/show-more.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +87,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="4" />
+          <entry key="Procfile" value="5" />
           <entry key="XUniRDvnIagfZiugDqrTdA1rJInKQj3TAve0tGAR" value="1" />
           <entry key="comments" value="7" />
           <entry key="css" value="97" />
@@ -111,7 +100,7 @@
           <entry key="html" value="14" />
           <entry key="ico" value="3" />
           <entry key="images" value="56" />
-          <entry key="ini" value="1" />
+          <entry key="ini" value="2" />
           <entry key="jpeg" value="2" />
           <entry key="jpg" value="30" />
           <entry key="js" value="181" />
@@ -124,7 +113,7 @@
           <entry key="mjs" value="5" />
           <entry key="password_resets" value="1" />
           <entry key="photos" value="4" />
-          <entry key="php" value="771" />
+          <entry key="php" value="772" />
           <entry key="phpcuBP41" value="1" />
           <entry key="png" value="7" />
           <entry key="rnc" value="1" />
@@ -143,13 +132,13 @@
           <entry key="ECMAScript 6" value="5" />
           <entry key="HTML" value="14" />
           <entry key="Image" value="42" />
-          <entry key="Ini" value="1" />
+          <entry key="Ini" value="2" />
           <entry key="JSON" value="21" />
           <entry key="JavaScript" value="181" />
           <entry key="Log" value="3" />
           <entry key="Markdown" value="10" />
-          <entry key="PHP" value="381" />
-          <entry key="PLAIN_TEXT" value="65" />
+          <entry key="PHP" value="382" />
+          <entry key="PLAIN_TEXT" value="66" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="8" />
           <entry key="SQL" value="8" />
@@ -173,10 +162,10 @@
           <entry key="js" value="5707" />
           <entry key="json" value="9" />
           <entry key="md" value="1017" />
-          <entry key="php" value="46349" />
+          <entry key="php" value="46376" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1183" />
-          <entry key="txt" value="3459" />
+          <entry key="txt" value="3504" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -189,8 +178,8 @@
           <entry key="JSON" value="9" />
           <entry key="JavaScript" value="5707" />
           <entry key="Markdown" value="1017" />
-          <entry key="PHP" value="18608" />
-          <entry key="PLAIN_TEXT" value="3734" />
+          <entry key="PHP" value="18635" />
+          <entry key="PLAIN_TEXT" value="3779" />
           <entry key="RegExp" value="2" />
           <entry key="SCSS" value="43" />
           <entry key="SQL" value="1183" />
@@ -229,11 +218,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
+            <state relative-caret-position="84">
               <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/.user.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="4" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -295,7 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../progresive-image-loading/database/migrations/2019_03_05_002441_create_photos_table.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/routes/web.php" />
@@ -346,6 +361,7 @@
         <option value="$PROJECT_DIR$/resources/views/user/people.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" />
         <option value="$PROJECT_DIR$/resources/views/user/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/index.php" />
       </list>
     </option>
   </component>
@@ -489,6 +505,10 @@
           <expand>
             <path>
               <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11-instavel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11-instavel" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -584,7 +604,7 @@
       <workItem from="1552490457493" duration="35480000" />
       <workItem from="1552576075173" duration="4099000" />
       <workItem from="1552589753808" duration="160000" />
-      <workItem from="1552682248654" duration="6979000" />
+      <workItem from="1552682248654" duration="8759000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -782,14 +802,22 @@
       <option name="project" value="LOCAL" />
       <updated>1552549924147</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Final steps 2&#10;&#10;-- added .user.ini (configured some php.ini options)&#10;-- fixing some bugs">
+      <created>1552694433283</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1552694433283</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="760347000" />
+    <option name="totallyTimeSpent" value="762127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
@@ -809,7 +837,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" weight="0.21148036" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.19637462" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50075644" side_tool="true" weight="0.2671875" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -866,7 +894,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="1. Fixing some bugs with images&#10;2. Better quality for the Images" />
     <MESSAGE value="Delete the possibility of upload gif" />
     <MESSAGE value="1- Added Comments section&#10;2- Better layout for comments&#10;3- Can add comment&#10;4- Can delete comment (only the user who post the comment or the user that belongs the Image)&#10;5- Minor details, like icons logic (when a Image have comments, the icon of comments in the home, change for another, more appropriate icon)" />
     <MESSAGE value="Before modify the principal card" />
@@ -891,10 +918,10 @@
     <MESSAGE value="Added progressive image load (for images, not for users profile pictures)&#10;&#10;-- better readme.md&#10;-- lazysizes.min.js (lazyloader for images)&#10;-- ls.respimg.min.js (for responsive images, just add 'data-sizes=&quot;auto&quot;' to &lt;img&gt; element)" />
     <MESSAGE value="Added progressive image load (for all pictures)&#10;&#10;-- better readme.md (pending: new previews)" />
     <MESSAGE value="Final steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final steps" />
+    <MESSAGE value="Final steps 2&#10;&#10;-- added .user.ini (configured some php.ini options)&#10;-- fixing some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final steps 2&#10;&#10;-- added .user.ini (configured some php.ini options)&#10;-- fixing some bugs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/storage/users/tiny/2_5c888c509fb629.46006630_1552452688.jpg" />
     <entry file="file://$PROJECT_DIR$/public/js/profile-picture.js" />
     <entry file="file://$PROJECT_DIR$/resources/views/user/config.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1075,6 +1102,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret column="785975" selection-start-column="785975" selection-end-column="785975" />
+          <folding>
+            <element signature="e#25767#26001#2" expanded="true" />
+            <element signature="e#26606#26759#1" expanded="true" />
+            <element signature="e#26799#27033#1" expanded="true" />
+            <element signature="e#30126#30402#2" expanded="true" />
+            <element signature="e#31035#31188#1" expanded="true" />
+            <element signature="e#31228#31504#1" expanded="true" />
+            <element signature="e#61066#61253#2" expanded="true" />
+            <element signature="e#61482#61618#2" expanded="true" />
+            <element signature="e#62021#62154#2" expanded="true" />
+            <element signature="e#63625#63778#1" expanded="true" />
+            <element signature="e#75833#76060#2" expanded="true" />
+            <element signature="e#76927#77160#2" expanded="true" />
+            <element signature="e#103974#104151#2" expanded="true" />
+            <element signature="e#104197#104374#2" expanded="true" />
+            <element signature="e#339996#340236#2" expanded="true" />
+            <element signature="e#341655#341901#2" expanded="true" />
+            <element signature="e#525129#525616#2" expanded="true" />
+            <element signature="e#525685#526472#2" expanded="true" />
+            <element signature="e#526540#527287#2" expanded="true" />
+            <element signature="e#527355#528070#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,20 +1136,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/modal-confirm.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" selection-start-column="35" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.user.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/modal-edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1167,8 +1202,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
+        <state relative-caret-position="84">
           <caret line="20" column="98" selection-start-line="20" selection-start-column="98" selection-end-line="20" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.user.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
