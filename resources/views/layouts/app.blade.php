@@ -6,7 +6,7 @@
     <title>Instavel</title>
     <meta name="robots" content="noimageindex, noarchive">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta name="Description" content="Instavel, is a basic application with some similarity to instagram. Developed by shipotech for educational uses. You can contact me through Github as shipotech: https://github.com/shipotech">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
