@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="" />
+    <list default="true" id="8da4db31-676b-4b10-91c6-5d75f6966183" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/11-instavel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/11-instavel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +52,7 @@
     <session id="687921356">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
+          <entry key="project.closed" value="29" />
           <entry key="project.open.time.125" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.4" value="1" />
@@ -57,6 +63,7 @@
           <entry key="project.open.time.69" value="1" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.71" value="2" />
+          <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.73" value="2" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.75" value="2" />
@@ -73,7 +80,7 @@
           <entry key="project.open.time.88" value="1" />
           <entry key="project.open.time.89" value="1" />
           <entry key="project.open.time.93" value="2" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -104,7 +111,7 @@
           <entry key="mjs" value="5" />
           <entry key="password_resets" value="1" />
           <entry key="photos" value="4" />
-          <entry key="php" value="787" />
+          <entry key="php" value="790" />
           <entry key="phpcuBP41" value="1" />
           <entry key="png" value="7" />
           <entry key="rnc" value="1" />
@@ -128,7 +135,7 @@
           <entry key="JavaScript" value="193" />
           <entry key="Log" value="3" />
           <entry key="Markdown" value="10" />
-          <entry key="PHP" value="391" />
+          <entry key="PHP" value="394" />
           <entry key="PLAIN_TEXT" value="68" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="8" />
@@ -153,7 +160,7 @@
           <entry key="js" value="5865" />
           <entry key="json" value="11" />
           <entry key="md" value="1017" />
-          <entry key="php" value="46607" />
+          <entry key="php" value="46623" />
           <entry key="scss" value="43" />
           <entry key="sql" value="1183" />
           <entry key="txt" value="3541" />
@@ -169,7 +176,7 @@
           <entry key="JSON" value="11" />
           <entry key="JavaScript" value="5865" />
           <entry key="Markdown" value="1017" />
-          <entry key="PHP" value="18713" />
+          <entry key="PHP" value="18729" />
           <entry key="PLAIN_TEXT" value="3830" />
           <entry key="RegExp" value="2" />
           <entry key="SCSS" value="43" />
@@ -199,17 +206,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -267,7 +264,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../progresive-image-loading/public/js/ls.respimg.min.js" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/resources/views/photo/index.blade.php" />
         <option value="$PROJECT_DIR$/../../progresive-image-loading/public/css/style.css" />
@@ -318,6 +314,7 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
       </list>
     </option>
   </component>
@@ -434,12 +431,11 @@
       <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/vendor/google/apiclient" />
-      <path value="$PROJECT_DIR$/vendor/nao-pon/flysystem-google-drive" />
-      <path value="$PROJECT_DIR$/vendor/nao-pon/flysystem-cached-extra" />
       <path value="$PROJECT_DIR$/vendor/google/apiclient-services" />
       <path value="$PROJECT_DIR$/vendor/google/auth" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -578,7 +574,8 @@
       <workItem from="1552490457493" duration="35480000" />
       <workItem from="1552576075173" duration="4099000" />
       <workItem from="1552589753808" duration="160000" />
-      <workItem from="1552682248654" duration="16504000" />
+      <workItem from="1552682248654" duration="18664000" />
+      <workItem from="1552708855803" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="Added Favicon.ico :D&#10;Modified the color of the Logo&#10;Added a decent readme.md :)">
       <created>1550462517854</created>
@@ -794,14 +791,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="769872000" />
+    <option name="totallyTimeSpent" value="772032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <layout>
       <window_info id="Project Explorer" order="0" />
       <window_info id="Job Explorer" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4939577" visible="true" weight="0.20497803" />
       <window_info id="DB Browser" order="3" />
       <window_info id="Structure" order="4" sideWeight="0.5060423" side_tool="true" weight="0.14787701" />
       <window_info id="Favorites" order="5" sideWeight="0.50453174" side_tool="true" weight="0.13250366" />
@@ -817,7 +814,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.29375" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" visible="true" weight="0.31722054" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49924356" weight="0.2779456" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50075644" side_tool="true" weight="0.2671875" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.32930514" />
       <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32930514" />
@@ -902,16 +899,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Final steps 4&#10;&#10;-- better layout and message&#10;-- fixing some bugs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/storage/images/tiny/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/storage/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/storage/images/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -977,28 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret column="756490" selection-end-column="795201" />
-          <folding>
-            <element signature="e#25762#25996#2" expanded="true" />
-            <element signature="e#26601#26754#1" expanded="true" />
-            <element signature="e#26794#27028#1" expanded="true" />
-            <element signature="e#30121#30397#2" expanded="true" />
-            <element signature="e#31030#31183#1" expanded="true" />
-            <element signature="e#31223#31499#1" expanded="true" />
-            <element signature="e#61061#61248#2" expanded="true" />
-            <element signature="e#61477#61613#2" expanded="true" />
-            <element signature="e#62016#62149#2" expanded="true" />
-            <element signature="e#63620#63773#1" expanded="true" />
-            <element signature="e#75827#76054#2" expanded="true" />
-            <element signature="e#76921#77154#2" expanded="true" />
-            <element signature="e#103964#104141#2" expanded="true" />
-            <element signature="e#104187#104364#2" expanded="true" />
-            <element signature="e#339878#340118#2" expanded="true" />
-            <element signature="e#341537#341783#2" expanded="true" />
-            <element signature="e#525009#525496#2" expanded="true" />
-            <element signature="e#525565#526352#2" expanded="true" />
-            <element signature="e#526420#527167#2" expanded="true" />
-            <element signature="e#527235#527950#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,28 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret column="785975" selection-start-column="785975" selection-end-column="785975" />
-          <folding>
-            <element signature="e#25767#26001#2" expanded="true" />
-            <element signature="e#26606#26759#1" expanded="true" />
-            <element signature="e#26799#27033#1" expanded="true" />
-            <element signature="e#30126#30402#2" expanded="true" />
-            <element signature="e#31035#31188#1" expanded="true" />
-            <element signature="e#31228#31504#1" expanded="true" />
-            <element signature="e#61066#61253#2" expanded="true" />
-            <element signature="e#61482#61618#2" expanded="true" />
-            <element signature="e#62021#62154#2" expanded="true" />
-            <element signature="e#63625#63778#1" expanded="true" />
-            <element signature="e#75833#76060#2" expanded="true" />
-            <element signature="e#76927#77160#2" expanded="true" />
-            <element signature="e#103974#104151#2" expanded="true" />
-            <element signature="e#104197#104374#2" expanded="true" />
-            <element signature="e#339996#340236#2" expanded="true" />
-            <element signature="e#341655#341901#2" expanded="true" />
-            <element signature="e#525129#525616#2" expanded="true" />
-            <element signature="e#525685#526472#2" expanded="true" />
-            <element signature="e#526540#527287#2" expanded="true" />
-            <element signature="e#527355#528070#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,20 +1012,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/.user.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.user.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/.user.ini" />
+    <entry file="file://$PROJECT_DIR$/public/.user.ini" />
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1090,9 +1021,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.user.ini">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.user.ini" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PhpController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -1220,10 +1149,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="74" column="54" lean-forward="true" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="267">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2174">
+          <caret line="147" column="33" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="33" />
         </state>
       </provider>
     </entry>
