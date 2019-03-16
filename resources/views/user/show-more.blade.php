@@ -12,8 +12,7 @@
                          @if($image->drive_id2 !== null || !empty($image->drive_id2))
                          data-srcset="
 {{'https://drive.google.com/uc?id='.$image->drive_id3.'&export=media 420w'}},
-{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}},
-{{'https://drive.google.com/uc?id='.$image->drive_id1.'&export=media 860w'}}"
+{{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media 640w'}}"
                          data-src="
 {{'https://drive.google.com/uc?id='.$image->drive_id2.'&export=media'}}"
                          @endif

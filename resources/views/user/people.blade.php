@@ -23,8 +23,8 @@
                 <h5 class="card-title text-dark">
                     <a href="{{ route('user.profile', ['id' => $user->id]) }}">{{ strtolower($user->nick) }}</a>
                 </h5>
-                <p class="card-text">{{ ucwords($user->name . ' ' . $user->surname) }}</p>
-                <p class="card-text text-right mb-0">Joined on {{ $user->created_at->englishMonth .' '. $user->created_at->year}}</p>
+                <p class="card-text text-dark">{{ ucwords($user->name . ' ' . $user->surname) }}</p>
+                <p class="card-text text-muted text-right mb-0">Joined on {{ $user->created_at->englishMonth .' '. $user->created_at->year}}</p>
                 </div>
                 <hr class="m-0 pb-2">
                 <div class="card-body py-0">

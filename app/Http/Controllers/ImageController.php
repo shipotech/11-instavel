@@ -40,7 +40,7 @@ class ImageController extends Controller
         }
 
         $validator = Validator::make($request->all(),
-            [ 'file'        => 'required|mimes:jpeg,jpg,png'],
+            [ 'file'        => 'required|mimes:jpeg,jpg,png|max:5000'],
             [ 'file.image'  => 'The file must be an image (jpg, png)']
         );
 
@@ -120,7 +120,7 @@ class ImageController extends Controller
         // Validation
         $validate = $this->validate($request, [
            'description'    => 'required',
-           'upload'         => 'required|mimes:jpeg,jpg,png'
+           'upload'         => 'required|mimes:jpeg,jpg,png|max:5000'
         ]);
 
         // Upload the image
@@ -216,7 +216,7 @@ class ImageController extends Controller
         // Validation
         $validate = $this->validate($request, [
             'description' => 'required',
-            'upload'      => 'mimes:jpeg,jpg,png'
+            'upload'      => 'mimes:jpeg,jpg,png|max:5000'
         ]);
 
         // Assign values

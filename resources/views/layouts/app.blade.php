@@ -12,8 +12,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <!-- Bootstrap core CSS -->
-    <link rel="preload" href="{{ asset('css/bootstrap5.min.css') }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap5.min.css') }}"></noscript>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css') }}" as="style">
+    <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css') }}"></noscript>
     <!-- Material Design Bootstrap -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css"></noscript>

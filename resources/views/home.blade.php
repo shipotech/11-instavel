@@ -12,12 +12,14 @@
                         <div class="content d-flex">
                             <div class="row w-100 m-0 p-0">
                                 <div class="col-12 p-0">
+                                    <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" aria-label="go to {{ strtolower(Auth::user()->nick) }} profile">
                                     <img src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
                                             https://i.ibb.co/2kjt747/nouser.png
 @else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
-                                         class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
+                                         class="rounded-circle avatar-img2 d-block mx-auto" alt="avatar">
+                                    </a>
                                     <div class="col text-center text-sm-left">
-                                        <p class="font-weight-bold text-dark m-0">
+                                        <p class="font-weight-bold text-dark m-0 text-center">
                                             <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" aria-label="go to {{ strtolower(Auth::user()->nick) }} profile">
                                                 {{ strtolower(Auth::user()->nick) }}
                                             </a>
@@ -65,7 +67,7 @@
                             <div class="view overlay overflow-hidden">
                                 <a title="Upload your photo" href="#!" class="change_upload" id="c_1" aria-label="Upload your photo">
                                     <img src="https://i.ibb.co/jGvG5VL/upload2.png" alt="upload picture" class="card-img-top upload-preview1">
-                                    <div class="mask flex-center text-white rgba-black-strong overflow-hidden">
+                                    <div class="mask flex-center text-white rgba-black-strong overflow-hidden rounded">
                                         <i class="fa fa-camera fa-2x"></i>
                                     </div>
                                 </a>

@@ -8,10 +8,12 @@
                 <div class="content d-flex">
                     <div class="row w-100 m-0 p-0">
                         <div class="col p-0">
-                            <img src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
-                                    https://i.ibb.co/2kjt747/nouser.png
-@else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
-                                 class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3" alt="avatar">
+                            <div class="rounded-circle avatar-img d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3">
+                                <img src="@if($image->user->drive_id2 === null || empty($image->user->drive_id2))
+                                https://i.ibb.co/2kjt747/nouser.png
+@else {{ 'https://drive.google.com/uc?id='.$image->user->drive_id2.'&export=media' }} @endif"
+                             class="rounded-circle avatar-img" alt="avatar">
+                            </div>
                             <div class="col text-center text-sm-left">
                                 <p class="font-weight-bold text-dark m-0">
                                     <a href="{{ route('user.profile', ['id' => $image->user->id]) }}" aria-label="go to {{ strtolower($image->user->nick) }} profile">
@@ -52,7 +54,7 @@
             <!-- Card image -->
             <div class="view like-overlay">
                 <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay" aria-label="show image by: {{ strtolower($image->user->nick) }}">
-                    <img class="card-img-top lazyload"
+                    <img class="card-img-top lazyload rounded-0"
                          src="@if($image->drive_id4 === null || empty($image->drive_id4))
                                  https://i.ibb.co/b23YqqB/noimage.png
 @else {{'https://drive.google.com/uc?id='.$image->drive_id4.'&export=media'}} @endif"
