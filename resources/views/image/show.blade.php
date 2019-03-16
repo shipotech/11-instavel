@@ -44,7 +44,7 @@
                 <!-- Grid column -->
                 <div class="col-md-7 px-0">
                     <!-- Card -->
-                    <div class="card card-personal h-100 rounded-0 z-depth-0">
+                    <div class="card card-personal h-100 rounded-0 z-depth-0 bg-dark">
                         <!-- Card image-->
                         <img class="card-img-top lazyload rounded-0 h-100 min-img"
                              src="@if($image->drive_id4 === null || empty($image->drive_id4))
@@ -75,7 +75,7 @@
                                     <div class="row w-100 h-100 m-0 p-0">
                                         <div class="col-12 text-center">
                                             <img src="@if($image->user->drive_id2 === null || empty($image->user->drive_id2))
-                                                    https://i.ibb.co/2kjt747/nouser.png
+                                                https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.$image->user->drive_id2.'&export=media' }} @endif"
                                                  class="rounded-circle avatar-img d-block mx-auto" alt="avatar">
                                             <p class="font-weight-bolder text-muted m-0">
@@ -146,8 +146,7 @@
                                                     <!-- Label -->
                                                     <div class="label text-center">
                                                         <img src="
-@if($comment->user->drive_id2 === null || empty($comment->user->drive_id2)) https://i.ibb.co/2kjt747/nouser.png
-@else{{ 'https://drive.google.com/uc?id='.$comment->user->drive_id2.'&export=media' }} @endif"
+@if($comment->user->drive_id2 === null || empty($comment->user->drive_id2)) https://i.ibb.co/st2Gyvk/rsz-noimage-min.png @else{{ 'https://drive.google.com/uc?id='.$comment->user->drive_id2.'&export=media' }} @endif"
                                                              class="rounded-circle avatar-img d-block">
                                                     </div>
 

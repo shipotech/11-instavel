@@ -12,6 +12,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <!-- Bootstrap core CSS -->
+    <noscript>
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL={{ route('no-js') }}">
+    </noscript>
     <link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css') }}" as="style">
     <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css') }}"></noscript>
     <!-- Material Design Bootstrap -->
@@ -29,7 +32,6 @@
 </head>
 <body class="@if (session('isDark')) dark-mode @else @guest rgba-blue-strong @else light-mode @endguest @endif ">
 <div class="se-pre-con"></div>
-
 <header>
     <nav class="navbar fixed-top navbar-expand-lg @if (session('isDark')) navbar-dark unique-color-dark @else navbar-light light-mode @endif py-0">
         <div class="container">
@@ -94,7 +96,7 @@
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img class="preview_image2 rounded-circle z-depth-0 mx-auto pp_f2"
                                          src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
-                                                 https://i.ibb.co/2kjt747/nouser.png
+                                                 https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
                                          alt="avatar image" width="35" height="35">
                                 </a>

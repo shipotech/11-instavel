@@ -9,7 +9,7 @@
                     <div class="row w-100 m-0 p-0">
                         <div class="col-12 p-0">
                             <img src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
-                                    https://i.ibb.co/2kjt747/nouser.png
+                                    https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
                                  class="rounded-circle avatar-img d-block float-none mx-auto" alt="avatar">
                             <div class="col text-center">

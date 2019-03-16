@@ -21,7 +21,7 @@
                         @endif
                             <img class="rounded-circle mx-auto d-block profile-photo preview_image pp_f"
                                     src="@if($user->drive_id1 === null || empty($user->drive_id1))
-                                            https://i.ibb.co/2kjt747/nouser.png
+                                            https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.$user->drive_id1.'&export=media' }} @endif"
                                  alt="profile picture">
 

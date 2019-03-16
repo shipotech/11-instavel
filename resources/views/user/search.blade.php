@@ -6,7 +6,7 @@
                     <div class="row w-100 m-0 p-0">
                         <div class="col p-0">
                             <img src="@if($user->drive_id2 === null || empty($user->drive_id2))
-                                    https://i.ibb.co/2kjt747/nouser.png
+                                    https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.$user->drive_id2.'&export=media' }} @endif"
                                  class="rounded-circle avatar-img3 d-block d-sm-inline float-none float-sm-left mx-auto mx-sm-0 mr-sm-3"
                                  alt="avatar">

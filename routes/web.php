@@ -17,10 +17,15 @@ Route::get('/', function () {
     return redirect()->route('home');
 });
 
+// Enable Javascript
+Route::get('/no-js', function () {
+    return view('layouts.no-js');
+})->name('no-js');
+
+// Home
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/scroll', 'HomeController@scroll');
 
-Route::get('/php', 'PhpController@index');
 // Dark Mode
 Route::get('/dark', 'HomeController@darkMode')->name('dark');
 

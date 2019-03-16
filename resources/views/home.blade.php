@@ -14,7 +14,7 @@
                                 <div class="col-12 p-0">
                                     <a href="{{ route('user.profile', ['id' => Auth::user()->id]) }}" aria-label="go to {{ strtolower(Auth::user()->nick) }} profile">
                                     <img src="@if(Auth::user()->drive_id2 === null || empty(Auth::user()->drive_id2))
-                                            https://i.ibb.co/2kjt747/nouser.png
+                                            https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.Auth::user()->drive_id2.'&export=media' }} @endif"
                                          class="rounded-circle avatar-img2 d-block mx-auto" alt="avatar">
                                     </a>

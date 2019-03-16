@@ -3,7 +3,7 @@
         <!-- Card -->
         <article class="card news-card mb-5 mb-sm-3">
             <!-- Card image -->
-            <div class="view like-overlay">
+            <div class="view like-overlay bg-dark">
                 <a href="{{ route('image.show', ['id' => $image->id]) }}" class="link-overlay">
                     <img class="card-img-top lazyload"
                          src="@if($image->drive_id4 === null || empty($image->drive_id4))

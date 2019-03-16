@@ -10,7 +10,7 @@
                 <div class="avatar mx-auto white light-mode zoom">
                     <a href="{{ route('user.profile', ['id' => $user->id]) }}">
                     <img src="@if($user->drive_id1 === null || empty($user->drive_id1))
-                            https://i.ibb.co/2kjt747/nouser.png
+                            https://i.ibb.co/st2Gyvk/rsz-noimage-min.png
 @else {{ 'https://drive.google.com/uc?id='.$user->drive_id1.'&export=media' }} @endif" alt="profile picture of {{ strtolower($user->nick) }}"
                          class="rounded-circle" style="height: 110px; width: 110px;">
                     </a>
