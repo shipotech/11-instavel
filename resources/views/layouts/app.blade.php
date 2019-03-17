@@ -4,12 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Instavel</title>
-
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-
     <meta name="robots" content="noimageindex, noarchive">
     <meta name="mobile-web-app-capable" content="yes">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
@@ -21,14 +15,14 @@
     <noscript>
         <META HTTP-EQUIV="Refresh" CONTENT="0;URL={{ route('no-js') }}">
     </noscript>
-    <link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css') }}" as="style">
-    <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css') }}"></noscript>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css?ver=2') }}" as="style">
+    <noscript><link rel="stylesheet" href="{{ asset('css/bootstrap6.min.css?ver=2') }}"></noscript>
     <!-- Material Design Bootstrap -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css"></noscript>
     <!-- Your custom styles (optional) -->
-    <link rel="preload" href="{{ asset('css/style.css') }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ asset('css/style.css') }}"></noscript>
+    <link rel="preload" href="{{ asset('css/style.css?ver=2') }}" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ asset('css/style.css?ver=2') }}"></noscript>
     <!-- Font Awesome -->
     <link rel="prefetch" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></noscript>
@@ -142,13 +136,13 @@
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js?ver=2"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js" defer></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js?ver=2" defer></script>
 <!-- Bootstrap core JavaScript -->
-<script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript" defer></script>
+<script src="{{ asset('js/bootstrap.min.js?ver=2') }}" type="text/javascript" defer></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js" async></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js?ver=2" async></script>
 <script src="{{ asset('js/lazysizes.min.js') }}" async></script>
 <script src="{{ asset('js/ls.respimg.min.js') }}" async></script>
 <!-- SCRIPTS -->
@@ -179,15 +173,15 @@
     });
 </script>
 @if(Auth::user())
-    <script src="{{ asset('js/profile-picture.js') }}" defer></script>
+    <script src="{{ asset('js/profile-picture.js?ver=2') }}" defer></script>
 @endif
-<script src="{{ asset('js/show-likes.js') }}" defer></script>
-<script src="{{ asset('js/show-more.js') }}" defer></script>
-<script src="{{ asset('js/likes.js') }}" defer></script>
-<script src="{{ asset('js/upload.js') }}" defer></script>
-<script src="{{ asset('js/image-edit.js') }}" defer></script>
-<script src="{{ asset('js/prevent.js') }}" defer></script>
-<script src="{{ asset('js/showpass.js') }}" defer></script>
-<script src="{{ asset('js/search-people.js') }}" defer></script>
+<script src="{{ asset('js/show-likes.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/show-more.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/likes.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/upload.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/image-edit.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/prevent.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/showpass.js?ver=2') }}" defer></script>
+<script src="{{ asset('js/search-people.js?ver=2') }}" defer></script>
 </body>
 </html>
