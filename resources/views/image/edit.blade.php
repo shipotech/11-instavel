@@ -56,7 +56,7 @@
                         @csrf
                         <input type="hidden" name="form_token" value="{{ session('form_token') }}">
                         <input type="hidden" name="image_id" value="{{ $image->id }}" />
-                        <input type="file" name="upload" id="upload-image2" style="display: none" />
+                        <input type="file" name="upload" id="upload-image2" accept="image/*" style="display: none" />
                         <label for="description" class="sr-only-focusable"></label>
                         <textarea name="description" class="form-control z-depth-1" id="description" rows="3" required>{{$image->description}}</textarea>
                         <div class="row">

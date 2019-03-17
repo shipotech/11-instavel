@@ -109,5 +109,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="MDB-Gulp-Free_4.7.4" />
   </component>
 </module>

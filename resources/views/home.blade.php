@@ -82,7 +82,7 @@
                             <form action="{{ route('image.store') }}" method="post" enctype="multipart/form-data" id="upload-form" class="prevent-form-submit">
                                 @csrf
                                 <input type="hidden" name="form_token" value="{{ session('form_token') }}">
-                                <input type="file" name="upload" id="upload-image1" style="display: none" />
+                                <input type="file" name="upload" id="upload-image1" accept="image/*" style="display: none" />
                                 <label for="description" class="sr-only-focusable"></label>
                                 <textarea name="description" class="form-control z-depth-1" id="description" rows="2" placeholder="Write something here..." aria-label="Description, Write something here..." required></textarea>
                                 <div class="row">

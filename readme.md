@@ -18,6 +18,10 @@ HTML, CSS, JavaScript, Jquery, Ajax, PHP
 [LazySizes](https://github.com/aFarkas/lazysizes)
 <br>
 
+## Live Demo
+[http://instavel.herokuapp.com/home](http://instavel.herokuapp.com/home)
+
+
 ## Instructions:
 1- Clone the repo and cd into it <br>
 2- `composer install` <br>

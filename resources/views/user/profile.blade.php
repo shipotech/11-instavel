@@ -36,7 +36,7 @@
                     </div>
                     <div class="card-body">
                     @if($user->id === Auth::user()->id)
-                        <input type="file" id="file" style="display: none"/>
+                        <input type="file" id="file" accept="image/*" style="display: none"/>
                         <input type="hidden" id="file_name"/>
                     @endif
 
