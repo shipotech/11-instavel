@@ -71,30 +71,23 @@ If you want to contact me, please send an e-mail to:
 
 ## Previews
 <p align="center">
-<img src="https://i.ibb.co/2t0zwnw/Captura-de-pantalla-de-2019-02-20-23-51-56.png" alt="Captura-de-pantalla-de-2019-02-20-23-51-56" border="0">
+<img src="https://i.ibb.co/TK5VN60/Captura-de-pantalla-de-2019-03-16-20-44-53.png" alt="Captura-de-pantalla-de-2019-03-16-20-44-53" border="0">
 <br><br>
-<img src="https://i.ibb.co/MS9q9wm/Captura-de-pantalla-de-2019-02-20-23-52-06.png" alt="Captura-de-pantalla-de-2019-02-20-23-52-06" border="0">
+<img src="https://i.ibb.co/JtgR7m2/Captura-de-pantalla-de-2019-03-16-20-44-58.png" alt="Captura-de-pantalla-de-2019-03-16-20-44-58" border="0">
 <br><br>
-<img src="https://i.ibb.co/W51yJVP/Captura-de-pantalla-de-2019-02-20-23-52-21.png" alt="Captura-de-pantalla-de-2019-02-20-23-52-21" border="0">
+<img src="https://i.ibb.co/nwhzZQX/Captura-de-pantalla-de-2019-03-16-20-45-20.png" alt="Captura-de-pantalla-de-2019-03-16-20-45-20" border="0">
 <br><br>
-<img src="https://i.ibb.co/wYsSNgf/Captura-de-pantalla-de-2019-02-20-23-49-01.png" alt="Captura-de-pantalla-de-2019-02-20-23-49-01" border="0">
+<img src="https://i.ibb.co/XDQvyQF/Captura-de-pantalla-de-2019-03-16-20-52-31.png" alt="Captura-de-pantalla-de-2019-03-16-20-52-31" border="0">
 <br><br>
-<img src="https://i.ibb.co/R4vMJNc/Captura-de-pantalla-de-2019-02-20-23-49-09.png" alt="Captura-de-pantalla-de-2019-02-20-23-49-09" border="0">
+<img src="https://i.ibb.co/Sf6LSv0/Captura-de-pantalla-de-2019-03-16-20-46-02.png" alt="Captura-de-pantalla-de-2019-03-16-20-46-02" border="0">
 <br><br>
-<img src="https://i.ibb.co/4Y7GZXp/Captura-de-pantalla-de-2019-02-20-23-49-21.png" alt="Captura-de-pantalla-de-2019-02-20-23-49-21" border="0">
+<img src="https://i.ibb.co/HYBBX7b/Captura-de-pantalla-de-2019-03-16-20-46-27.png" alt="Captura-de-pantalla-de-2019-03-16-20-46-27" border="0">
 <br><br>
-<img src="https://i.ibb.co/PGXCrQw/Captura-de-pantalla-de-2019-02-20-23-49-27.png" alt="Captura-de-pantalla-de-2019-02-20-23-49-27" border="0">
+<img src="https://i.ibb.co/QKpKdqC/Captura-de-pantalla-de-2019-03-16-20-47-28.png" alt="Captura-de-pantalla-de-2019-03-16-20-47-28" border="0">
 <br><br>
-<img src="https://i.ibb.co/12YsDCD/Captura-de-pantalla-de-2019-02-20-23-49-36.png" alt="Captura-de-pantalla-de-2019-02-20-23-49-36" border="0">
+<img src="https://i.ibb.co/xfN3pTs/Captura-de-pantalla-de-2019-03-16-20-48-23.png" alt="Captura-de-pantalla-de-2019-03-16-20-48-23" border="0">
 <br><br>
-<img src="https://i.ibb.co/vBKcKYG/Captura-de-pantalla-de-2019-02-20-23-56-13.png" alt="Captura-de-pantalla-de-2019-02-20-23-56-13" border="0">
-<br><br>
-<img src="https://i.ibb.co/N11Qn2J/Captura-de-pantalla-de-2019-02-20-23-56-21.png" alt="Captura-de-pantalla-de-2019-02-20-23-56-21" border="0">
-<br><br>
-<img src="https://i.ibb.co/Hp0t3xp/Captura-de-pantalla-de-2019-02-20-23-56-31.png" alt="Captura-de-pantalla-de-2019-02-20-23-56-31" border="0">
-<br><br>
-<img src="https://i.ibb.co/cxfRhc3/Captura-de-pantalla-de-2019-02-20-23-57-20.png" alt="Captura-de-pantalla-de-2019-02-20-23-57-20" border="0">
-<br><br>
+<img src="https://i.ibb.co/wJQZ07z/Captura-de-pantalla-de-2019-03-16-20-47-17.png" alt="Captura-de-pantalla-de-2019-03-16-20-47-17" border="0">
 </p>
 
 <br>
